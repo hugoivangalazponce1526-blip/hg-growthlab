@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>HG Growth Lab - Automatiza tu Futuro con IA</title>
+    <!-- Favicon: Logo de la marca -->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4GDSG-Ng0zzRbW3zjAyctDNwmmPMnFWWYO6KDyfVFqpWrq7l2NDsBszgR6AHv55HU4Epax9xhdxDmJ6QTvl2KAPnK6ddZ9aXoDpnhQI_3mCk5_5plMYs6RPG2YwReMveuhXwmYiz6Y8g2kD-2FXh0_XrJPIa5PVjyaRt8sWVP6s_WakPybpsU1ovrRhNJlYWqS44ztqtYaOJPEY75sKN6q5S4ZS2vTfqYG1b_b899fLUZBcmIVDxRb4vmUld2hClb4AyxoXIEA">
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4GDSG-Ng0zzRbW3zjAyctDNwmmPMnFWWYO6KDyfVFqpWrq7l2NDsBszgR6AHv55HU4Epax9xhdxDmJ6QTvl2KAPnK6ddZ9aXoDpnhQI_3mCk5_5plMYs6RPG2YwReMveuhXwmYiz6Y8g2kD-2FXh0_XrJPIa5PVjyaRt8sWVP6s_WakPybpsU1ovrRhNJlYWqS44ztqtYaOJPEY75sKN6q5S4ZS2vTfqYG1b_b899fLUZBcmIVDxRb4vmUld2hClb4AyxoXIEA">
+    <!-- Tailwind CSS with Forms and Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts: Hanken Grotesk, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Configuration matching Stitch Theme -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#e0e3e5",
+                        "surface-container-highest": "#323537",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-tint": "#b9c3ff",
+                        "surface-dim": "#101415",
+                        "outline-variant": "#434657",
+                        "inverse-primary": "#0046fa",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary-fixed-variant": "#45474b",
+                        "error": "#ffb4ab",
+                        "background": "#101415",
+                        "on-error": "#690005",
+                        "surface-container-high": "#272a2c",
+                        "on-primary-fixed-variant": "#0033c0",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#363a3b",
+                        "inverse-surface": "#e0e3e5",
+                        "surface-container-lowest": "#0b0f10",
+                        "tertiary-fixed-dim": "#c6c6cc",
+                        "on-primary-fixed": "#001257",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#dbdbe1",
+                        "primary-fixed": "#dde1ff",
+                        "primary": "#b9c3ff",
+                        "outline": "#8e8fa3",
+                        "on-surface": "#e0e3e5",
+                        "secondary": "#e9c349",
+                        "on-primary-container": "#d4d9ff",
+                        "on-secondary": "#3c2f00",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-container": "#af8d11",
+                        "surface-variant": "#323537",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary": "#c6c6cc",
+                        "primary-container": "#0047ff",
+                        "inverse-on-surface": "#2d3133",
+                        "on-surface-variant": "#c4c5da",
+                        "on-tertiary": "#2f3035",
+                        "primary-fixed-dim": "#b9c3ff",
+                        "on-tertiary-fixed": "#1a1c20",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e2e2e8",
+                        "surface": "#101415",
+                        "on-primary": "#00228a",
+                        "tertiary-container": "#5f6065",
+                        "surface-container-low": "#191c1e",
+                        "surface-container": "#1d2022"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Hanken Grotesk", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for advanced animations and glassmorphism details -->
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Customize scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Material icons custom sizes/alignments */
+        .material-symbols-outlined {
+            font-size: 24px;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Hero emblem pulse glow on hover */
+        @keyframes emblem-glow-pulse {
+            0%   { filter: drop-shadow(0 0 20px rgba(185,195,255,0.4)); }
+            30%  { filter: drop-shadow(0 0 55px rgba(185,195,255,0.95)) drop-shadow(0 0 90px rgba(0,71,255,0.6)); }
+            60%  { filter: drop-shadow(0 0 40px rgba(233,195,73,0.8))  drop-shadow(0 0 70px rgba(233,195,73,0.4)); }
+            100% { filter: drop-shadow(0 0 20px rgba(185,195,255,0.4)); }
+        }
+        .emblem-hover {
+            transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        .emblem-hover:hover {
+            transform: scale(1.08);
+            animation: emblem-glow-pulse 1.6s ease-in-out infinite;
+        }
+
+        /* Logo hover spin + glow animation */
+        @keyframes logo-spin-glow {
+            0%   { transform: rotate(0deg) scale(1);    filter: drop-shadow(0 0 0px rgba(185,195,255,0)); }
+            40%  { transform: rotate(200deg) scale(1.15); filter: drop-shadow(0 0 14px rgba(185,195,255,0.7)); }
+            70%  { transform: rotate(340deg) scale(1.08); filter: drop-shadow(0 0 10px rgba(233,195,73,0.5)); }
+            100% { transform: rotate(360deg) scale(1);  filter: drop-shadow(0 0 0px rgba(185,195,255,0)); }
+        }
+        .logo-spin:hover {
+            animation: logo-spin-glow 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(16, 20, 21, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        /* Bento Grid Interactive Glow effect */
+        .bento-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* Interactive border light following cursor */
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(0, 71, 255, 0.15), transparent 45%);
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .bento-card-glow-border {
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            padding: 1.5px;
+            background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(185, 195, 255, 0.35), rgba(233, 195, 73, 0.15) 30%, transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .bento-card:hover::before,
+        .bento-card:hover .bento-card-glow-border {
+            opacity: 1;
+        }
+
+        /* Gradient typography */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, #b9c3ff 0%, #e9c349 100%);
+        }
+
+        /* Ambient floating light animation */
+        @keyframes float-orb-1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -60px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.95); }
+        }
+        @keyframes float-orb-2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-50px, 50px) scale(1.15); }
+        }
+
+        .animate-float-1 {
+            animation: float-orb-1 18s ease-in-out infinite;
+        }
+        .animate-float-2 {
+            animation: float-orb-2 22s ease-in-out infinite;
+        }
+
+        /* Input styling adjustments */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.08);
+            height: 6px;
+            border-radius: 9999px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #0047ff;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 71, 255, 0.6);
+            transition: transform 0.1s;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-sans antialiased min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- Atmospheric background light elements -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-[#0047ff]/10 rounded-full blur-[150px] animate-float-1"></div>
+        <div class="absolute top-[40%] -right-[10%] w-[45%] h-[45%] bg-[#e9c349]/5 rounded-full blur-[120px] animate-float-2"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[40%] h-[40%] bg-[#0047ff]/5 rounded-full blur-[130px] animate-float-1"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 w-full z-40 bg-surface-dim/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300" id="main-nav">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto w-full">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <img alt="HG Growth Lab Logo" class="h-8 w-auto object-contain logo-spin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4GDSG-Ng0zzRbW3zjAyctDNwmmPMnFWWYO6KDyfVFqpWrq7l2NDsBszgR6AHv55HU4Epax9xhdxDmJ6QTvl2KAPnK6ddZ9aXoDpnhQI_3mCk5_5plMYs6RPG2YwReMveuhXwmYiz6Y8g2kD-2FXh0_XrJPIa5PVjyaRt8sWVP6s_WakPybpsU1ovrRhNJlYWqS44ztqtYaOJPEY75sKN6q5S4ZS2vTfqYG1b_b899fLUZBcmIVDxRb4vmUld2hClb4AyxoXIEA"/>
+                <span class="font-display text-[20px] md:text-[24px] font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">
+                    HG Growth Lab
+                </span>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#inicio">Inicio</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#servicios">Servicios</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#calculadora">Calculadora de Ahorro</a>
+            </nav>
+
+            <!-- Nav Action Buttons -->
+            <div class="flex items-center gap-4">
+                <button onclick="openModal()" class="bg-secondary/15 text-secondary border border-secondary/30 hover:bg-secondary/25 hover:border-secondary font-mono text-[12px] px-6 py-2.5 rounded-full transition-all duration-300 flex items-center gap-2 uppercase tracking-wider shadow-[0_0_15px_rgba(233,195,73,0.1)] hover:shadow-[0_0_20px_rgba(233,195,73,0.3)]">
+                    Contacto
+                    <span class="material-symbols-outlined text-[16px] transform group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-on-surface focus:outline-none" id="mobile-menu-btn">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div class="hidden md:hidden absolute w-full left-0 bg-surface-dim/95 backdrop-blur-2xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 shadow-2xl transition-all duration-300" id="mobile-nav-dropdown">
+            <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#inicio">Inicio</a>
+            <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#servicios">Servicios</a>
+            <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#calculadora">Calculadora de Ahorro</a>
+            <button onclick="toggleMobileMenu(); openModal();" class="w-full bg-primary-container text-white py-4 rounded-xl font-bold uppercase tracking-wider text-sm transition-all duration-300">
+                Agendar Consultoría
+            </button>
+        </div>
+    </header>
+
+    <main class="relative z-10 flex-grow pt-24 md:pt-32">
+        
+        <!-- Hero Section -->
+        <section class="relative px-margin-mobile md:px-margin-desktop py-16 md:py-28 max-w-container-max mx-auto flex flex-col items-center text-center overflow-hidden" id="inicio">
+            <!-- Brand Emblem Container with dynamic glow -->
+            <div class="mb-8 p-5 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_rgba(0,71,255,0.15)] flex justify-center items-center">
+                <img alt="HG Growth Lab Emblem" class="h-28 md:h-36 w-auto object-contain emblem-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQvfnfo7qRMSB2aL1JQO8w-xoP1zkZ4jJ-ZOukSjwlSIFijTSsfpKx_WUBURuqCVXC43G47YUdOSMUC41rMFrNufXP4sOa1P5TzM2I5T9KBCrSFrNQ9XAJFwo8dKG7BXKXs8Z4m4RABOYoIngzzVwollo_3JzQBH8zoZ5mkz71HxN0mhkfcovs6Xj3BCZ2zdOYlm8SAtfW2eeMutZZ1UKvVyegzjXSf5e6aqC2nsWs4_ltS2UUVL1tpRYi5PK6BEhByNBO8kpzA"/>
+            </div>
+
+            <!-- Accent Label -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-md">
+                <span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+                <span class="font-mono text-[11px] md:text-[12px] text-primary uppercase tracking-widest font-semibold">
+                    Agencia Digital · Chile
+                </span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-display text-[44px] md:text-[72px] font-extrabold text-on-surface mb-6 max-w-5xl tracking-tight leading-[1.1]">
+                Automatiza tu Futuro con <span class="text-gradient">IA</span>
+            </h1>
+
+            <!-- Subtitle Description -->
+            <p class="font-sans text-[18px] md:text-[22px] text-on-surface-variant max-w-3xl mb-12 font-light leading-relaxed">
+                Creamos tu página web, gestionamos tus anuncios en Meta y automatizamos tu negocio con IA. Más clientes, más ventas, sin complicaciones.
+            </p>
+
+            <!-- Hero Action CTA buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-6">
+                <button onclick="openModal()" class="w-full sm:w-auto bg-gradient-to-r from-primary-container to-[#0033c0] text-white font-mono text-[12px] px-10 py-5 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-3 uppercase tracking-wider shadow-[0_0_20px_rgba(0,71,255,0.4)] hover:shadow-[0_0_30px_rgba(0,71,255,0.6)] hover:-translate-y-0.5 active:translate-y-0">
+                    Empezar Ahora
+                    <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+                </button>
+                <a href="#servicios" class="w-full sm:w-auto bg-white/[0.03] hover:bg-white/[0.08] text-on-surface border border-white/10 font-mono text-[12px] px-10 py-5 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 uppercase tracking-wider hover:-translate-y-0.5 active:translate-y-0">
+                    Ver Servicios
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section (Bento Grid) -->
+        <section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto scroll-mt-20" id="servicios">
+            <!-- Section Header -->
+            <div class="flex flex-col items-center mb-16 text-center">
+                <span class="font-mono text-secondary text-[12px] uppercase tracking-widest mb-3">Nuestras Soluciones</span>
+                <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-on-surface tracking-tight">
+                    Lo que hacemos por tu negocio
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mt-6 rounded-full"></div>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-12 gap-gutter">
+                
+                <!-- Service 1: Automatización de Flujos (Large - Span 8 Desktop, Span 12 Mobile) -->
+                <div class="bento-card col-span-12 lg:col-span-8 p-8 md:p-10 flex flex-col justify-between min-h-[340px] group">
+                    <div class="bento-card-glow-border"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start justify-between">
+                        <div class="max-w-xl">
+                            <!-- Icon Box -->
+                            <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:border-primary/50 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-[32px]">account_tree</span>
+                            </div>
+                            <h3 class="font-display text-[26px] md:text-[32px] font-bold text-on-surface mb-4">
+                                Automatización de Flujos
+                            </h3>
+                            <p class="text-on-surface-variant font-sans leading-relaxed text-[16px] md:text-[18px]">
+                                Conectamos tus aplicaciones y automatizamos las tareas que te quitan tiempo: respuestas, agendas, seguimientos. Tú te enfocas en atender, nosotros hacemos el resto.
+                            </p>
+                        </div>
+                        <!-- Decorative Tech Badge -->
+                        <span class="font-mono text-[10px] text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full uppercase tracking-wider hidden md:inline-block">
+                            Ahorra horas cada semana
+                        </span>
+                    </div>
+                    <div class="relative z-10 mt-8 pt-4 flex justify-between items-center border-t border-white/5">
+                        <span class="text-xs text-on-surface-variant font-mono uppercase tracking-widest">Más tiempo para tu negocio</span>
+                        <button onclick="openModal('Automatización de Flujos')" class="text-primary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Saber Más
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2: Chatbots Inteligentes (Small - Span 4 Desktop, Span 12 Mobile) -->
+                <div class="bento-card col-span-12 md:col-span-6 lg:col-span-4 p-8 flex flex-col justify-between min-h-[340px] group">
+                    <div class="bento-card-glow-border"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center mb-8 group-hover:border-secondary/50 transition-colors">
+                            <span class="material-symbols-outlined text-secondary text-[26px]">smart_toy</span>
+                        </div>
+                        <h3 class="font-display text-[22px] md:text-[24px] font-bold text-on-surface mb-3 leading-tight">
+                            Chatbots Inteligentes
+                        </h3>
+                        <p class="text-on-surface-variant text-[15px] leading-relaxed">
+                            Un asistente virtual que responde por ti en Instagram y WhatsApp las 24 horas. Atiende consultas, agenda reservas y nunca deja a un cliente sin respuesta.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
+                        <span class="text-xs text-on-surface-variant font-mono">Responde 24/7</span>
+                        <button onclick="openModal('Chatbots Inteligentes')" class="text-secondary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
+                            Solicitar
+                            <span class="material-symbols-outlined text-[16px]">add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3: Resultados Medibles (Small - Span 4 Desktop, Span 12 Mobile) -->
+                <div class="bento-card col-span-12 md:col-span-6 lg:col-span-4 p-8 flex flex-col justify-between min-h-[340px] group">
+                    <div class="bento-card-glow-border"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:border-primary/50 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-[26px]">monitoring</span>
+                        </div>
+                        <h3 class="font-display text-[22px] md:text-[24px] font-bold text-on-surface mb-3 leading-tight">
+                            Resultados Medibles
+                        </h3>
+                        <p class="text-on-surface-variant text-[15px] leading-relaxed">
+                            Te mostramos en números reales cómo están funcionando tus anuncios y tu web: cuántas personas llegaron, cuántas consultaron y cuántas compraron.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
+                        <span class="text-xs text-on-surface-variant font-mono">Reportes claros</span>
+                        <button onclick="openModal('Resultados Medibles')" class="text-primary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
+                            Explorar
+                            <span class="material-symbols-outlined text-[16px]">add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 4: Desarrollo Web (Medium - Span 6 Desktop, Span 12 Mobile) -->
+                <div class="bento-card col-span-12 md:col-span-6 p-8 flex flex-col justify-between min-h-[320px] group">
+                    <div class="bento-card-glow-border"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center group-hover:border-primary/30 transition-colors">
+                                <span class="material-symbols-outlined text-on-surface text-[30px]">code_blocks</span>
+                            </div>
+                            <span class="font-mono text-[10px] text-primary-fixed-dim bg-primary-fixed-dim/15 px-3 py-1.5 rounded-full border border-primary-fixed-dim/35 uppercase tracking-wider font-semibold">
+                                Desde $80.000 CLP
+                            </span>
+                        </div>
+                        <h3 class="font-display text-[24px] md:text-[28px] font-bold text-on-surface mb-4">
+                            Desarrollo Web
+                        </h3>
+                        <p class="text-on-surface-variant text-[15px] leading-relaxed">
+                            Tu negocio merece una página web que venda. Diseñamos sitios modernos, rápidos y optimizados para que tus clientes te encuentren en Google y contacten de inmediato.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
+                        <span class="text-xs text-on-surface-variant font-mono">Pago único</span>
+                        <button onclick="openModal('Desarrollo Web')" class="text-on-surface hover:text-primary font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
+                            Agendar
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 5: Escalado en Meta Ads (Medium - Span 6 Desktop, Span 12 Mobile) -->
+                <div class="bento-card col-span-12 md:col-span-6 p-8 flex flex-col justify-between min-h-[320px] group">
+                    <div class="bento-card-glow-border"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center group-hover:border-secondary/30 transition-colors">
+                                <span class="material-symbols-outlined text-secondary text-[30px]">ads_click</span>
+                            </div>
+                            <span class="font-mono text-[10px] text-secondary bg-secondary/15 px-3 py-1.5 rounded-full border border-secondary/35 uppercase tracking-wider font-semibold">
+                                ROI Focus
+                            </span>
+                        </div>
+                        <h3 class="font-display text-[24px] md:text-[28px] font-bold text-on-surface mb-4">
+                            Escalado en Meta Ads
+                        </h3>
+                        <p class="text-on-surface-variant text-[15px] leading-relaxed">
+                            Creamos y gestionamos tus anuncios en Facebook e Instagram para que lleguen exactamente a las personas de tu zona que buscan lo que tú ofreces.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
+                        <span class="text-xs text-on-surface-variant font-mono">Más clientes locales</span>
+                        <button onclick="openModal('Escalado en Meta Ads')" class="text-secondary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
+                            Comenzar
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- AI Savings Interactive Calculator Section -->
+        <section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto scroll-mt-20" id="calculadora">
+            <div class="bg-gradient-to-br from-surface-container-low to-surface-dim border border-white/10 rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.4)]">
+                <!-- Inner soft radial gradient glow -->
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-[80px] pointer-events-none"></div>
+                <div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary/5 rounded-full blur-[80px] pointer-events-none"></div>
+
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Column: Intro & Interactive Sliders -->
+                    <div class="lg:col-span-7">
+                        <span class="font-mono text-primary text-[12px] uppercase tracking-widest font-semibold block mb-3">ROI estimador</span>
+                        <h2 class="font-display text-[28px] md:text-[40px] font-extrabold text-on-surface mb-6 leading-tight">
+                            Calcula tu ahorro mensual con Automatización e IA
+                        </h2>
+                        <p class="text-on-surface-variant font-sans mb-10 text-[15px] md:text-[16px] leading-relaxed max-w-xl">
+                            Ajusta los controles deslizantes para estimar la cantidad de tiempo y costos que podrías optimizar delegando flujos repetitivos a agentes autónomos de IA.
+                        </p>
+
+                        <!-- Sliders list -->
+                        <div class="space-y-8">
+                            <!-- Slider 1: Number of Employees -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <label class="text-[15px] font-semibold text-on-surface" for="employees">
+                                        Número de empleados afectados
+                                    </label>
+                                    <span class="font-mono text-primary font-bold text-[16px]" id="employees-val">10</span>
+                                </div>
+                                <input type="range" min="1" max="100" value="10" class="w-full" id="employees" oninput="calculateSavings()">
+                            </div>
+
+                            <!-- Slider 2: Hours spent in manual tasks -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <label class="text-[15px] font-semibold text-on-surface" for="hours">
+                                        Horas semanales por empleado en tareas manuales
+                                    </label>
+                                    <span class="font-mono text-primary font-bold text-[16px]" id="hours-val">15h</span>
+                                </div>
+                                <input type="range" min="2" max="40" value="15" class="w-full" id="hours" oninput="calculateSavings()">
+                            </div>
+
+                            <!-- Slider 3: Hourly Cost -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <label class="text-[15px] font-semibold text-on-surface" for="cost">
+                                        Costo por hora estimado (CLP)
+                                    </label>
+                                    <span class="font-mono text-primary font-bold text-[16px]" id="cost-val">$20.000</span>
+                                </div>
+                                <input type="range" min="5000" max="100000" value="20000" step="1000" class="w-full" id="cost" oninput="calculateSavings()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Dashboard Results -->
+                    <div class="lg:col-span-5 flex flex-col justify-center">
+                        <div class="bg-white/[0.02] border border-white/10 backdrop-blur-md rounded-2xl p-8 space-y-8 shadow-inner">
+                            <h3 class="font-display text-[18px] font-bold text-on-surface uppercase tracking-wider text-center border-b border-white/5 pb-4">
+                                Resultados estimados de ahorro
+                            </h3>
+
+                            <!-- Result Block 1: Time saved -->
+                            <div class="text-center space-y-1">
+                                <span class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">Horas recuperadas al año</span>
+                                <div class="font-display text-[36px] md:text-[44px] font-black text-secondary tracking-tight" id="res-hours">
+                                    5,460h
+                                </div>
+                                <p class="text-xs text-on-surface-variant">Equivalente a más de <span id="res-fte" class="font-semibold text-on-surface">2.5</span> empleados a tiempo completo.</p>
+                            </div>
+
+                            <!-- Result Block 2: Financial saved -->
+                            <div class="text-center space-y-1">
+                                <span class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">Ahorro anual estimado</span>
+                                <div class="font-display text-[38px] md:text-[48px] font-black text-primary tracking-tight" id="res-money">
+                                    $136,500
+                                </div>
+                                <p class="text-xs text-on-surface-variant">Dinero que puedes reinvertir directamente en crecimiento.</p>
+                            </div>
+
+                            <button onclick="openModal('Consulta desde calculadora')" class="w-full bg-secondary text-on-secondary font-mono text-[12px] py-4 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 hover:bg-secondary-fixed shadow-[0_0_20px_rgba(233,195,73,0.2)] hover:shadow-[0_0_30px_rgba(233,195,73,0.4)]">
+                                Reclamar mi Ahorro ahora
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 scroll-mt-20" id="testimonios">
+
+            <!-- Section Header -->
+            <div class="flex flex-col items-center mb-14 text-center px-margin-mobile md:px-margin-desktop">
+                <span class="font-mono text-secondary text-[12px] uppercase tracking-widest mb-3">Clientes</span>
+                <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-on-surface tracking-tight">
+                    Lo que dicen nuestros clientes
+                </h2>
+                <p class="text-on-surface-variant font-sans mt-4 text-[16px] md:text-[18px] font-light">
+                    Negocios reales, resultados reales
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mt-6 rounded-full"></div>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="relative max-w-3xl mx-auto px-margin-mobile md:px-0">
+
+                <!-- Track -->
+                <div class="overflow-hidden rounded-3xl" id="testi-overflow">
+                    <div class="flex transition-transform duration-700 ease-in-out" id="testi-track">
+
+                        <!-- ── CARD 1: Cascada Meta Ads ── -->
+                        <div class="testi-card min-w-full relative bg-gradient-to-br from-surface-container-low to-surface-dim border border-secondary/35 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(233,195,73,0.07)] overflow-hidden">
+                            <div class="absolute -top-10 -right-10 w-52 h-52 bg-secondary/10 rounded-full blur-[60px] pointer-events-none"></div>
+                            <span class="absolute top-4 left-8 font-display text-[130px] leading-none text-secondary/10 select-none pointer-events-none font-black">"</span>
+                            <div class="relative z-10 flex gap-0.5 mb-6"><span class="text-secondary text-[22px]">★★★★★</span></div>
+                            <blockquote class="relative z-10 text-on-surface text-[16px] md:text-[19px] leading-relaxed font-sans font-light italic mb-10">
+                                "Antes solo teníamos publicaciones orgánicas y nadie nos encontraba. HG Growth Lab nos ayudó a crear contenido profesional, gestionar nuestras redes y lanzar anuncios en Meta. Con un presupuesto accesible logramos llegar a toda la comuna de Molina. Los resultados se notaron rápido."
+                            </blockquote>
+                            <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                                <div class="flex items-center gap-4">
+                                    <img src="logo-cascada.png" alt="Cascada Restobar" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]">
+                                    <div>
+                                        <p class="font-display font-bold text-on-surface text-[17px]">Cascada Restobar</p>
+                                        <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Molina, Región del Maule</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 shrink-0">
+                                    <div class="text-center"><p class="font-display text-[24px] font-black text-secondary leading-none">1</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Comuna</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[24px] font-black text-secondary leading-none">Meta</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Ads activo</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[24px] font-black text-secondary leading-none">100%</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Gestionado</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── CARD 2: Sobreruedas Park ── -->
+                        <div class="testi-card min-w-full relative bg-gradient-to-br from-surface-container-low to-surface-dim border border-secondary/35 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(233,195,73,0.07)] overflow-hidden">
+                            <div class="absolute -top-10 -right-10 w-52 h-52 bg-primary/10 rounded-full blur-[60px] pointer-events-none"></div>
+                            <span class="absolute top-4 left-8 font-display text-[130px] leading-none text-secondary/10 select-none pointer-events-none font-black">"</span>
+                            <div class="relative z-10 flex gap-0.5 mb-6"><span class="text-secondary text-[22px]">★★★★★</span></div>
+                            <blockquote class="relative z-10 text-on-surface text-[16px] md:text-[19px] leading-relaxed font-sans font-light italic mb-10">
+                                "Antes la gente no sabía cómo contactarnos para reservar. Desde que HG Growth Lab nos creó la página web, recibimos reservas para cumpleaños y eventos directamente online. Más visibilidad, más gente llegando a la plaza."
+                            </blockquote>
+                            <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                                <div class="flex items-center gap-4">
+                                    <img src="logo-sobreruedas.png" alt="Sobreruedas Park" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]">
+                                    <div>
+                                        <p class="font-display font-bold text-on-surface text-[17px]">Sobreruedas Park</p>
+                                        <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Molina, Región del Maule</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 shrink-0">
+                                    <div class="text-center"><p class="font-display text-[16px] font-black text-secondary leading-none">Web</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Profesional</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[16px] font-black text-secondary leading-none">Reservas</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Online</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[16px] font-black text-secondary leading-none">+Visib.</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Local</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── CARD 3: Estudio Barber ── -->
+                        <div class="testi-card min-w-full relative bg-gradient-to-br from-surface-container-low to-surface-dim border border-secondary/35 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(233,195,73,0.07)] overflow-hidden">
+                            <div class="absolute -top-10 -right-10 w-52 h-52 bg-secondary/10 rounded-full blur-[60px] pointer-events-none"></div>
+                            <span class="absolute top-4 left-8 font-display text-[130px] leading-none text-secondary/10 select-none pointer-events-none font-black">"</span>
+                            <div class="relative z-10 flex gap-0.5 mb-6"><span class="text-secondary text-[22px]">★★★★★</span></div>
+                            <blockquote class="relative z-10 text-on-surface text-[16px] md:text-[19px] leading-relaxed font-sans font-light italic mb-10">
+                                "Antes coordinábamos las citas por mensaje y siempre había confusión. Con la app que nos desarrolló HG Growth Lab, los clientes reservan solos y nosotros nos organizamos sin estrés. Hoy manejamos cerca de 20 a 30 reservas diarias sin ningún problema."
+                            </blockquote>
+                            <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 rounded-full border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)] bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center shrink-0">
+                                        <span class="font-display font-black text-[18px] text-on-surface">EB</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-display font-bold text-on-surface text-[17px]">Estudio Barber</p>
+                                        <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Chile</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 shrink-0">
+                                    <div class="text-center"><p class="font-display text-[16px] font-black text-secondary leading-none">App</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Reservas</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[18px] font-black text-secondary leading-none">~30</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Citas/día</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[16px] font-black text-secondary leading-none">Cero</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Confusión</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── CARD 4: Cascada App Gestión ── -->
+                        <div class="testi-card min-w-full relative bg-gradient-to-br from-surface-container-low to-surface-dim border border-secondary/35 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(233,195,73,0.07)] overflow-hidden">
+                            <div class="absolute -top-10 -right-10 w-52 h-52 bg-secondary/10 rounded-full blur-[60px] pointer-events-none"></div>
+                            <span class="absolute top-4 left-8 font-display text-[130px] leading-none text-secondary/10 select-none pointer-events-none font-black">"</span>
+                            <div class="relative z-10 flex gap-0.5 mb-6"><span class="text-secondary text-[22px]">★★★★★</span></div>
+                            <blockquote class="relative z-10 text-on-surface text-[16px] md:text-[19px] leading-relaxed font-sans font-light italic mb-10">
+                                "Pasamos de manejar todo en papeles a tener todo digitalizado. Ahora sabemos exactamente cuánto gana cada trabajador, cómo se reparten las propinas y cómo cerramos cada turno. Es un cambio total en cómo operamos."
+                            </blockquote>
+                            <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                                <div class="flex items-center gap-4">
+                                    <img src="logo-cascada.png" alt="Cascada Restobar" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]">
+                                    <div>
+                                        <p class="font-display font-bold text-on-surface text-[17px]">Cascada Restobar</p>
+                                        <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Molina, Región del Maule</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 shrink-0">
+                                    <div class="text-center"><p class="font-display text-[14px] font-black text-secondary leading-none">Papel</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">→ Digital</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[14px] font-black text-secondary leading-none">App</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Gestión</p></div>
+                                    <div class="w-px bg-white/10"></div>
+                                    <div class="text-center"><p class="font-display text-[14px] font-black text-secondary leading-none">Control</p><p class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider mt-1">Por turno</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- end track -->
+                </div><!-- end overflow -->
+
+                <!-- Arrows -->
+                <button onclick="testiPrev()" aria-label="Anterior" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 md:-translate-x-6 z-20 w-10 h-10 rounded-full bg-surface-container border border-secondary/30 text-secondary flex items-center justify-center hover:bg-secondary/20 transition-all shadow-lg">
+                    <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                </button>
+                <button onclick="testiNext()" aria-label="Siguiente" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 md:translate-x-6 z-20 w-10 h-10 rounded-full bg-surface-container border border-secondary/30 text-secondary flex items-center justify-center hover:bg-secondary/20 transition-all shadow-lg">
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </button>
+
+                <!-- Dots -->
+                <div class="flex justify-center gap-2 mt-8" id="testi-dots">
+                    <button onclick="testiGoto(0)" class="testi-dot w-2.5 h-2.5 rounded-full bg-secondary transition-all duration-300" aria-label="1"></button>
+                    <button onclick="testiGoto(1)" class="testi-dot w-2.5 h-2.5 rounded-full bg-white/20 transition-all duration-300" aria-label="2"></button>
+                    <button onclick="testiGoto(2)" class="testi-dot w-2.5 h-2.5 rounded-full bg-white/20 transition-all duration-300" aria-label="3"></button>
+                    <button onclick="testiGoto(3)" class="testi-dot w-2.5 h-2.5 rounded-full bg-white/20 transition-all duration-300" aria-label="4"></button>
+                </div>
+
+            </div><!-- end carousel wrapper -->
+
+        </section>
+
+        <!-- Call To Action Section -->
+        <section class="px-margin-mobile md:px-margin-desktop py-16 md:py-24 max-w-container-max mx-auto text-center relative">
+            <div class="relative bg-gradient-to-br from-surface-container-high via-surface-container-highest to-surface-dim border border-primary/20 rounded-3xl p-10 md:p-20 overflow-hidden shadow-2xl">
+                <!-- Glowing atmospheric backdrop -->
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+                
+                <h2 class="font-display text-[32px] md:text-[56px] font-extrabold text-on-surface mb-6 relative z-10 tracking-tight leading-tight">
+                    ¿Listo para transformar tu negocio?
+                </h2>
+                <p class="font-sans text-[16px] md:text-[20px] text-on-surface-variant max-w-2xl mx-auto mb-10 relative z-10 font-light leading-relaxed">
+                    Agenda una llamada gratuita de 30 minutos. Te contamos cómo podemos hacer crecer tu negocio con herramientas digitales adaptadas a tu presupuesto.
+                </p>
+                
+                <button onclick="openModal()" class="relative z-10 bg-secondary text-on-secondary hover:bg-secondary-fixed font-mono text-[12px] px-10 py-5 rounded-xl font-bold transition-all duration-300 uppercase tracking-widest hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(233,195,73,0.3)] hover:shadow-[0_0_40px_rgba(233,195,73,0.5)]">
+                    Agendar Consultoría
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full py-16 border-t border-white/5 relative z-10 mt-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12 w-full">
+            
+            <div class="flex flex-col items-start gap-4">
+                <div class="flex items-center gap-3">
+                    <img alt="HG Growth Lab Footer Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4GDSG-Ng0zzRbW3zjAyctDNwmmPMnFWWYO6KDyfVFqpWrq7l2NDsBszgR6AHv55HU4Epax9xhdxDmJ6QTvl2KAPnK6ddZ9aXoDpnhQI_3mCk5_5plMYs6RPG2YwReMveuhXwmYiz6Y8g2kD-2FXh0_XrJPIa5PVjyaRt8sWVP6s_WakPybpsU1ovrRhNJlYWqS44ztqtYaOJPEY75sKN6q5S4ZS2vTfqYG1b_b899fLUZBcmIVDxRb4vmUld2hClb4AyxoXIEA"/>
+                    <span class="font-display text-[22px] font-bold text-on-surface">HG Growth Lab</span>
+                </div>
+                <p class="font-mono text-xs text-on-surface-variant">
+                    Optimizando el rendimiento corporativo con inteligencia artificial.
+                </p>
+                <p class="font-mono text-[11px] text-secondary mt-2">
+                    © 2026 HG Growth Lab. Todos los derechos reservados.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-8 sm:gap-16 items-start w-full lg:w-auto">
+                <div class="flex flex-col gap-3">
+                    <span class="text-xs font-mono uppercase text-on-surface-variant font-bold tracking-wider">Enlaces</span>
+                    <nav class="flex flex-col gap-2">
+                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#inicio">Inicio</a>
+                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#servicios">Servicios</a>
+                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#calculadora">Calculadora</a>
+                    </nav>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class="text-xs font-mono uppercase text-on-surface-variant font-bold tracking-wider">Legal</span>
+                    <nav class="flex flex-col gap-2">
+                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Términos del Servicio</a>
+                    </nav>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class="text-xs font-mono uppercase text-on-surface-variant font-bold tracking-wider">Síguenos</span>
+                    <div class="flex gap-3">
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-white/10 hover:border hover:border-primary/50 transition-all" href="#" aria-label="LinkedIn">
+                            <span class="material-symbols-outlined text-[18px]">link</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-white/10 hover:border hover:border-primary/50 transition-all" href="#" aria-label="LinkedIn">
+                            <span class="material-symbols-outlined text-[18px]">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact & Consultation Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <!-- Backdrop blur background overlay -->
+        <div onclick="closeModal()" class="absolute inset-0 bg-surface-dim/80 backdrop-blur-xl"></div>
+        
+        <!-- Modal Card container -->
+        <div class="relative bg-[#101415] border border-white/15 rounded-3xl w-full max-w-lg p-8 md:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] z-10 transform scale-95 opacity-0 transition-all duration-300 overflow-hidden" id="modal-card">
+            <!-- Decorative border accent -->
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-secondary"></div>
+            
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-on-surface-variant hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-[24px]">close</span>
+            </button>
+
+            <!-- Form State -->
+            <div id="modal-form-state">
+                <div class="mb-8">
+                    <span class="font-mono text-secondary text-[11px] uppercase tracking-widest font-semibold block mb-2" id="modal-subtitle">
+                        Agenda tu sesión
+                    </span>
+                    <h3 class="font-display text-[26px] font-bold text-on-surface" id="modal-title">
+                        Agendar Consultoría
+                    </h3>
+                    <p class="text-sm text-on-surface-variant mt-2">
+                        Completa tus datos y un especialista de IA te contactará en menos de 24 horas.
+                    </p>
+                </div>
+
+                <form onsubmit="submitForm(event)" class="space-y-5">
+                    <div class="space-y-1">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant" for="form-name">Nombre Completo</label>
+                        <input required type="text" id="form-name" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" placeholder="Ej. Carlos Pérez">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant" for="form-email">Correo Electrónico</label>
+                        <input required type="email" id="form-email" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" placeholder="carlos@empresa.com">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant" for="form-phone">Número de Teléfono / WhatsApp</label>
+                        <input required type="tel" id="form-phone" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm" placeholder="+56 9 1234 5678">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant" id="form-service-label">Servicio de Interés</label>
+                        <select id="form-service" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm">
+                            <option value="General" class="bg-surface-dim text-on-surface">Consultoría General de IA</option>
+                            <option value="Automatización de Flujos" class="bg-surface-dim text-on-surface">Automatización de Flujos</option>
+                            <option value="Chatbots Inteligentes" class="bg-surface-dim text-on-surface">Chatbots Inteligentes</option>
+                            <option value="Resultados Medibles" class="bg-surface-dim text-on-surface">Resultados Medibles</option>
+                            <option value="Desarrollo Web" class="bg-surface-dim text-on-surface">Desarrollo Web</option>
+                            <option value="Escalado en Meta Ads" class="bg-surface-dim text-on-surface">Escalado en Meta Ads</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant" for="form-message">Contanos sobre tu proyecto</label>
+                        <textarea id="form-message" rows="3" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-sm resize-none" placeholder="¿Qué tareas manuales deseas automatizar o qué necesitas?"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-primary-container to-[#0033c0] text-white font-mono text-[12px] py-4 rounded-xl font-bold uppercase tracking-wider shadow-lg hover:shadow-[0_0_20px_rgba(0,71,255,0.4)] transition-all mt-4 flex items-center justify-center gap-2">
+                        Enviar Solicitud
+                        <span class="material-symbols-outlined text-[16px]">send</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Success State -->
+            <div id="modal-success-state" class="hidden text-center py-10 space-y-6">
+                <!-- Checkmark Animation container -->
+                <div class="w-20 h-20 bg-secondary/15 border border-secondary/30 rounded-full flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(233,195,73,0.2)]">
+                    <span class="material-symbols-outlined text-secondary text-[40px]">check_circle</span>
+                </div>
+                
+                <div class="space-y-2">
+                    <h3 class="font-display text-[24px] font-bold text-on-surface">¡Solicitud Recibida!</h3>
+                    <p class="text-on-surface-variant text-sm max-w-sm mx-auto leading-relaxed">
+                        Muchas gracias <span id="success-user-name" class="font-bold text-primary"></span>. Tu información ha sido registrada correctamente. Un estratega de automatizaciones se pondrá en contacto contigo muy pronto.
+                    </p>
+                </div>
+
+                <button onclick="closeModal()" class="bg-white/5 hover:bg-white/10 border border-white/10 px-8 py-3 rounded-xl font-mono text-[12px] text-on-surface uppercase tracking-wider transition-colors">
+                    Cerrar Ventana
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/56934022106?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20HG%20Growth%20Lab"
+       target="_blank" rel="noopener"
+       aria-label="Contactar por WhatsApp"
+       class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-[0_4px_24px_rgba(37,211,102,0.5)] hover:shadow-[0_4px_32px_rgba(37,211,102,0.8)] transition-all duration-300 hover:scale-110 active:scale-95"
+       style="background:#25d366;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-7 h-7">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Page Logic -->
+    <script>
+        // Adjust navigation header style on scroll
+        const mainNav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                mainNav.classList.add('shadow-xl', 'bg-surface-dim/95', 'py-3');
+                mainNav.classList.remove('bg-surface-dim/80', 'py-4');
+            } else {
+                mainNav.classList.remove('shadow-xl', 'bg-surface-dim/95', 'py-3');
+                mainNav.classList.add('bg-surface-dim/80', 'py-4');
+            }
+        });
+
+        // Toggle Mobile Menu
+        const mobileNavDropdown = document.getElementById('mobile-nav-dropdown');
+        const mobileMenuBtn = id => document.getElementById('mobile-menu-btn');
+        function toggleMobileMenu() {
+            const dropdown = document.getElementById('mobile-nav-dropdown');
+            const icon = document.querySelector('#mobile-menu-btn span');
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                icon.textContent = 'close';
+            } else {
+                dropdown.classList.add('hidden');
+                icon.textContent = 'menu';
+            }
+        }
+
+        // Bento Cards cursor tracking glow effect
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // AI Savings Calculator logic
+        function calculateSavings() {
+            const employees = parseFloat(document.getElementById('employees').value);
+            const hours = parseFloat(document.getElementById('hours').value);
+            const cost = parseFloat(document.getElementById('cost').value);
+
+            // Update UI slider values
+            document.getElementById('employees-val').textContent = employees;
+            document.getElementById('hours-val').textContent = hours + 'h';
+            document.getElementById('cost-val').textContent = '$' + new Intl.NumberFormat('es-CL').format(cost);
+
+            // Calculations
+            // Hours saved per year (assuming 48 working weeks per year, saving 70% of manual task hours through IA automation)
+            const hoursSavedPerYear = Math.round(employees * (hours * 0.70) * 48);
+            // Money saved per year
+            const moneySavedPerYear = Math.round(hoursSavedPerYear * cost);
+            // FTE (Full Time Equivalent - assuming 1920 hours per FTE per year)
+            const fteEquivalent = (hoursSavedPerYear / 1920).toFixed(1);
+
+            // Format numbers (Chilean Peso locale: dots for thousands)
+            const formattedHours = new Intl.NumberFormat('es-CL').format(hoursSavedPerYear) + 'h';
+            const formattedMoney = '$' + new Intl.NumberFormat('es-CL').format(moneySavedPerYear);
+
+            // Update results in UI
+            document.getElementById('res-hours').textContent = formattedHours;
+            document.getElementById('res-money').textContent = formattedMoney;
+            document.getElementById('res-fte').textContent = fteEquivalent;
+        }
+
+        // Initialize Calculator values on page load
+        calculateSavings();
+
+        // ── Testimonial Carousel ──
+        (function () {
+            const track  = document.getElementById('testi-track');
+            const dots   = document.querySelectorAll('.testi-dot');
+            const total  = 4;
+            let current  = 0;
+            let timer;
+
+            function goTo(n) {
+                current = (n + total) % total;
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dots.forEach((d, i) => {
+                    d.classList.toggle('bg-secondary', i === current);
+                    d.classList.toggle('bg-white/20', i !== current);
+                    d.style.transform = i === current ? 'scale(1.3)' : 'scale(1)';
+                });
+            }
+
+            function startAuto() {
+                clearInterval(timer);
+                timer = setInterval(() => goTo(current + 1), 5000);
+            }
+
+            window.testiNext = () => { goTo(current + 1); startAuto(); };
+            window.testiPrev = () => { goTo(current - 1); startAuto(); };
+            window.testiGoto = (n) => { goTo(n); startAuto(); };
+
+            // Pause on hover
+            const overflow = document.getElementById('testi-overflow');
+            overflow.addEventListener('mouseenter', () => clearInterval(timer));
+            overflow.addEventListener('mouseleave', startAuto);
+
+            // Swipe support (touch)
+            let touchStartX = 0;
+            overflow.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            overflow.addEventListener('touchend', e => {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 40) diff > 0 ? testiNext() : testiPrev();
+            });
+
+            startAuto();
+        })();
+
+        // Modal Functionality
+        const contactModal = document.getElementById('contact-modal');
+        const modalCard = document.getElementById('modal-card');
+        const modalFormState = document.getElementById('modal-form-state');
+        const modalSuccessState = document.getElementById('modal-success-state');
+
+        function openModal(defaultService = '') {
+            contactModal.classList.remove('hidden');
+            
+            // Set service dropdown if specified
+            if (defaultService) {
+                const serviceSelect = document.getElementById('form-service');
+                // Select matching option
+                for(let i=0; i<serviceSelect.options.length; i++) {
+                    if(serviceSelect.options[i].value === defaultService) {
+                        serviceSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            // Animate card entrance
+            setTimeout(() => {
+                modalCard.classList.remove('scale-95', 'opacity-0');
+                modalCard.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            // Animate card exit
+            modalCard.classList.add('scale-95', 'opacity-0');
+            modalCard.classList.remove('scale-100', 'opacity-100');
+            
+            setTimeout(() => {
+                contactModal.classList.add('hidden');
+                // Reset form state visibility
+                modalFormState.classList.remove('hidden');
+                modalSuccessState.classList.add('hidden');
+                // Clear input values
+                document.getElementById('form-name').value = '';
+                document.getElementById('form-email').value = '';
+                document.getElementById('form-phone').value = '';
+                document.getElementById('form-message').value = '';
+                document.getElementById('form-service').selectedIndex = 0;
+            }, 300);
+        }
+
+        async function submitForm(event) {
+            event.preventDefault();
+            const userName    = document.getElementById('form-name').value.trim();
+            const userEmail   = document.getElementById('form-email').value.trim();
+            const userPhone   = document.getElementById('form-phone').value.trim();
+            const userService = document.getElementById('form-service').value;
+            const userMessage = document.getElementById('form-message').value.trim();
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn.innerHTML;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Procesando solicitud...
+            `;
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        nombre:   userName,
+                        email:    userEmail,
+                        telefono: userPhone,
+                        servicio: userService,
+                        mensaje:  userMessage || ''
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success === 'true' || data.success === true) {
+                    document.getElementById('success-user-name').textContent = userName;
+                    modalFormState.classList.add('hidden');
+                    modalSuccessState.classList.remove('hidden');
+                } else {
+                    throw new Error('Error al enviar');
+                }
+            } catch (err) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+                alert('Hubo un problema al enviar tu solicitud. Por favor intenta de nuevo o escríbenos directamente.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment — NUNCA subir al repo
+.env
+.env.local
+.env.production
+.env.production.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
