@@ -1102,15 +1102,19 @@
             `;
 
             try {
-                const response = await fetch('/api/contact', {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({
-                        nombre:   userName,
-                        email:    userEmail,
-                        telefono: userPhone,
-                        servicio: userService,
-                        mensaje:  userMessage || ''
+                        access_key: '34deab76-373d-4f25-96d9-160e203cefa8',
+                        subject:    '🚀 Nueva consulta HG Growth Lab — ' + userService,
+                        from_name:  'HG Growth Lab Web',
+                        replyto:    userEmail,
+                        'Nombre':   userName,
+                        'Email':    userEmail,
+                        'Telefono': userPhone,
+                        'Servicio': userService,
+                        'Mensaje':  userMessage || '(sin mensaje)'
                     })
                 });
 
