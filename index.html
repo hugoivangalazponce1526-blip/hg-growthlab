@@ -21,6 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
     <!-- Spline 3D web component viewer -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <!-- Three.js — shader animation en sección servicios -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 
     <!-- Tailwind Configuration matching Stitch Theme -->
     <script id="tailwind-config">
@@ -462,7 +464,22 @@
 
             <!-- Bento Grid Layout -->
             <div class="grid grid-cols-12 gap-gutter">
-                
+
+                <!-- Shader Animation Banner -->
+                <div class="col-span-12 relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_0_40px_rgba(0,71,255,0.1)]" style="height:260px;">
+                    <!-- Three.js canvas target -->
+                    <div id="shader-container" class="absolute inset-0" style="background:#000;"></div>
+                    <!-- Overlay texto de marca -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none px-6 text-center">
+                        <span class="font-mono text-[11px] text-secondary uppercase tracking-widest mb-3">Tecnología avanzada</span>
+                        <h3 class="font-display text-[26px] md:text-[40px] font-bold text-white leading-tight">
+                            Impulsados por <span class="text-gradient">Inteligencia Artificial</span>
+                        </h3>
+                    </div>
+                    <!-- Máscara radial para fundir bordes -->
+                    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 70% at center,transparent 35%,#101415 100%);z-index:5;"></div>
+                </div>
+
                 <!-- Service 1: Automatización de Flujos (Large - Span 8 Desktop, Span 12 Mobile) -->
                 <div class="bento-card col-span-12 lg:col-span-8 p-8 md:p-10 flex flex-col justify-between min-h-[340px] group">
                     <div class="bento-card-glow-border"></div>
@@ -1155,6 +1172,72 @@
             });
 
             startAuto();
+        })();
+
+        // Three.js Shader Animation — sección servicios
+        (function () {
+            const container = document.getElementById('shader-container');
+            if (!container || typeof THREE === 'undefined') return;
+
+            const vertexShader = `
+                void main() { gl_Position = vec4(position, 1.0); }
+            `;
+            const fragmentShader = `
+                #define TWO_PI 6.2831853072
+                precision highp float;
+                uniform vec2 resolution;
+                uniform float time;
+                void main(void) {
+                    vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+                    float t = time * 0.05;
+                    float lineWidth = 0.002;
+                    vec3 color = vec3(0.0);
+                    for(int j = 0; j < 3; j++){
+                        for(int i = 0; i < 5; i++){
+                            color[j] += lineWidth * float(i * i) / abs(fract(t - 0.01 * float(j) + float(i) * 0.01) * 5.0 - length(uv) + mod(uv.x + uv.y, 0.2));
+                        }
+                    }
+                    gl_FragColor = vec4(color[0], color[1], color[2], 1.0);
+                }
+            `;
+
+            const camera = new THREE.Camera();
+            camera.position.z = 1;
+            const scene = new THREE.Scene();
+            const geometry = new THREE.PlaneGeometry(2, 2);
+            const uniforms = {
+                time:       { type: 'f',  value: 1.0 },
+                resolution: { type: 'v2', value: new THREE.Vector2() }
+            };
+            const material = new THREE.ShaderMaterial({ uniforms, vertexShader, fragmentShader });
+            scene.add(new THREE.Mesh(geometry, material));
+
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            container.appendChild(renderer.domElement);
+
+            const resize = () => {
+                const w = container.clientWidth, h = container.clientHeight;
+                renderer.setSize(w, h);
+                uniforms.resolution.value.set(renderer.domElement.width, renderer.domElement.height);
+            };
+            resize();
+            window.addEventListener('resize', resize);
+
+            let animId, running = false;
+            const animate = () => {
+                animId = requestAnimationFrame(animate);
+                uniforms.time.value += 0.05;
+                renderer.render(scene, camera);
+            };
+
+            // Solo animar cuando es visible (performance)
+            new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting && !running) { running = true;  animate(); }
+                    else if (!e.isIntersecting && running) { running = false; cancelAnimationFrame(animId); }
+                });
+            }, { threshold: 0.1 }).observe(container);
         })();
 
         // Spline: ocultar loader al cargar + spotlight mouse-tracking
