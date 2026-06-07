@@ -453,32 +453,24 @@
 
         <!-- Services Section (Bento Grid) -->
         <section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto scroll-mt-20" id="servicios">
-            <!-- Section Header -->
-            <div class="flex flex-col items-center mb-16 text-center">
-                <span class="font-mono text-secondary text-[12px] uppercase tracking-widest mb-3">Nuestras Soluciones</span>
-                <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-on-surface tracking-tight">
-                    Lo que hacemos por tu negocio
-                </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mt-6 rounded-full"></div>
+            <!-- Section Header con Shader de fondo -->
+            <div class="relative mb-16 text-center overflow-hidden rounded-3xl" style="height:240px;">
+                <!-- Three.js shader canvas -->
+                <div id="shader-container" class="absolute inset-0" style="background:#000;"></div>
+                <!-- Máscara radial — funde bordes con el fondo de la página -->
+                <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 70% at center,transparent 30%,#101415 100%);z-index:5;"></div>
+                <!-- Texto encima del shader -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-6">
+                    <span class="font-mono text-secondary text-[12px] uppercase tracking-widest mb-3">Nuestras Soluciones</span>
+                    <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-on-surface tracking-tight">
+                        Lo que hacemos por tu negocio
+                    </h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mt-6 rounded-full"></div>
+                </div>
             </div>
 
             <!-- Bento Grid Layout -->
             <div class="grid grid-cols-12 gap-gutter">
-
-                <!-- Shader Animation Banner -->
-                <div class="col-span-12 relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_0_40px_rgba(0,71,255,0.1)]" style="height:260px;">
-                    <!-- Three.js canvas target -->
-                    <div id="shader-container" class="absolute inset-0" style="background:#000;"></div>
-                    <!-- Overlay texto de marca -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none px-6 text-center">
-                        <span class="font-mono text-[11px] text-secondary uppercase tracking-widest mb-3">Tecnología avanzada</span>
-                        <h3 class="font-display text-[26px] md:text-[40px] font-bold text-white leading-tight">
-                            Impulsados por <span class="text-gradient">Inteligencia Artificial</span>
-                        </h3>
-                    </div>
-                    <!-- Máscara radial para fundir bordes -->
-                    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 70% at center,transparent 35%,#101415 100%);z-index:5;"></div>
-                </div>
 
                 <!-- Service 1: Automatización de Flujos (Large - Span 8 Desktop, Span 12 Mobile) -->
                 <div class="bento-card col-span-12 lg:col-span-8 p-8 md:p-10 flex flex-col justify-between min-h-[340px] group">
