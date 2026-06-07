@@ -469,47 +469,44 @@
                 </div>
             </div>
 
-            <!-- Bento Grid Layout -->
-            <div class="grid grid-cols-12 gap-gutter">
+            <!-- Bento Grid Layout — Fila 1: Feature (8) + Card (4) | Fila 2: 3 cards iguales (4+4+4) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
 
-                <!-- Service 1: Automatización de Flujos (Large - Span 8 Desktop, Span 12 Mobile) -->
-                <div class="bento-card col-span-12 lg:col-span-8 p-8 md:p-10 flex flex-col justify-between min-h-[340px] group">
+                <!-- Service 1: Automatización de Flujos — Feature card grande -->
+                <div class="bento-card lg:col-span-8 p-8 md:p-10 flex flex-col justify-between min-h-[320px] group">
                     <div class="bento-card-glow-border"></div>
-                    <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start justify-between">
-                        <div class="max-w-xl">
-                            <!-- Icon Box -->
-                            <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:border-primary/50 transition-colors">
-                                <span class="material-symbols-outlined text-primary text-[32px]">account_tree</span>
+                    <div class="relative z-10">
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0">
+                                <span class="material-symbols-outlined text-primary text-[26px]">account_tree</span>
                             </div>
-                            <h3 class="font-display text-[26px] md:text-[32px] font-bold text-on-surface mb-4">
-                                Automatización de Flujos
-                            </h3>
-                            <p class="text-on-surface-variant font-sans leading-relaxed text-[16px] md:text-[18px]">
-                                Conectamos tus aplicaciones y automatizamos las tareas que te quitan tiempo: respuestas, agendas, seguimientos. Tú te enfocas en atender, nosotros hacemos el resto.
-                            </p>
+                            <span class="font-mono text-[10px] text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full uppercase tracking-wider hidden sm:inline-block">
+                                Ahorra horas cada semana
+                            </span>
                         </div>
-                        <!-- Decorative Tech Badge -->
-                        <span class="font-mono text-[10px] text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full uppercase tracking-wider hidden md:inline-block">
-                            Ahorra horas cada semana
-                        </span>
+                        <h3 class="font-display text-[24px] md:text-[28px] font-bold text-on-surface mb-3">
+                            Automatización de Flujos
+                        </h3>
+                        <p class="text-on-surface-variant font-sans leading-relaxed text-[15px] md:text-[16px] max-w-lg">
+                            Conectamos tus aplicaciones y automatizamos las tareas que te quitan tiempo: respuestas, agendas, seguimientos. Tú te enfocas en atender, nosotros hacemos el resto.
+                        </p>
                     </div>
                     <div class="relative z-10 mt-8 pt-4 flex justify-between items-center border-t border-white/5">
                         <span class="text-xs text-on-surface-variant font-mono uppercase tracking-widest">Más tiempo para tu negocio</span>
                         <button onclick="openModal('Automatización de Flujos')" class="text-primary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
-                            Saber Más
-                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            Saber Más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 2: Chatbots Inteligentes (Small - Span 4 Desktop, Span 12 Mobile) -->
-                <div class="bento-card col-span-12 md:col-span-6 lg:col-span-4 p-8 flex flex-col justify-between min-h-[340px] group">
+                <!-- Service 2: Chatbots Inteligentes -->
+                <div class="bento-card lg:col-span-4 p-8 flex flex-col justify-between min-h-[320px] group">
                     <div class="bento-card-glow-border"></div>
                     <div class="relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center mb-8 group-hover:border-secondary/50 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-secondary/10 border border-secondary/20 flex items-center justify-center mb-6 group-hover:border-secondary/50 transition-colors">
                             <span class="material-symbols-outlined text-secondary text-[26px]">smart_toy</span>
                         </div>
-                        <h3 class="font-display text-[22px] md:text-[24px] font-bold text-on-surface mb-3 leading-tight">
+                        <h3 class="font-display text-[22px] font-bold text-on-surface mb-3 leading-tight">
                             Chatbots Inteligentes
                         </h3>
                         <p class="text-on-surface-variant text-[15px] leading-relaxed">
@@ -519,20 +516,19 @@
                     <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
                         <span class="text-xs text-on-surface-variant font-mono">Responde 24/7</span>
                         <button onclick="openModal('Chatbots Inteligentes')" class="text-secondary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
-                            Solicitar
-                            <span class="material-symbols-outlined text-[16px]">add</span>
+                            Solicitar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 3: Resultados Medibles (Small - Span 4 Desktop, Span 12 Mobile) -->
-                <div class="bento-card col-span-12 md:col-span-6 lg:col-span-4 p-8 flex flex-col justify-between min-h-[340px] group">
+                <!-- Service 3: Resultados Medibles -->
+                <div class="bento-card lg:col-span-4 p-8 flex flex-col justify-between min-h-[300px] group">
                     <div class="bento-card-glow-border"></div>
                     <div class="relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 group-hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
                             <span class="material-symbols-outlined text-primary text-[26px]">monitoring</span>
                         </div>
-                        <h3 class="font-display text-[22px] md:text-[24px] font-bold text-on-surface mb-3 leading-tight">
+                        <h3 class="font-display text-[22px] font-bold text-on-surface mb-3 leading-tight">
                             Resultados Medibles
                         </h3>
                         <p class="text-on-surface-variant text-[15px] leading-relaxed">
@@ -542,25 +538,24 @@
                     <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
                         <span class="text-xs text-on-surface-variant font-mono">Reportes claros</span>
                         <button onclick="openModal('Resultados Medibles')" class="text-primary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
-                            Explorar
-                            <span class="material-symbols-outlined text-[16px]">add</span>
+                            Explorar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 4: Desarrollo Web (Medium - Span 6 Desktop, Span 12 Mobile) -->
-                <div class="bento-card col-span-12 md:col-span-6 p-8 flex flex-col justify-between min-h-[320px] group">
+                <!-- Service 4: Desarrollo Web -->
+                <div class="bento-card lg:col-span-4 p-8 flex flex-col justify-between min-h-[300px] group">
                     <div class="bento-card-glow-border"></div>
                     <div class="relative z-10">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center group-hover:border-primary/30 transition-colors">
-                                <span class="material-symbols-outlined text-on-surface text-[30px]">code_blocks</span>
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center group-hover:border-primary/30 transition-colors shrink-0">
+                                <span class="material-symbols-outlined text-on-surface text-[26px]">code_blocks</span>
                             </div>
-                            <span class="font-mono text-[10px] text-primary-fixed-dim bg-primary-fixed-dim/15 px-3 py-1.5 rounded-full border border-primary-fixed-dim/35 uppercase tracking-wider font-semibold">
+                            <span class="font-mono text-[10px] text-primary-fixed-dim bg-primary-fixed-dim/15 px-3 py-1.5 rounded-full border border-primary-fixed-dim/35 uppercase tracking-wider font-semibold hidden sm:inline-block">
                                 Desde $80.000 CLP
                             </span>
                         </div>
-                        <h3 class="font-display text-[24px] md:text-[28px] font-bold text-on-surface mb-4">
+                        <h3 class="font-display text-[22px] font-bold text-on-surface mb-3">
                             Desarrollo Web
                         </h3>
                         <p class="text-on-surface-variant text-[15px] leading-relaxed">
@@ -570,25 +565,24 @@
                     <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
                         <span class="text-xs text-on-surface-variant font-mono">Pago único</span>
                         <button onclick="openModal('Desarrollo Web')" class="text-on-surface hover:text-primary font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
-                            Agendar
-                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            Agendar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 5: Escalado en Meta Ads (Medium - Span 6 Desktop, Span 12 Mobile) -->
-                <div class="bento-card col-span-12 md:col-span-6 p-8 flex flex-col justify-between min-h-[320px] group">
+                <!-- Service 5: Escalado en Meta Ads -->
+                <div class="bento-card lg:col-span-4 p-8 flex flex-col justify-between min-h-[300px] group">
                     <div class="bento-card-glow-border"></div>
                     <div class="relative z-10">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center group-hover:border-secondary/30 transition-colors">
-                                <span class="material-symbols-outlined text-secondary text-[30px]">ads_click</span>
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center group-hover:border-secondary/30 transition-colors shrink-0">
+                                <span class="material-symbols-outlined text-secondary text-[26px]">ads_click</span>
                             </div>
-                            <span class="font-mono text-[10px] text-secondary bg-secondary/15 px-3 py-1.5 rounded-full border border-secondary/35 uppercase tracking-wider font-semibold">
+                            <span class="font-mono text-[10px] text-secondary bg-secondary/15 px-3 py-1.5 rounded-full border border-secondary/35 uppercase tracking-wider font-semibold hidden sm:inline-block">
                                 ROI Focus
                             </span>
                         </div>
-                        <h3 class="font-display text-[24px] md:text-[28px] font-bold text-on-surface mb-4">
+                        <h3 class="font-display text-[22px] font-bold text-on-surface mb-3">
                             Escalado en Meta Ads
                         </h3>
                         <p class="text-on-surface-variant text-[15px] leading-relaxed">
@@ -598,8 +592,7 @@
                     <div class="relative z-10 mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
                         <span class="text-xs text-on-surface-variant font-mono">Más clientes locales</span>
                         <button onclick="openModal('Escalado en Meta Ads')" class="text-secondary hover:text-white font-mono text-[12px] uppercase tracking-wider flex items-center gap-1 transition-all">
-                            Comenzar
-                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            Comenzar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </button>
                     </div>
                 </div>
