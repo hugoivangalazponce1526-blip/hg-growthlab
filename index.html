@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
     <!-- tsParticles slim — sparkles hero (vanilla JS, sin React) -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
+    <!-- Spline 3D web component viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
 
     <!-- Tailwind Configuration matching Stitch Theme -->
     <script id="tailwind-config">
@@ -129,6 +131,44 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+        /* Spotlight SVG entrance animation */
+        @keyframes spotlight {
+            0%   { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
+            100% { opacity: 1; transform: translate(-50%, -40%) scale(1); }
+        }
+        .animate-spotlight { animation: spotlight 2s ease 0.3s forwards; }
+
+        /* Mouse-following spotlight glow */
+        .spline-card-spotlight {
+            position: absolute;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at center, rgba(185,195,255,0.12) 0%, rgba(0,71,255,0.06) 40%, transparent 70%);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.2s ease;
+            opacity: 0;
+            z-index: 2;
+        }
+        .spline-card:hover .spline-card-spotlight { opacity: 1; }
+
+        /* Spline scene loader */
+        .spline-loader {
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 3; transition: opacity 0.4s ease;
+        }
+        .spline-loader.hidden { opacity: 0; pointer-events: none; }
+        .loader {
+            width: 36px; height: 36px;
+            border: 3px solid rgba(185,195,255,0.15);
+            border-top-color: rgba(201,168,76,0.9);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
         /* Hero emblem pulse glow on hover */
         @keyframes emblem-glow-pulse {
@@ -322,9 +362,50 @@
         
         <!-- Hero Section -->
         <section class="relative px-margin-mobile md:px-margin-desktop py-16 md:py-28 max-w-container-max mx-auto flex flex-col items-center text-center overflow-hidden" id="inicio">
-            <!-- Brand Emblem Container with dynamic glow -->
-            <div class="mb-8 p-5 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-[0_0_50px_rgba(0,71,255,0.15)] flex justify-center items-center">
-                <img alt="HG Growth Lab Emblem" class="h-28 md:h-36 w-auto object-contain emblem-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQvfnfo7qRMSB2aL1JQO8w-xoP1zkZ4jJ-ZOukSjwlSIFijTSsfpKx_WUBURuqCVXC43G47YUdOSMUC41rMFrNufXP4sOa1P5TzM2I5T9KBCrSFrNQ9XAJFwo8dKG7BXKXs8Z4m4RABOYoIngzzVwollo_3JzQBH8zoZ5mkz71HxN0mhkfcovs6Xj3BCZ2zdOYlm8SAtfW2eeMutZZ1UKvVyegzjXSf5e6aqC2nsWs4_ltS2UUVL1tpRYi5PK6BEhByNBO8kpzA"/>
+            <!-- Hero Card: Emblem + Spline 3D (layout tipo demo 21st.dev) -->
+            <div class="spline-card mb-10 w-full max-w-3xl relative overflow-hidden rounded-3xl border border-white/10 bg-black/[0.96] shadow-[0_0_60px_rgba(0,71,255,0.18)]" style="height:360px;">
+                <!-- Spotlight SVG (aceternity style, color primario de marca) -->
+                <svg class="animate-spotlight pointer-events-none absolute z-[1] h-[169%] w-[138%] opacity-0 -top-40 left-0 md:left-40 md:-top-20"
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
+                    <g filter="url(#sp-filter)">
+                        <ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501"
+                            transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
+                            fill="#b9c3ff" fill-opacity="0.18"/>
+                    </g>
+                    <defs>
+                        <filter id="sp-filter" x="0.86" y="0.84" width="3785.16" height="2840.26"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur"/>
+                        </filter>
+                    </defs>
+                </svg>
+                <!-- Mouse spotlight (ibelick style) -->
+                <div class="spline-card-spotlight" id="hero-spotlight"></div>
+
+                <div class="flex h-full">
+                    <!-- Izquierda: logo HG -->
+                    <div class="flex-1 flex flex-col items-center justify-center p-8 relative z-10 gap-3">
+                        <img alt="HG Growth Lab Emblem"
+                             class="h-32 md:h-40 w-auto object-contain emblem-hover"
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQvfnfo7qRMSB2aL1JQO8w-xoP1zkZ4jJ-ZOukSjwlSIFijTSsfpKx_WUBURuqCVXC43G47YUdOSMUC41rMFrNufXP4sOa1P5TzM2I5T9KBCrSFrNQ9XAJFwo8dKG7BXKXs8Z4m4RABOYoIngzzVwollo_3JzQBH8zoZ5mkz71HxN0mhkfcovs6Xj3BCZ2zdOYlm8SAtfW2eeMutZZ1UKvVyegzjXSf5e6aqC2nsWs4_ltS2UUVL1tpRYi5PK6BEhByNBO8kpzA"/>
+                        <span class="font-mono text-[11px] text-secondary uppercase tracking-widest opacity-70">HG Growth Lab</span>
+                    </div>
+                    <!-- Separador vertical sutil -->
+                    <div class="w-px bg-gradient-to-b from-transparent via-white/10 to-transparent self-stretch my-6"></div>
+                    <!-- Derecha: Spline 3D scene -->
+                    <div class="flex-1 relative overflow-hidden">
+                        <div class="spline-loader" id="spline-loader">
+                            <span class="loader"></span>
+                        </div>
+                        <spline-viewer
+                            url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                            style="position:absolute;inset:0;width:100%;height:100%;"
+                            id="spline-scene"
+                        ></spline-viewer>
+                    </div>
+                </div>
             </div>
 
             <!-- Accent Label -->
@@ -1074,6 +1155,29 @@
             });
 
             startAuto();
+        })();
+
+        // Spline: ocultar loader al cargar + spotlight mouse-tracking
+        (function () {
+            const scene    = document.getElementById('spline-scene');
+            const loader   = document.getElementById('spline-loader');
+            const card     = document.querySelector('.spline-card');
+            const spot     = document.getElementById('hero-spotlight');
+
+            // Ocultar spinner al cargar la escena
+            if (scene && loader) {
+                scene.addEventListener('load', () => loader.classList.add('hidden'), { once: true });
+                setTimeout(() => loader && loader.classList.add('hidden'), 9000);
+            }
+
+            // Spotlight sigue al mouse dentro de la card
+            if (card && spot) {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    spot.style.left = (e.clientX - rect.left) + 'px';
+                    spot.style.top  = (e.clientY - rect.top)  + 'px';
+                });
+            }
         })();
 
         // Sparkles hero — partículas doradas detrás del título
