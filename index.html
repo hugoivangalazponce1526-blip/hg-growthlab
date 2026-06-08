@@ -4,6 +4,13 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>HG Growth Lab - Automatiza tu Futuro con IA</title>
+    <meta name="description" content="HG Growth Lab — Agencia digital chilena. Creamos páginas web, gestionamos Meta Ads y automatizamos tu negocio con IA. Más clientes, más ventas.">
+    <meta name="theme-color" content="#101415">
+    <meta property="og:title" content="HG Growth Lab — Automatiza tu Futuro con IA">
+    <meta property="og:description" content="Creamos tu página web, gestionamos tus anuncios en Meta y automatizamos tu negocio con IA. Más clientes, más ventas, sin complicaciones.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hg-growthlab.cl">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Favicon: Logo de la marca -->
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4GDSG-Ng0zzRbW3zjAyctDNwmmPMnFWWYO6KDyfVFqpWrq7l2NDsBszgR6AHv55HU4Epax9xhdxDmJ6QTvl2KAPnK6ddZ9aXoDpnhQI_3mCk5_5plMYs6RPG2YwReMveuhXwmYiz6Y8g2kD-2FXh0_XrJPIa5PVjyaRt8sWVP6s_WakPybpsU1ovrRhNJlYWqS44ztqtYaOJPEY75sKN6q5S4ZS2vTfqYG1b_b899fLUZBcmIVDxRb4vmUld2hClb4AyxoXIEA">
     <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4GDSG-Ng0zzRbW3zjAyctDNwmmPMnFWWYO6KDyfVFqpWrq7l2NDsBszgR6AHv55HU4Epax9xhdxDmJ6QTvl2KAPnK6ddZ9aXoDpnhQI_3mCk5_5plMYs6RPG2YwReMveuhXwmYiz6Y8g2kD-2FXh0_XrJPIa5PVjyaRt8sWVP6s_WakPybpsU1ovrRhNJlYWqS44ztqtYaOJPEY75sKN6q5S4ZS2vTfqYG1b_b899fLUZBcmIVDxRb4vmUld2hClb4AyxoXIEA">
@@ -291,12 +298,13 @@
             height: 6px;
             border-radius: 9999px;
             outline: none;
+            touch-action: pan-x;
         }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 18px;
-            height: 18px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             background: #0047ff;
             cursor: pointer;
@@ -305,6 +313,35 @@
         }
         input[type="range"]::-webkit-slider-thumb:hover {
             transform: scale(1.2);
+        }
+        /* Larger touch target on mobile */
+        @media (hover: none) and (pointer: coarse) {
+            input[type="range"]::-webkit-slider-thumb {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        /* Reduce animations for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-float-1, .animate-float-2,
+            .animate-spotlight, .emblem-hover:hover,
+            .logo-spin:hover {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Hero card: stack vertically on mobile */
+        @media (max-width: 767px) {
+            .hero-split { flex-direction: column; }
+            .hero-split-divider { display: none; }
+            .hero-spline-col { display: none; }
+        }
+
+        /* Fast tap — remove 300ms delay on touch */
+        button, a, input[type="range"] {
+            touch-action: manipulation;
         }
     </style>
 </head>
@@ -368,7 +405,7 @@
         <!-- Hero Section -->
         <section class="relative px-margin-mobile md:px-margin-desktop py-16 md:py-28 max-w-container-max mx-auto flex flex-col items-center text-center overflow-hidden" id="inicio">
             <!-- Hero Card: Emblem + Spline 3D (layout tipo demo 21st.dev) -->
-            <div class="spline-card mb-10 w-full max-w-3xl relative overflow-hidden rounded-3xl border border-white/10 bg-black/[0.96] shadow-[0_0_60px_rgba(0,71,255,0.18)]" style="height:360px;">
+            <div class="spline-card mb-10 w-full max-w-3xl relative overflow-hidden rounded-3xl border border-white/10 bg-black/[0.96] shadow-[0_0_60px_rgba(0,71,255,0.18)]" style="height:360px;min-height:220px;">
                 <!-- Spotlight SVG (aceternity style, color primario de marca) -->
                 <svg class="animate-spotlight pointer-events-none absolute z-[1] h-[169%] w-[138%] opacity-0 -top-40 left-0 md:left-40 md:-top-20"
                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
@@ -389,18 +426,19 @@
                 <!-- Mouse spotlight (ibelick style) -->
                 <div class="spline-card-spotlight" id="hero-spotlight"></div>
 
-                <div class="flex h-full">
+                <div class="hero-split flex h-full">
                     <!-- Izquierda: logo HG -->
-                    <div class="flex-1 flex flex-col items-center justify-center p-8 relative z-10 gap-3">
+                    <div class="flex-1 flex flex-col items-center justify-center p-6 md:p-8 relative z-10 gap-3">
                         <img alt="HG Growth Lab Emblem"
-                             class="h-32 md:h-40 w-auto object-contain emblem-hover"
-                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQvfnfo7qRMSB2aL1JQO8w-xoP1zkZ4jJ-ZOukSjwlSIFijTSsfpKx_WUBURuqCVXC43G47YUdOSMUC41rMFrNufXP4sOa1P5TzM2I5T9KBCrSFrNQ9XAJFwo8dKG7BXKXs8Z4m4RABOYoIngzzVwollo_3JzQBH8zoZ5mkz71HxN0mhkfcovs6Xj3BCZ2zdOYlm8SAtfW2eeMutZZ1UKvVyegzjXSf5e6aqC2nsWs4_ltS2UUVL1tpRYi5PK6BEhByNBO8kpzA"/>
+                             class="h-28 md:h-40 w-auto object-contain emblem-hover"
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUQvfnfo7qRMSB2aL1JQO8w-xoP1zkZ4jJ-ZOukSjwlSIFijTSsfpKx_WUBURuqCVXC43G47YUdOSMUC41rMFrNufXP4sOa1P5TzM2I5T9KBCrSFrNQ9XAJFwo8dKG7BXKXs8Z4m4RABOYoIngzzVwollo_3JzQBH8zoZ5mkz71HxN0mhkfcovs6Xj3BCZ2zdOYlm8SAtfW2eeMutZZ1UKvVyegzjXSf5e6aqC2nsWs4_ltS2UUVL1tpRYi5PK6BEhByNBO8kpzA"
+                             loading="eager"/>
                         <span class="font-mono text-[11px] text-secondary uppercase tracking-widest opacity-70">HG Growth Lab</span>
                     </div>
-                    <!-- Separador vertical sutil -->
-                    <div class="w-px bg-gradient-to-b from-transparent via-white/10 to-transparent self-stretch my-6"></div>
-                    <!-- Derecha: Spline 3D scene -->
-                    <div class="flex-1 relative overflow-hidden">
+                    <!-- Separador vertical sutil (oculto en móvil via CSS .hero-split-divider) -->
+                    <div class="hero-split-divider w-px bg-gradient-to-b from-transparent via-white/10 to-transparent self-stretch my-6"></div>
+                    <!-- Derecha: Spline 3D scene (oculto en móvil via CSS .hero-spline-col) -->
+                    <div class="hero-spline-col flex-1 relative overflow-hidden">
                         <div class="spline-loader" id="spline-loader">
                             <span class="loader"></span>
                         </div>
@@ -430,7 +468,7 @@
                 <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent pointer-events-none" style="z-index:1;"></div>
                 <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-2/5 h-[4px] bg-gradient-to-r from-transparent via-[#b9c3ff] to-transparent blur-sm pointer-events-none" style="z-index:1;"></div>
                 <!-- Título -->
-                <h1 class="font-display text-[44px] md:text-[72px] font-extrabold text-on-surface max-w-5xl tracking-tight leading-[1.1] relative py-4" style="z-index:2;">
+                <h1 class="font-display text-[34px] sm:text-[44px] md:text-[72px] font-extrabold text-on-surface max-w-5xl tracking-tight leading-[1.1] relative py-4" style="z-index:2;">
                     Automatiza tu Futuro con <span class="text-gradient">IA</span>
                 </h1>
                 <!-- Máscara radial para bordes suaves -->
@@ -438,7 +476,7 @@
             </div>
 
             <!-- Subtitle Description -->
-            <p class="font-sans text-[18px] md:text-[22px] text-on-surface-variant max-w-3xl mb-12 font-light leading-relaxed">
+            <p class="font-sans text-[16px] md:text-[22px] text-on-surface-variant max-w-3xl mb-12 font-light leading-relaxed">
                 Creamos tu página web, gestionamos tus anuncios en Meta y automatizamos tu negocio con IA. Más clientes, más ventas, sin complicaciones.
             </p>
 
@@ -457,7 +495,7 @@
         <!-- Services Section (Bento Grid) -->
         <section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto scroll-mt-20" id="servicios">
             <!-- Section Header con Shader de fondo -->
-            <div class="relative mb-16 text-center overflow-hidden rounded-3xl" style="height:240px;">
+            <div class="relative mb-16 text-center overflow-hidden rounded-3xl" style="min-height:200px;height:clamp(180px,30vw,240px);">
                 <!-- Three.js shader canvas -->
                 <div id="shader-container" class="absolute inset-0" style="background:#000;"></div>
                 <!-- Máscara radial — funde bordes con el fondo de la página -->
@@ -609,7 +647,7 @@
                 <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-[80px] pointer-events-none"></div>
                 <div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     <!-- Left Column: Intro & Sliders -->
                     <div class="lg:col-span-7">
@@ -747,7 +785,7 @@
                             </blockquote>
                             <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                                 <div class="flex items-center gap-4">
-                                    <img src="logo-cascada.png" alt="Cascada Restobar" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]">
+                                    <img src="logo-cascada.png" alt="Cascada Restobar" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]" loading="lazy">
                                     <div>
                                         <p class="font-display font-bold text-on-surface text-[17px]">Cascada Restobar</p>
                                         <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Molina, Región del Maule</p>
@@ -773,7 +811,7 @@
                             </blockquote>
                             <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                                 <div class="flex items-center gap-4">
-                                    <img src="logo-sobreruedas.png" alt="Sobreruedas Park" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]">
+                                    <img src="logo-sobreruedas.png" alt="Sobreruedas Park" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]" loading="lazy">
                                     <div>
                                         <p class="font-display font-bold text-on-surface text-[17px]">Sobreruedas Park</p>
                                         <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Molina, Región del Maule</p>
@@ -827,7 +865,7 @@
                             </blockquote>
                             <div class="relative z-10 border-t border-secondary/20 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                                 <div class="flex items-center gap-4">
-                                    <img src="logo-cascada.png" alt="Cascada Restobar" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]">
+                                    <img src="logo-cascada.png" alt="Cascada Restobar" class="w-14 h-14 rounded-full object-cover border-2 border-secondary/50 shadow-[0_0_14px_rgba(233,195,73,0.25)]" loading="lazy">
                                     <div>
                                         <p class="font-display font-bold text-on-surface text-[17px]">Cascada Restobar</p>
                                         <p class="font-mono text-xs text-on-surface-variant mt-0.5">📍 Molina, Región del Maule</p>
@@ -897,7 +935,7 @@
 
         <!-- Call To Action Section -->
         <section class="px-margin-mobile md:px-margin-desktop py-16 md:py-24 max-w-container-max mx-auto text-center relative">
-            <div class="relative bg-gradient-to-br from-surface-container-high via-surface-container-highest to-surface-dim border border-primary/20 rounded-3xl p-10 md:p-20 overflow-hidden shadow-2xl">
+            <div class="relative bg-gradient-to-br from-surface-container-high via-surface-container-highest to-surface-dim border border-primary/20 rounded-3xl p-8 md:p-20 overflow-hidden shadow-2xl">
                 <!-- Glowing atmospheric backdrop -->
                 <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none"></div>
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -1410,9 +1448,13 @@
 
         // ── Circuit board background animation ──
         (function () {
+            // Skip animation if user prefers reduced motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
             const canvas = document.getElementById('circuit-canvas');
             const ctx    = canvas.getContext('2d');
-            const GRID   = 80;
+            const isMobile = window.innerWidth < 768;
+            const GRID   = isMobile ? 110 : 80;   // sparser grid on mobile
             const R = 0, G = 120, B = 255; // electric blue
 
             let W, H, cols, rows, hEdges, vEdges, nodes, signals;
@@ -1447,7 +1489,8 @@
                     }
                 }
 
-                for (let i = 0; i < 12; i++) spawnSignal();
+                const signalCount = isMobile ? 5 : 12;
+                for (let i = 0; i < signalCount; i++) spawnSignal();
             }
 
             function spawnSignal() {
@@ -1474,7 +1517,15 @@
                 buildLayout();
             }
 
-            function draw() {
+            // Throttle to 30fps on mobile to save battery
+            const FPS_LIMIT = isMobile ? 30 : 60;
+            const FRAME_MS  = 1000 / FPS_LIMIT;
+            let lastFrame   = 0;
+
+            function draw(ts) {
+                requestAnimationFrame(draw);
+                if (ts - lastFrame < FRAME_MS) return;
+                lastFrame = ts;
                 ctx.clearRect(0, 0, W, H);
 
                 // Edges
@@ -1584,12 +1635,11 @@
                     }
                 });
 
-                requestAnimationFrame(draw);
             }
 
             window.addEventListener('resize', resize);
             resize();
-            draw();
+            requestAnimationFrame(draw);
         })();
     </script>
 </body>
