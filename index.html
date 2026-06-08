@@ -332,7 +332,7 @@
             <nav class="hidden md:flex gap-8 items-center">
                 <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#inicio">Inicio</a>
                 <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#servicios">Servicios</a>
-                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#calculadora">Calculadora de Ahorro</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-medium" href="#calculadora">Simulador Meta Ads</a>
             </nav>
 
             <!-- Nav Action Buttons -->
@@ -353,7 +353,7 @@
         <div class="hidden md:hidden absolute w-full left-0 bg-surface-dim/95 backdrop-blur-2xl border-b border-white/10 px-6 py-8 flex flex-col gap-6 shadow-2xl transition-all duration-300" id="mobile-nav-dropdown">
             <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#inicio">Inicio</a>
             <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#servicios">Servicios</a>
-            <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#calculadora">Calculadora de Ahorro</a>
+            <a onclick="toggleMobileMenu()" class="text-lg text-on-surface hover:text-secondary border-b border-white/5 pb-2" href="#calculadora">Simulador Meta Ads</a>
             <button onclick="toggleMobileMenu(); openModal();" class="w-full bg-primary-container text-white py-4 rounded-xl font-bold uppercase tracking-wider text-sm transition-all duration-300">
                 Agendar Consultoría
             </button>
@@ -600,89 +600,110 @@
             </div>
         </section>
 
-        <!-- AI Savings Interactive Calculator Section -->
+        <!-- Meta Ads ROI Interactive Calculator Section -->
         <section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto scroll-mt-20" id="calculadora">
             <div class="bg-gradient-to-br from-surface-container-low to-surface-dim border border-white/10 rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.4)]">
-                <!-- Inner soft radial gradient glow -->
                 <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-[80px] pointer-events-none"></div>
                 <div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary/5 rounded-full blur-[80px] pointer-events-none"></div>
 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Left Column: Intro & Interactive Sliders -->
+
+                    <!-- Left Column: Intro & Sliders -->
                     <div class="lg:col-span-7">
-                        <span class="font-mono text-primary text-[12px] uppercase tracking-widest font-semibold block mb-3">ROI estimador</span>
+                        <span class="font-mono text-primary text-[12px] uppercase tracking-widest font-semibold block mb-3">Simulador Meta Ads</span>
                         <h2 class="font-display text-[28px] md:text-[40px] font-extrabold text-on-surface mb-6 leading-tight">
-                            Calcula tu ahorro mensual con Automatización e IA
+                            ¿Cuánto estás dejando de ganar en Meta?
                         </h2>
                         <p class="text-on-surface-variant font-sans mb-10 text-[15px] md:text-[16px] leading-relaxed max-w-xl">
-                            Ajusta los controles deslizantes para estimar la cantidad de tiempo y costos que podrías optimizar delegando flujos repetitivos a agentes autónomos de IA.
+                            Ingresa tu presupuesto actual y el costo por resultado que estás pagando. Te mostramos el alcance y leads que podrías lograr con campañas bien optimizadas.
                         </p>
 
-                        <!-- Sliders list -->
                         <div class="space-y-8">
-                            <!-- Slider 1: Number of Employees -->
+                            <!-- Slider 1: Monthly Budget -->
                             <div class="space-y-3">
                                 <div class="flex justify-between items-center">
-                                    <label class="text-[15px] font-semibold text-on-surface" for="employees">
-                                        Número de empleados afectados
+                                    <label class="text-[15px] font-semibold text-on-surface" for="meta-budget">
+                                        Presupuesto mensual en Meta Ads
                                     </label>
-                                    <span class="font-mono text-primary font-bold text-[16px]" id="employees-val">10</span>
+                                    <span class="font-mono text-primary font-bold text-[16px]" id="meta-budget-val">$300.000</span>
                                 </div>
-                                <input type="range" min="1" max="100" value="10" class="w-full" id="employees" oninput="calculateSavings()">
+                                <input type="range" min="50000" max="3000000" value="300000" step="10000" class="w-full" id="meta-budget" oninput="calculateMeta()">
+                                <div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+                                    <span>$50.000</span><span>$3.000.000</span>
+                                </div>
                             </div>
 
-                            <!-- Slider 2: Hours spent in manual tasks -->
+                            <!-- Slider 2: Current CPL -->
                             <div class="space-y-3">
                                 <div class="flex justify-between items-center">
-                                    <label class="text-[15px] font-semibold text-on-surface" for="hours">
-                                        Horas semanales por empleado en tareas manuales
+                                    <label class="text-[15px] font-semibold text-on-surface" for="meta-cpl">
+                                        Costo por lead / resultado actual (CPL)
                                     </label>
-                                    <span class="font-mono text-primary font-bold text-[16px]" id="hours-val">15h</span>
+                                    <span class="font-mono text-primary font-bold text-[16px]" id="meta-cpl-val">$25.000</span>
                                 </div>
-                                <input type="range" min="2" max="40" value="15" class="w-full" id="hours" oninput="calculateSavings()">
+                                <input type="range" min="2000" max="150000" value="25000" step="1000" class="w-full" id="meta-cpl" oninput="calculateMeta()">
+                                <div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+                                    <span>$2.000</span><span>$150.000</span>
+                                </div>
                             </div>
 
-                            <!-- Slider 3: Hourly Cost -->
+                            <!-- Slider 3: Average ticket -->
                             <div class="space-y-3">
                                 <div class="flex justify-between items-center">
-                                    <label class="text-[15px] font-semibold text-on-surface" for="cost">
-                                        Costo por hora estimado (CLP)
+                                    <label class="text-[15px] font-semibold text-on-surface" for="meta-ticket">
+                                        Valor promedio por cliente / venta
                                     </label>
-                                    <span class="font-mono text-primary font-bold text-[16px]" id="cost-val">$20.000</span>
+                                    <span class="font-mono text-primary font-bold text-[16px]" id="meta-ticket-val">$80.000</span>
                                 </div>
-                                <input type="range" min="5000" max="100000" value="20000" step="1000" class="w-full" id="cost" oninput="calculateSavings()">
+                                <input type="range" min="10000" max="1000000" value="80000" step="5000" class="w-full" id="meta-ticket" oninput="calculateMeta()">
+                                <div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+                                    <span>$10.000</span><span>$1.000.000</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right Column: Visual Dashboard Results -->
+                    <!-- Right Column: Results Dashboard -->
                     <div class="lg:col-span-5 flex flex-col justify-center">
-                        <div class="bg-white/[0.02] border border-white/10 backdrop-blur-md rounded-2xl p-8 space-y-8 shadow-inner">
+                        <div class="bg-white/[0.02] border border-white/10 backdrop-blur-md rounded-2xl p-8 space-y-6 shadow-inner">
                             <h3 class="font-display text-[18px] font-bold text-on-surface uppercase tracking-wider text-center border-b border-white/5 pb-4">
-                                Resultados estimados de ahorro
+                                Potencial de tu inversión
                             </h3>
 
-                            <!-- Result Block 1: Time saved -->
+                            <!-- Reach -->
                             <div class="text-center space-y-1">
-                                <span class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">Horas recuperadas al año</span>
-                                <div class="font-display text-[36px] md:text-[44px] font-black text-secondary tracking-tight" id="res-hours">
-                                    5,460h
+                                <span class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">Alcance mensual estimado</span>
+                                <div class="font-display text-[34px] md:text-[40px] font-black text-on-surface tracking-tight" id="res-reach">
+                                    66.666
                                 </div>
-                                <p class="text-xs text-on-surface-variant">Equivalente a más de <span id="res-fte" class="font-semibold text-on-surface">2.5</span> empleados a tiempo completo.</p>
+                                <p class="text-xs text-on-surface-variant">personas alcanzadas con tu presupuesto</p>
                             </div>
 
-                            <!-- Result Block 2: Financial saved -->
-                            <div class="text-center space-y-1">
-                                <span class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">Ahorro anual estimado</span>
-                                <div class="font-display text-[38px] md:text-[48px] font-black text-primary tracking-tight" id="res-money">
-                                    $136,500
+                            <!-- Leads comparison -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white/[0.03] rounded-xl p-4 text-center border border-white/5">
+                                    <span class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider block mb-2">Sin optimizar</span>
+                                    <div class="font-display text-[30px] font-black text-on-surface-variant tracking-tight" id="res-leads-current">12</div>
+                                    <span class="text-[10px] text-on-surface-variant">leads / mes</span>
                                 </div>
-                                <p class="text-xs text-on-surface-variant">Dinero que puedes reinvertir directamente en crecimiento.</p>
+                                <div class="bg-secondary/[0.08] rounded-xl p-4 text-center border border-secondary/25">
+                                    <span class="text-[10px] text-secondary font-mono uppercase tracking-wider block mb-2">Con HG optimizado</span>
+                                    <div class="font-display text-[30px] font-black text-secondary tracking-tight" id="res-leads-opt">30</div>
+                                    <span class="text-[10px] text-on-surface-variant">leads / mes</span>
+                                </div>
                             </div>
 
-                            <button onclick="openModal('Consulta desde calculadora')" class="w-full bg-secondary text-on-secondary font-mono text-[12px] py-4 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 hover:bg-secondary-fixed shadow-[0_0_20px_rgba(233,195,73,0.2)] hover:shadow-[0_0_30px_rgba(233,195,73,0.4)]">
-                                Reclamar mi Ahorro ahora
+                            <!-- Extra revenue -->
+                            <div class="text-center space-y-1">
+                                <span class="text-xs text-on-surface-variant font-mono uppercase tracking-wider">Ingresos adicionales potenciales</span>
+                                <div class="font-display text-[34px] md:text-[42px] font-black text-primary tracking-tight" id="res-revenue">
+                                    +$1.440.000
+                                </div>
+                                <p class="text-xs text-on-surface-variant">al mes reduciendo el CPL un <span id="res-cpl-reduction" class="font-semibold text-on-surface">60%</span></p>
+                            </div>
+
+                            <button onclick="openModal('Consulta desde calculadora Meta')" class="w-full bg-secondary text-on-secondary font-mono text-[12px] py-4 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 hover:bg-secondary-fixed shadow-[0_0_20px_rgba(233,195,73,0.2)] hover:shadow-[0_0_30px_rgba(233,195,73,0.4)]">
+                                Quiero ese resultado
                             </button>
                         </div>
                     </div>
@@ -916,7 +937,7 @@
                     <nav class="flex flex-col gap-2">
                         <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#inicio">Inicio</a>
                         <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#servicios">Servicios</a>
-                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#calculadora">Calculadora</a>
+                        <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#calculadora">Simulador Meta</a>
                     </nav>
                 </div>
 
@@ -1084,37 +1105,38 @@
             });
         });
 
-        // AI Savings Calculator logic
-        function calculateSavings() {
-            const employees = parseFloat(document.getElementById('employees').value);
-            const hours = parseFloat(document.getElementById('hours').value);
-            const cost = parseFloat(document.getElementById('cost').value);
+        // Meta Ads ROI Calculator
+        function calculateMeta() {
+            const budget = parseFloat(document.getElementById('meta-budget').value);
+            const cpl    = parseFloat(document.getElementById('meta-cpl').value);
+            const ticket = parseFloat(document.getElementById('meta-ticket').value);
 
-            // Update UI slider values
-            document.getElementById('employees-val').textContent = employees;
-            document.getElementById('hours-val').textContent = hours + 'h';
-            document.getElementById('cost-val').textContent = '$' + new Intl.NumberFormat('es-CL').format(cost);
+            const fmt = (n) => new Intl.NumberFormat('es-CL').format(n);
 
-            // Calculations
-            // Hours saved per year (assuming 48 working weeks per year, saving 70% of manual task hours through IA automation)
-            const hoursSavedPerYear = Math.round(employees * (hours * 0.70) * 48);
-            // Money saved per year
-            const moneySavedPerYear = Math.round(hoursSavedPerYear * cost);
-            // FTE (Full Time Equivalent - assuming 1920 hours per FTE per year)
-            const fteEquivalent = (hoursSavedPerYear / 1920).toFixed(1);
+            document.getElementById('meta-budget-val').textContent = '$' + fmt(budget);
+            document.getElementById('meta-cpl-val').textContent    = '$' + fmt(cpl);
+            document.getElementById('meta-ticket-val').textContent = '$' + fmt(ticket);
 
-            // Format numbers (Chilean Peso locale: dots for thousands)
-            const formattedHours = new Intl.NumberFormat('es-CL').format(hoursSavedPerYear) + 'h';
-            const formattedMoney = '$' + new Intl.NumberFormat('es-CL').format(moneySavedPerYear);
+            // Reach: avg CPM Chile ~$4.500 CLP
+            const reach = Math.round((budget / 4500) * 1000);
 
-            // Update results in UI
-            document.getElementById('res-hours').textContent = formattedHours;
-            document.getElementById('res-money').textContent = formattedMoney;
-            document.getElementById('res-fte').textContent = fteEquivalent;
+            // Leads without optimization
+            const leadsCurrent = Math.floor(budget / cpl);
+
+            // Leads with HG optimization: CPL reduced to 40% of current (60% cheaper)
+            const leadsOpt    = Math.floor(budget / (cpl * 0.40));
+            const leadsExtra  = leadsOpt - leadsCurrent;
+            const extraRevenue = leadsExtra * ticket;
+
+            document.getElementById('res-reach').textContent         = fmt(reach);
+            document.getElementById('res-leads-current').textContent = fmt(leadsCurrent);
+            document.getElementById('res-leads-opt').textContent     = fmt(leadsOpt);
+            document.getElementById('res-revenue').textContent       = '+$' + fmt(extraRevenue);
+            document.getElementById('res-cpl-reduction').textContent = '60%';
         }
 
-        // Initialize Calculator values on page load
-        calculateSavings();
+        // Initialize on page load
+        calculateMeta();
 
         // ── Testimonial Carousel ──
         (function () {
