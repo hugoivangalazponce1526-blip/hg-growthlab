@@ -310,6 +310,9 @@
 </head>
 <body class="bg-background text-on-background font-sans antialiased min-h-screen flex flex-col overflow-x-hidden">
 
+    <!-- Circuit board background canvas -->
+    <canvas id="circuit-canvas" style="position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
     <!-- Atmospheric background light elements -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-[#0047ff]/10 rounded-full blur-[150px] animate-float-1"></div>
@@ -1404,6 +1407,190 @@
                 alert('Hubo un problema al enviar tu solicitud. Por favor intenta de nuevo o escríbenos directamente.');
             }
         }
+
+        // ── Circuit board background animation ──
+        (function () {
+            const canvas = document.getElementById('circuit-canvas');
+            const ctx    = canvas.getContext('2d');
+            const GRID   = 80;
+            const R = 0, G = 120, B = 255; // electric blue
+
+            let W, H, cols, rows, hEdges, vEdges, nodes, signals;
+
+            function hash(a, b) {
+                const h = ((a * 2654435761) ^ (b * 2246822519)) >>> 0;
+                return (h >>> 16) / 65535;
+            }
+
+            function rgba(a) { return `rgba(${R},${G},${B},${a})`; }
+
+            function radGlow(x, y, r, a) {
+                const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+                g.addColorStop(0, rgba(a));
+                g.addColorStop(1, rgba(0));
+                ctx.fillStyle = g;
+                ctx.beginPath();
+                ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            function buildLayout() {
+                hEdges = {}; vEdges = {}; nodes = []; signals = [];
+                cols = Math.ceil(W / GRID) + 2;
+                rows = Math.ceil(H / GRID) + 2;
+
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        if (c < cols - 1) hEdges[`${r},${c}`] = hash(r * 997 + c, 1) > 0.42;
+                        if (r < rows - 1) vEdges[`${r},${c}`] = hash(r * 997 + c, 2) > 0.42;
+                        nodes.push({ x: c * GRID, y: r * GRID, r, c, bright: 0, timer: Math.random() * 300 | 0 });
+                    }
+                }
+
+                for (let i = 0; i < 12; i++) spawnSignal();
+            }
+
+            function spawnSignal() {
+                for (let attempt = 0; attempt < 120; attempt++) {
+                    const horiz = Math.random() > 0.5;
+                    const r = Math.random() * (rows - 1) | 0;
+                    const c = Math.random() * (cols - 1) | 0;
+                    const key = `${r},${c}`;
+                    if (horiz ? hEdges[key] : vEdges[key]) {
+                        signals.push({
+                            horiz, r, c,
+                            t:     Math.random(),
+                            speed: 0.005 + Math.random() * 0.009,
+                            dir:   Math.random() > 0.5 ? 1 : -1
+                        });
+                        return;
+                    }
+                }
+            }
+
+            function resize() {
+                W = canvas.width  = window.innerWidth;
+                H = canvas.height = window.innerHeight;
+                buildLayout();
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+
+                // Edges
+                ctx.lineWidth = 1;
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols - 1; c++) {
+                        if (!hEdges[`${r},${c}`]) continue;
+                        ctx.beginPath();
+                        ctx.moveTo(c * GRID, r * GRID);
+                        ctx.lineTo((c + 1) * GRID, r * GRID);
+                        ctx.strokeStyle = rgba(0.07);
+                        ctx.stroke();
+                    }
+                }
+                for (let r = 0; r < rows - 1; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        if (!vEdges[`${r},${c}`]) continue;
+                        ctx.beginPath();
+                        ctx.moveTo(c * GRID, r * GRID);
+                        ctx.lineTo(c * GRID, (r + 1) * GRID);
+                        ctx.strokeStyle = rgba(0.07);
+                        ctx.stroke();
+                    }
+                }
+
+                // Nodes
+                nodes.forEach(n => {
+                    if (--n.timer <= 0) {
+                        n.bright = 1;
+                        n.timer = (180 + Math.random() * 500) | 0;
+                    }
+                    if (n.bright > 0) {
+                        radGlow(n.x, n.y, 5 + n.bright * 12, n.bright * 0.4);
+                        n.bright = Math.max(0, n.bright - 0.022);
+                    }
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2);
+                    ctx.fillStyle = rgba(0.09 + n.bright * 0.5);
+                    ctx.fill();
+                });
+
+                // Signals
+                signals.forEach(s => {
+                    s.t += s.speed * s.dir;
+                    const t = Math.max(0, Math.min(1, s.t));
+
+                    let x1, y1, x2, y2;
+                    if (s.horiz) {
+                        x1 = s.c * GRID;       y1 = s.r * GRID;
+                        x2 = (s.c + 1) * GRID; y2 = s.r * GRID;
+                    } else {
+                        x1 = s.c * GRID; y1 = s.r * GRID;
+                        x2 = s.c * GRID; y2 = (s.r + 1) * GRID;
+                    }
+
+                    const px = x1 + (x2 - x1) * t;
+                    const py = y1 + (y2 - y1) * t;
+
+                    // Trail
+                    const TRAIL = 0.28;
+                    const t0 = Math.max(0, Math.min(1, s.t - TRAIL * s.dir));
+                    const tx0 = x1 + (x2 - x1) * t0;
+                    const ty0 = y1 + (y2 - y1) * t0;
+                    const grad = ctx.createLinearGradient(tx0, ty0, px, py);
+                    grad.addColorStop(0, rgba(0));
+                    grad.addColorStop(1, rgba(0.55));
+                    ctx.beginPath();
+                    ctx.moveTo(tx0, ty0);
+                    ctx.lineTo(px, py);
+                    ctx.strokeStyle = grad;
+                    ctx.lineWidth = 1.8;
+                    ctx.stroke();
+
+                    // Dot
+                    radGlow(px, py, 9, 0.55);
+                    ctx.beginPath();
+                    ctx.arc(px, py, 2.2, 0, Math.PI * 2);
+                    ctx.fillStyle = rgba(1);
+                    ctx.fill();
+
+                    // Advance to next segment at boundary
+                    if (s.t >= 1 || s.t <= 0) {
+                        let nr = s.r, nc = s.c;
+                        if (s.dir > 0) { if (s.horiz) nc++; else nr++; }
+                        else           { if (s.horiz) nc--; else nr--; }
+
+                        const nkey = `${nr},${nc}`;
+                        const canGo = s.horiz
+                            ? (hEdges[nkey] && nc >= 0 && nc < cols - 1)
+                            : (vEdges[nkey] && nr >= 0 && nr < rows - 1);
+
+                        if (canGo) {
+                            s.r = nr; s.c = nc;
+                            s.t = s.dir > 0 ? 0 : 1;
+                        } else {
+                            // Try to turn at the current node
+                            const ckey = `${s.r},${s.c}`;
+                            if (s.horiz && vEdges[ckey]) {
+                                s.horiz = false; s.dir = 1; s.t = 0;
+                            } else if (!s.horiz && hEdges[ckey]) {
+                                s.horiz = true; s.dir = 1; s.t = 0;
+                            } else {
+                                s.dir *= -1;
+                                s.t = s.dir > 0 ? 0 : 1;
+                            }
+                        }
+                    }
+                });
+
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            draw();
+        })();
     </script>
 </body>
 </html>
