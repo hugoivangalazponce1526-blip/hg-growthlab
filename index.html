@@ -397,48 +397,34 @@
             touch-action: manipulation;
         }
 
-        /* Custom cursor — only on devices with precise pointer (mouse) */
+        /* Cursor glow — halo que acompaña la flecha nativa */
         @media (pointer: fine) {
-            * { cursor: none !important; }
-
-            #cursor-core {
-                position: fixed;
-                top: 0; left: 0;
-                width: 7px; height: 7px;
-                background: #b9c3ff;
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 10000;
-                transform: translate(-50%, -50%);
-                box-shadow:
-                    0 0 6px 2px rgba(0, 120, 255, 1),
-                    0 0 18px 6px rgba(0, 80, 255, 0.5);
-                transition: opacity 0.3s, width 0.15s, height 0.15s;
-            }
-
             #cursor-ring {
                 position: fixed;
                 top: 0; left: 0;
-                width: 38px; height: 38px;
-                border: 1.5px solid rgba(100, 160, 255, 0.45);
+                width: 48px; height: 48px;
+                background: radial-gradient(circle,
+                    rgba(0, 120, 255, 0.22) 0%,
+                    rgba(0, 80, 255, 0.10) 45%,
+                    transparent 70%);
                 border-radius: 50%;
                 pointer-events: none;
                 z-index: 9999;
                 transform: translate(-50%, -50%);
-                box-shadow:
-                    0 0 10px 3px rgba(0, 100, 255, 0.18),
-                    inset 0 0 10px 2px rgba(0, 100, 255, 0.06);
-                transition: width 0.22s ease, height 0.22s ease,
-                            border-color 0.22s ease, box-shadow 0.22s ease,
-                            opacity 0.3s;
+                filter: blur(6px);
+                opacity: 1;
+                transition: opacity 0.3s,
+                            width 0.2s ease, height 0.2s ease,
+                            background 0.2s ease, filter 0.2s ease;
             }
 
             #cursor-ring.hovering {
-                width: 54px; height: 54px;
-                border-color: rgba(233, 195, 73, 0.65);
-                box-shadow:
-                    0 0 14px 5px rgba(233, 195, 73, 0.22),
-                    inset 0 0 12px 3px rgba(233, 195, 73, 0.08);
+                width: 64px; height: 64px;
+                filter: blur(8px);
+                background: radial-gradient(circle,
+                    rgba(233, 195, 73, 0.28) 0%,
+                    rgba(233, 150, 50, 0.12) 45%,
+                    transparent 70%);
             }
         }
     </style>
@@ -449,8 +435,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Custom cursor elements -->
-    <div id="cursor-core"></div>
+    <!-- Cursor glow halo -->
     <div id="cursor-ring"></div>
 
     <!-- Circuit board background canvas -->
@@ -1555,37 +1540,29 @@
             }
         }
 
-        // ── Custom cursor glow ──
+        // ── Cursor glow halo ──
         (function () {
             if (window.matchMedia('(pointer: coarse)').matches) return;
 
-            const core = document.getElementById('cursor-core');
             const ring = document.getElementById('cursor-ring');
             let mx = -200, my = -200;
             let rx = -200, ry = -200;
 
             document.addEventListener('mousemove', e => {
-                mx = e.clientX; my = e.clientY;
-                core.style.left = mx + 'px';
-                core.style.top  = my + 'px';
+                mx = e.clientX;
+                my = e.clientY;
             });
 
             (function followRing() {
-                rx += (mx - rx) * 0.11;
-                ry += (my - ry) * 0.11;
+                rx += (mx - rx) * 0.13;
+                ry += (my - ry) * 0.13;
                 ring.style.left = rx + 'px';
                 ring.style.top  = ry + 'px';
                 requestAnimationFrame(followRing);
             })();
 
-            document.addEventListener('mouseleave', () => {
-                core.style.opacity = '0';
-                ring.style.opacity = '0';
-            });
-            document.addEventListener('mouseenter', () => {
-                core.style.opacity = '1';
-                ring.style.opacity = '1';
-            });
+            document.addEventListener('mouseleave', () => ring.style.opacity = '0');
+            document.addEventListener('mouseenter', () => ring.style.opacity = '1');
 
             document.addEventListener('mouseover', e => {
                 const t = e.target.closest('a, button, [onclick], input, label');
