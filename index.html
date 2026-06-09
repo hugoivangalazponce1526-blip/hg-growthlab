@@ -1540,8 +1540,23 @@
             }
         }
 
-        // ── Navegación instantánea para todos los links de anclaje ──
+        // ── Scroll animado rápido (220ms) para links de anclaje ──
         (function () {
+            function quickScroll(y) {
+                const start = window.scrollY;
+                const diff  = y - start;
+                const dur   = 220;
+                let t0 = null;
+                function step(ts) {
+                    if (!t0) t0 = ts;
+                    const p = Math.min((ts - t0) / dur, 1);
+                    const e = p < 0.5 ? 2*p*p : -1+(4-2*p)*p; // easeInOut
+                    window.scrollTo(0, start + diff * e);
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+
             document.addEventListener('click', function (e) {
                 const link = e.target.closest('a[href^="#"]');
                 if (!link) return;
@@ -1551,7 +1566,7 @@
                 if (!target) return;
                 e.preventDefault();
                 const y = target.getBoundingClientRect().top + window.scrollY - 80;
-                window.scrollTo(0, y);
+                quickScroll(y);
             });
         })();
 
