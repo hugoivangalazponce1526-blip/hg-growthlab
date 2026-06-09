@@ -1540,23 +1540,8 @@
             }
         }
 
-        // ── Smooth scroll rápido (350ms) para todos los links de anclaje ──
+        // ── Navegación instantánea para todos los links de anclaje ──
         (function () {
-            function scrollTo(target, duration) {
-                const start = window.scrollY;
-                const end   = target.getBoundingClientRect().top + start - 80; // 80px offset por nav fija
-                const diff  = end - start;
-                let startTime = null;
-                function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
-                function step(ts) {
-                    if (!startTime) startTime = ts;
-                    const elapsed = Math.min((ts - startTime) / duration, 1);
-                    window.scrollTo(0, start + diff * ease(elapsed));
-                    if (elapsed < 1) requestAnimationFrame(step);
-                }
-                requestAnimationFrame(step);
-            }
-
             document.addEventListener('click', function (e) {
                 const link = e.target.closest('a[href^="#"]');
                 if (!link) return;
@@ -1565,15 +1550,9 @@
                 const target = document.getElementById(id);
                 if (!target) return;
                 e.preventDefault();
-                scrollTo(target, 350);
+                const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo(0, y);
             });
-
-            // Logo click también usa scroll rápido
-            const logoBtn = document.querySelector('[onclick="window.scrollTo({top:0, behavior:\'smooth\'})"]');
-            if (logoBtn) {
-                logoBtn.removeAttribute('onclick');
-                logoBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'auto' }));
-            }
         })();
 
         // ── Cursor glow halo ──
