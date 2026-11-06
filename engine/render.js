@@ -71,6 +71,7 @@ p{font-size:40px;line-height:1.42;color:#D6D6D6}
 .bgimg{position:absolute;inset:0;background-size:cover;background-position:center bottom;z-index:0}
 .bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,16,.97) 0%,rgba(16,16,16,.88) 38%,rgba(16,16,16,.35) 62%,rgba(16,16,16,.15) 80%,rgba(16,16,16,.6) 100%)}
 .s.hasimg::after{display:none}
+.s.hasimg h1,.s.hasimg .sub{text-shadow:0 4px 24px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.9)}
 .photo{width:100%;height:360px;border-radius:28px;background-size:cover;background-position:center;border:2px solid rgba(201,168,76,.45);box-shadow:0 30px 60px rgba(0,0,0,.55);margin-bottom:34px;flex:none}
 .sign{margin-top:40px;font-family:Sora;font-size:28px;color:var(--g)}
 `;
