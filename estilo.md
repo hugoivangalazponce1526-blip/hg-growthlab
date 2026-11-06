@@ -118,6 +118,6 @@ Para escenas con personas: "foto estilo documental, luz natural de día, persona
 - `==frase==` = frase clave resaltada con recuadro dorado suave y puntos (estilo selección de Figma). Úsalo 1 vez por slide como máximo y en frases cortas (que quepan en una línea).
 - `"dark": true` en una slide = slide negra de contraste (para el giro o remate; 1 por carrusel).
 - Slides point sin box, img, num ni icon se centran solas (slides de solo texto, como Flama).
-- Portada: `"img": "img_portada.jpg"` con foto de objeto sobre fondo crema (el objeto en la mitad inferior; el texto va arriba).
+- Portada: `"img": "img_portada.jpg"` con foto de objeto sobre fondo crema (el objeto en la mitad inferior; el texto va arriba). Si el objeto queda cortado o tapa el texto, ajusta `"imgTop"` (px desde arriba; por defecto 150; menor = sube la foto).
 - Slide con foto interna: `"img": "img_2.jpg"` en una point (texto corto).
 - Ejemplo de referencia: queue/2026-11-06 (metáfora del megáfono).

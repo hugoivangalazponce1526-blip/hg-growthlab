@@ -166,7 +166,7 @@ function slideHTML(s, i) {
       break;
     default: throw new Error('Tipo de slide desconocido: ' + s.type);
   }
-  const bg = s.type === 'cover' && s.img ? `<div class="bgimg" style="background-image:url('${imgUrl(s.img)}')"></div>` : '';
+  const bg = s.type === 'cover' && s.img ? `<div class="bgimg" style="background-image:url('${imgUrl(s.img)}')${s.imgTop !== undefined ? `;top:${s.imgTop}px` : ''}"></div>` : '';
   const center = s.center || (s.type === 'point' && !s.box && !s.img && !s.num && !s.icon) || (s.type === 'vs' && !s.box);
   return `<section class="s${bg ? ' hasimg' : ''}${s.dark ? ' dark' : ''}" id="s${i + 1}">${bg}${top}<div class="in${center ? ' center' : ''}">${body}</div>${swipe}</section>`;
 }

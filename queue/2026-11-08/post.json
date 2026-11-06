@@ -9,27 +9,22 @@
   "slides": [
     {
       "type": "cover",
-      "tag": "Para dueños de locales",
-      "title": "Más *reseñas*\nen Google\nsin rogar",
-      "size": 132,
-      "sub": "Con mensajes *listos para copiar*.",
-      "img": "img_portada.jpg"
+      "title": "Más *reseñas*\nsin rogar",
+      "size": 140,
+      "sub": "Tus clientes felices sí quieren ayudarte.\n*Solo pídeselo bien.*",
+      "img": "img_portada.jpg",
+      "imgTop": 20
     },
     {
       "type": "point",
-      "icon": "⭐",
-      "title": "Las estrellas\n*venden por ti*",
-      "body": "Antes de ir a un local nuevo, la gente **mira las reseñas en Google**.\n\nMás reseñas = más confianza = más visitas.",
-      "box": {
-        "k": "El problema",
-        "text": "Tus clientes felices casi nunca dejan una. No porque no quieran: nadie se los pidió."
-      }
+      "title": "Tus clientes felices\n==no dejan reseña==",
+      "body": "No es que no quieran.\n**Nadie se los pidió.**"
     },
     {
       "type": "point",
       "num": "01",
       "title": "Pídela en el\n*mejor momento*",
-      "body": "Justo cuando el cliente **te dice que le gustó**: al pagar, al despedirse o al entregar su pedido.",
+      "body": "Justo cuando el cliente **te dice que le gustó**: al pagar o al despedirse.",
       "box": {
         "k": "Ejemplo",
         "text": "\"¡Qué bueno que te gustó! ¿Me ayudas con una reseña en Google? Me sirve un montón.\""
@@ -42,12 +37,11 @@
       "body": "Google te da un **link directo para dejar reseñas** desde tu Perfil de Empresa.",
       "box": {
         "k": "Úsalo así",
-        "text": "Pégalo en WhatsApp, imprímelo como código QR en la caja o en la mesa."
+        "text": "Pégalo en WhatsApp o imprímelo como código QR en la caja o en la mesa."
       }
     },
     {
       "type": "prompt",
-      "icon": "💬",
       "title": "03. Mensaje\npara *WhatsApp*",
       "prompt": "¡Hola [nombre]! Gracias por venir a [local] 😊 Si te gustó, ¿nos dejas una reseña en Google? Nos ayuda muchísimo a crecer. Es aquí: [tu link]. ¡Te esperamos pronto!",
       "box": {
@@ -57,15 +51,14 @@
     },
     {
       "type": "point",
-      "num": "04",
-      "warn": true,
-      "title": "Responde *todas*,\nsobre todo las malas",
-      "body": "El próximo cliente lee **cómo respondiste**, no solo la queja.",
-      "box": {
-        "k": "Lo que nunca hacer",
-        "warn": true,
-        "text": "Discutir, dar excusas o pagar por reseñas falsas. Google puede castigar tu perfil."
-      }
+      "img": "img_2.jpg",
+      "title": "Una por cliente,\n==cada semana==",
+      "body": "Así se llena tu perfil, sin campañas ni descuentos."
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "La gente ya habla\nde tu local.\nFalta ==que lo escriba==."
     },
     {
       "type": "checklist",
@@ -74,14 +67,20 @@
         "Saca el link de reseñas de tu perfil",
         "Imprime un QR para la caja",
         "Pide 1 reseña a cada cliente feliz",
-        "Responde todas las reseñas",
+        "Responde todas, incluso las malas",
         "Repite cada semana"
       ]
     },
     {
       "type": "cta",
       "title": "¿Cuántas reseñas\ntiene *tu local*?",
-      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local."
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Guárdalo y aplícalo esta semana",
+        "Mándaselo a alguien con local"
+      ]
     }
-  ]
+  ],
+  "estilo": "claro"
 }
