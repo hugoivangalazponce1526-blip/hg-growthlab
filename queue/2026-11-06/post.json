@@ -9,45 +9,45 @@
   "slides": [
     {
       "type": "cover",
-      "tag": "Antes de invertir un peso",
-      "title": "Promocionar\n*NO* es hacer\npublicidad",
-      "size": 124,
-      "sub": "Y por eso sientes que *perdiste la plata*.",
+      "title": "Promocionar\nno es\n*publicidad*",
+      "size": 138,
+      "sub": "Es gritar en la calle… y esperar que *alguien entre*.",
       "img": "img_portada.jpg"
     },
     {
       "type": "point",
-      "icon": "💸",
-      "title": "¿Te pasó esto?",
-      "body": "Apretaste **\"Promocionar\"**, pagaste, llegaron likes...\n\n...y al local no llegó nadie.",
-      "box": {
-        "k": "No es tu culpa",
-        "text": "El botón está hecho para que sea fácil, no para que te traiga clientes."
-      }
+      "title": "Apretaste \"Promocionar\" y\n==no llegó nadie==",
+      "body": "No es tu producto.\nEs **a quién** le estás hablando."
     },
     {
       "type": "vs",
-      "title": "La diferencia\nen una imagen",
+      "title": "La diferencia,\nen simple",
       "noLabel": "BOTÓN PROMOCIONAR",
-      "no": "Pocas opciones, objetivo genérico y casi cero control sobre qué funcionó.",
+      "no": "Pocas opciones, objetivo genérico y casi nada de control sobre qué funcionó.",
       "siLabel": "ADMINISTRADOR DE ANUNCIOS",
       "si": "Eliges el objetivo, a quién le hablas, dónde aparece y puedes **comparar anuncios**."
     },
     {
       "type": "point",
       "num": "01",
-      "title": "Eliges un\n*objetivo real*",
-      "body": "No es lo mismo pedir likes que pedir **mensajes por WhatsApp** o **visitas a tu web**.",
+      "title": "Pide lo que\nde verdad *necesitas*",
+      "body": "Likes no pagan cuentas. Pide **mensajes por WhatsApp** o **visitas a tu web**.",
       "box": {
         "k": "Ejemplo",
-        "text": "Una carnicería que quiere pedidos debería pedir mensajes, no \"me gusta\"."
+        "text": "Una carnicería que quiere pedidos pide mensajes, no \"me gusta\"."
       }
     },
     {
       "type": "point",
+      "img": "img_2.jpg",
+      "title": "Háblale a quien\n==ya te vio==",
+      "body": "Muéstrale tu anuncio a quien **ya visitó tu perfil o tu web**."
+    },
+    {
+      "type": "point",
       "num": "02",
-      "title": "*Pruebas* antes\nde gastar todo",
-      "body": "Subes 2 o 3 versiones del anuncio y Meta te muestra **cuál trae más resultados**.",
+      "title": "Prueba *antes*\nde gastar todo",
+      "body": "Sube 2 o 3 versiones del anuncio y deja que los resultados elijan.",
       "box": {
         "k": "Regla simple",
         "text": "Deja correr cada versión unos días. Apaga la peor, deja la mejor."
@@ -55,30 +55,19 @@
     },
     {
       "type": "point",
-      "num": "03",
-      "title": "Le hablas a\nquien *ya te vio*",
-      "body": "Puedes mostrarle tu anuncio a quien **ya visitó tu perfil o tu web**. Esa gente compra más fácil.",
-      "box": {
-        "k": "Por qué importa",
-        "text": "Casi nadie compra la primera vez que te ve. La segunda o tercera, sí."
-      }
-    },
-    {
-      "type": "checklist",
-      "tag": "Antes de tu próximo anuncio",
-      "title": "Revisa *esto*",
-      "items": [
-        "Sé qué quiero que haga la persona",
-        "Elegí ese objetivo en el anuncio",
-        "Tengo al menos 2 versiones",
-        "Defino un presupuesto para probar",
-        "Reviso resultados, no solo likes"
-      ]
+      "dark": true,
+      "title": "Nunca fue el\npresupuesto.\nFue ==tu público==."
     },
     {
       "type": "cta",
       "title": "¿Promocionaste\ny *no pasó nada*?",
-      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local."
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Guárdalo para tu próximo anuncio",
+        "Mándaselo a alguien con local"
+      ]
     }
-  ]
+  ],
+  "estilo": "claro"
 }

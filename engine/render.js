@@ -10,10 +10,12 @@ const dir = path.resolve(process.argv[2] || '.');
 const post = JSON.parse(fs.readFileSync(path.join(dir, 'post.json'), 'utf8'));
 const slides = post.slides;
 const N = slides.length;
+const CLARO = post.estilo === 'claro';
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // Marcado: *palabra* = dorado · **texto** = negrita blanca · \n = salto de línea
 const md = s => esc(s)
+  .replace(/==([\s\S]+?)==/g, '<span class="hl">$1</span>')
   .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
   .replace(/\*(.+?)\*/g, '<span class="gold">$1</span>')
   .replace(/\n/g, '<br>');
@@ -73,13 +75,63 @@ p{font-size:40px;line-height:1.42;color:#D6D6D6}
 .s.hasimg::after{display:none}
 .s.hasimg h1,.s.hasimg .sub{text-shadow:0 4px 24px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.9)}
 .photo{width:100%;height:360px;border-radius:28px;background-size:cover;background-position:center;border:2px solid rgba(201,168,76,.45);box-shadow:0 30px 60px rgba(0,0,0,.55);margin-bottom:34px;flex:none}
+
+/* ===== Estilo CLARO (guía de estilo nov 2026) ===== */
+.hl{display:inline-block;background:#EBDDB5;padding:2px 18px 8px;position:relative;font-style:italic;margin:6px 0 10px -18px}
+.hl::before,.hl::after{content:'';position:absolute;width:26px;height:26px;border-radius:50%;background:#C9A84C}
+.hl::before{left:-13px;top:-13px}.hl::after{right:-13px;bottom:-13px}
+body.claro .s{background:#F5F1E8;color:#1A1A1A;background-image:linear-gradient(rgba(0,0,0,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.035) 1px,transparent 1px);background-size:60px 60px}
+body.claro .s::after{display:none}
+body.claro .top{color:#8a8a8a}
+body.claro .top img{height:96px}
+body.claro h1,body.claro h2{color:#1A1A1A}
+body.claro .gold{color:#A8842F}
+body.claro strong{color:#1A1A1A;font-weight:700}
+body.claro p{color:#3d3d3d}
+body.claro .sub{color:#3d3d3d}
+body.claro .tag{background:#1A1A1A;color:#F5F1E8}
+body.claro .bot{color:#1A1A1A}
+body.claro .big{-webkit-text-stroke:3px #1A1A1A}
+body.claro .big.red{-webkit-text-stroke-color:#C7443F}
+body.claro .icon{background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.08)}
+body.claro .box{background:#fff;border:1.5px solid rgba(26,26,26,.12);color:#2a2a2a;box-shadow:0 14px 30px rgba(0,0,0,.05)}
+body.claro .box .k{color:#A8842F}
+body.claro .box.warn{background:#fff;border-color:rgba(199,68,63,.5)}body.claro .box.warn .k{color:#C7443F}
+body.claro .code{background:#1A1A1A;border-color:#1A1A1A;color:#F5F1E8}
+body.claro .list li{color:#1A1A1A}
+body.claro .list li i{background:#1A1A1A;border-color:#1A1A1A;color:#E3BC52}
+body.claro .vs .no{background:#fff;color:#555;border-color:rgba(199,68,63,.45)}body.claro .vs .no b{color:#C7443F}
+body.claro .vs .si{background:#1A1A1A;color:#F5F1E8;border-color:#1A1A1A}body.claro .vs .si b{color:#E3BC52}
+body.claro .vs .si strong{color:#fff}
+body.claro .btn{color:#1A1A1A;border-color:rgba(26,26,26,.2)}
+body.claro .btn:first-child{background:#1A1A1A;color:#F5F1E8;border-color:#1A1A1A;box-shadow:none}
+body.claro .sign{color:#8a8a8a}
+body.claro .bgimg::after{background:linear-gradient(180deg,rgba(245,241,232,1) 0%,rgba(245,241,232,.92) 30%,rgba(245,241,232,.0) 58%)}
+body.claro .s.hasimg h1,body.claro .s.hasimg .sub{text-shadow:none}
+body.claro .photo{border:none;box-shadow:0 20px 40px rgba(0,0,0,.12)}
+body.claro .bgimg{top:150px;background-position:center top;background-size:100% auto;background-repeat:no-repeat}
+body.claro .s.hasimg .bot{display:none}
+.in.center{justify-content:center}
+.in.center h2{font-size:96px}
+body.claro .photo{height:440px;background-position:center 80%}
+/* slide de contraste negra dentro del estilo claro */
+body.claro .s.dark{background:#1A1A1A;color:#F5F1E8;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px}
+body.claro .s.dark h1,body.claro .s.dark h2,body.claro .s.dark strong{color:#F5F1E8}
+body.claro .s.dark .gold{color:#E3BC52}
+body.claro .s.dark p,body.claro .s.dark .sub{color:#d8d2c4}
+body.claro .s.dark .hl{background:rgba(201,168,76,.28)}
+body.claro .s.dark .btn{color:#F5F1E8;border-color:rgba(245,241,232,.3)}
+body.claro .s.dark .btn:first-child{background:#C9A84C;color:#1A1A1A;border-color:#C9A84C}
+body.claro .s.dark .top{color:#8a8a8a}
+
 .sign{margin-top:40px;font-family:Sora;font-size:28px;color:var(--g)}
 `;
 
 const imgUrl = f => 'file://' + path.join(dir, f);
 function slideHTML(s, i) {
   const n = `${i + 1}/${N}`;
-  const top = `<div class="top"><img src="file://${ENGINE}/logo.png"><div>${n}</div></div>`;
+  const logo = CLARO && !s.dark ? 'logo_claro.png' : 'logo.png';
+  const top = `<div class="top"><img src="file://${ENGINE}/${logo}"><div>${CLARO ? '@hg_growthlab · ' : ''}${n}</div></div>`;
   const swipe = i < N - 1 && (s.type === 'cover' || i === 1) ? `<div class="bot">Desliza <span style="font-size:38px">→</span></div>` : '';
   let body = '';
   switch (s.type) {
@@ -115,11 +167,12 @@ function slideHTML(s, i) {
     default: throw new Error('Tipo de slide desconocido: ' + s.type);
   }
   const bg = s.type === 'cover' && s.img ? `<div class="bgimg" style="background-image:url('${imgUrl(s.img)}')"></div>` : '';
-  return `<section class="s${bg ? ' hasimg' : ''}" id="s${i + 1}">${bg}${top}<div class="in" ${s.type === 'cover' ? '' : ''}>${body}</div>${swipe}</section>`;
+  const center = s.center || (s.type === 'point' && !s.box && !s.img && !s.num && !s.icon) || (s.type === 'vs' && !s.box);
+  return `<section class="s${bg ? ' hasimg' : ''}${s.dark ? ' dark' : ''}" id="s${i + 1}">${bg}${top}<div class="in${center ? ' center' : ''}">${body}</div>${swipe}</section>`;
 }
 
 (async () => {
-  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>${CSS}</style></head><body>${slides.map(slideHTML).join('')}</body></html>`;
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>${CSS}</style></head><body class="${CLARO ? 'claro' : ''}">${slides.map(slideHTML).join('')}</body></html>`;
   const tmp = path.join(dir, '_render.html');
   fs.writeFileSync(tmp, html);
   const b = await chromium.launch();
