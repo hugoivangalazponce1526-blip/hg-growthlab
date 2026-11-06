@@ -68,9 +68,14 @@ p{font-size:40px;line-height:1.42;color:#D6D6D6}
 .btns{margin-top:auto;display:flex;flex-direction:column;gap:22px}
 .btn{font-family:Sora;font-weight:700;font-size:38px;padding:30px 36px;border-radius:22px;border:2px solid rgba(255,255,255,.25)}
 .btn:first-child{background:var(--gold);color:#111;border-color:var(--gold);box-shadow:0 0 60px rgba(201,168,76,.35)}
+.bgimg{position:absolute;inset:0;background-size:cover;background-position:center bottom;z-index:0}
+.bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,16,.97) 0%,rgba(16,16,16,.88) 38%,rgba(16,16,16,.35) 62%,rgba(16,16,16,.15) 80%,rgba(16,16,16,.6) 100%)}
+.s.hasimg::after{display:none}
+.photo{width:100%;height:360px;border-radius:28px;background-size:cover;background-position:center;border:2px solid rgba(201,168,76,.45);box-shadow:0 30px 60px rgba(0,0,0,.55);margin-bottom:34px;flex:none}
 .sign{margin-top:40px;font-family:Sora;font-size:28px;color:var(--g)}
 `;
 
+const imgUrl = f => 'file://' + path.join(dir, f);
 function slideHTML(s, i) {
   const n = `${i + 1}/${N}`;
   const top = `<div class="top"><img src="file://${ENGINE}/logo.png"><div>${n}</div></div>`;
@@ -83,7 +88,7 @@ function slideHTML(s, i) {
         ${s.sub ? `<div class="sub">${md(s.sub)}</div>` : ''}`;
       break;
     case 'point':
-      body = `${s.num ? `<div class="big ${s.warn ? 'red' : ''}">${esc(s.num)}</div>` : ''}${s.icon ? `<div class="icon">${s.icon}</div>` : ''}
+      body = `${s.img ? `<div class="photo" style="background-image:url('${imgUrl(s.img)}')"></div>` : ''}${s.num && !s.img ? `<div class="big ${s.warn ? 'red' : ''}">${esc(s.num)}</div>` : ''}${s.icon && !s.img ? `<div class="icon">${s.icon}</div>` : ''}
         <h2>${md(s.title)}</h2>${s.body ? `<p style="margin-top:36px">${md(s.body)}</p>` : ''}
         ${s.box ? `<div class="box ${s.warn ? 'warn' : ''}"><span class="k">${esc(s.box.k)}</span>${md(s.box.text)}</div>` : ''}`;
       break;
@@ -108,7 +113,8 @@ function slideHTML(s, i) {
       break;
     default: throw new Error('Tipo de slide desconocido: ' + s.type);
   }
-  return `<section class="s" id="s${i + 1}">${top}<div class="in" ${s.type === 'cover' ? '' : ''}>${body}</div>${swipe}</section>`;
+  const bg = s.type === 'cover' && s.img ? `<div class="bgimg" style="background-image:url('${imgUrl(s.img)}')"></div>` : '';
+  return `<section class="s${bg ? ' hasimg' : ''}" id="s${i + 1}">${bg}${top}<div class="in" ${s.type === 'cover' ? '' : ''}>${body}</div>${swipe}</section>`;
 }
 
 (async () => {
