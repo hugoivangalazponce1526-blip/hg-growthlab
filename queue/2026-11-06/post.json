@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-11-06",
+  "hora": "13:00",
+  "tema": "El botón Promocionar NO es lo mismo que hacer publicidad",
+  "pilar": "Publicidad Meta",
+  "estado": "pendiente",
+  "generado": "2026-11-05T22:00:00-03:00",
+  "caption": "Apretar \"Promocionar\" no es hacer publicidad. Es como poner un letrero... sin elegir bien la calle. 💸\n\nNo digo que no sirva. Digo que te deja muy pocas decisiones, y en publicidad las decisiones son las que hacen la diferencia.\n\nEn este carrusel te explico qué cambia cuando pasas del botón al Administrador de anuncios:\n\n🎯 Eliges un objetivo real (mensajes, visitas o ventas)\n🧪 Pruebas varios anuncios y te quedas con el que funciona\n🔁 Vuelves a mostrarle tu local a quien ya te vio\n\n💡 Tip extra: antes de invertir un peso, define qué quieres que haga la persona al ver tu anuncio. Si la respuesta es \"no sé\", el anuncio tampoco va a saber.\n\n¿Alguna vez promocionaste un post y no pasó nada? Cuéntame 👇\n\n🔖 Guárdalo para la próxima vez que quieras invertir\n📩 Mándaselo a alguien que siempre aprieta \"Promocionar\"\n\n#publicidadfacebook #negocioslocales #emprendedoreschile #molina #maule",
+  "slides": [
+    {"type": "cover", "tag": "Antes de invertir un peso", "title": "Promocionar\n*NO* es hacer\npublicidad", "size": 124, "sub": "Y por eso sientes que *perdiste la plata*."},
+    {"type": "point", "icon": "💸", "title": "¿Te pasó esto?", "body": "Apretaste **\"Promocionar\"**, pagaste, llegaron likes...\n\n...y al local no llegó nadie.", "box": {"k": "No es tu culpa", "text": "El botón está hecho para que sea fácil, no para que te traiga clientes."}},
+    {"type": "vs", "title": "La diferencia\nen una imagen", "noLabel": "BOTÓN PROMOCIONAR", "no": "Pocas opciones, objetivo genérico y casi cero control sobre qué funcionó.", "siLabel": "ADMINISTRADOR DE ANUNCIOS", "si": "Eliges el objetivo, a quién le hablas, dónde aparece y puedes **comparar anuncios**."},
+    {"type": "point", "num": "01", "title": "Eliges un\n*objetivo real*", "body": "No es lo mismo pedir likes que pedir **mensajes por WhatsApp** o **visitas a tu web**.", "box": {"k": "Ejemplo", "text": "Una carnicería que quiere pedidos debería pedir mensajes, no \"me gusta\"."}},
+    {"type": "point", "num": "02", "title": "*Pruebas* antes\nde gastar todo", "body": "Subes 2 o 3 versiones del anuncio y Meta te muestra **cuál trae más resultados**.", "box": {"k": "Regla simple", "text": "Deja correr cada versión unos días. Apaga la peor, deja la mejor."}},
+    {"type": "point", "num": "03", "title": "Le hablas a\nquien *ya te vio*", "body": "Puedes mostrarle tu anuncio a quien **ya visitó tu perfil o tu web**. Esa gente compra más fácil.", "box": {"k": "Por qué importa", "text": "Casi nadie compra la primera vez que te ve. La segunda o tercera, sí."}},
+    {"type": "checklist", "tag": "Antes de tu próximo anuncio", "title": "Revisa *esto*", "items": ["Sé qué quiero que haga la persona", "Elegí ese objetivo en el anuncio", "Tengo al menos 2 versiones", "Defino un presupuesto para probar", "Reviso resultados, no solo likes"]},
+    {"type": "cta", "title": "¿Promocionaste\ny *no pasó nada*?", "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local."}
+  ]
+}

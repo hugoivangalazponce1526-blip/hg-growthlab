@@ -1,0 +1,80 @@
+{
+  "fecha": "2026-11-07",
+  "hora": "20:30",
+  "tema": "3 prompts de IA que te ahorran horas en tu local",
+  "pilar": "IA para tu negocio",
+  "estado": "pendiente",
+  "generado": "2026-11-05T22:00:00-03:00",
+  "caption": "La IA no te va a quitar el negocio. Pero sí te puede quitar horas de trabajo que hoy haces a mano. 🤖\n\nNo necesitas saber de tecnología. Necesitas saber qué pedirle.\n\nEn este carrusel te dejo 3 prompts listos para copiar y pegar en ChatGPT o Claude:\n\n✍️ Textos para tu Instagram en minutos\n⭐ Respuestas a reseñas (las buenas y las malas)\n📅 Una semana de contenido planificada\n\n💡 Tip extra: mientras más detalles le des (tu ciudad, tu rubro, tus precios, cómo hablas), mejor responde. La IA no adivina: trabaja con lo que le cuentas.\n\n¿Cuál vas a probar primero? Cuéntame 👇\n\n🔖 Guárdalo: lo vas a usar más de una vez\n📩 Mándaselo a alguien que pasa horas escribiendo en Instagram\n\n#inteligenciaartificial #negocioslocales #emprendedoreschile #molina #maule",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Copia y pega",
+      "title": "3 prompts\nde IA que te\n*ahorran horas*",
+      "size": 128,
+      "sub": "Para tu local. Sin saber de *tecnología*."
+    },
+    {
+      "type": "point",
+      "icon": "⏳",
+      "title": "¿Cuánto tiempo\nte quita *escribir*?",
+      "body": "Textos para Instagram, respuestas a clientes, ideas para subir...\n\nTodo eso lo puede hacer la IA **en segundos**.",
+      "box": {
+        "k": "Cómo usarlos",
+        "text": "Abre ChatGPT o Claude, copia el prompt y cambia lo que está entre [corchetes]."
+      }
+    },
+    {
+      "type": "prompt",
+      "icon": "✍️",
+      "title": "1. Textos para\ntu *Instagram*",
+      "prompt": "Eres experto en marketing para negocios locales. Escribe 3 textos para Instagram de mi [rubro] en [ciudad] sobre [tema]. Tono cercano y chileno. Cada uno con una primera línea que enganche y una pregunta al final.",
+      "box": {
+        "k": "Resultado",
+        "text": "3 opciones de texto en segundos. Elige una y ajústala a tu estilo."
+      }
+    },
+    {
+      "type": "prompt",
+      "icon": "⭐",
+      "title": "2. Responder\n*reseñas*",
+      "prompt": "Responde esta reseña de Google de mi [rubro] de forma amable y profesional, en máximo 3 líneas. Si es negativa, pide disculpas sin excusas e invita a volver. Reseña: [pega aquí la reseña]",
+      "box": {
+        "k": "Tip",
+        "text": "Responder rápido las reseñas también le muestra a Google que tu perfil está activo."
+      }
+    },
+    {
+      "type": "prompt",
+      "icon": "📅",
+      "title": "3. Una *semana*\nde contenido",
+      "prompt": "Arma un calendario de 7 días de publicaciones para el Instagram de mi [rubro] en [ciudad]. Mezcla: detrás de escena, producto, clientes y una promoción. Para cada día dame la idea y el texto.",
+      "box": {
+        "k": "Tip",
+        "text": "Pídele después: \"ahora hazlo más corto\" o \"agrega emojis\". Puedes corregirla."
+      }
+    },
+    {
+      "type": "vs",
+      "title": "El truco que\nlo *cambia todo*",
+      "noLabel": "PROMPT VAGO",
+      "no": "\"Escríbeme un post para mi café\"",
+      "siLabel": "PROMPT CON CONTEXTO",
+      "si": "\"...para mi café en Molina, que abre a las 8, tiene queques caseros y le habla a oficinistas\"",
+      "box": {
+        "k": "Regla",
+        "text": "Más detalles = mejores respuestas. La IA no adivina."
+      }
+    },
+    {
+      "type": "cta",
+      "title": "¿Cuál vas a\n*probar primero*?",
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo usar marketing e IA en tu local.",
+      "buttons": [
+        "🔖 Guárdalo: lo vas a usar",
+        "📩 Mándaselo a alguien con local",
+        "➕ Sígueme para más"
+      ]
+    }
+  ]
+}

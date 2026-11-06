@@ -1,0 +1,86 @@
+{
+  "fecha": "2026-11-08",
+  "hora": "13:00",
+  "tema": "Cómo conseguir más reseñas en Google (con mensajes listos)",
+  "pilar": "Atraer clientes",
+  "estado": "pendiente",
+  "generado": "2026-11-05T22:00:00-03:00",
+  "caption": "Cuando alguien busca dónde comer en tu ciudad, no lee tu Instagram primero. Mira las estrellas en Google. ⭐\n\nLas reseñas son la recomendación boca a boca de hoy. Y la mayoría de los clientes felices nunca deja una... porque nadie se lo pidió.\n\nEn este carrusel te enseño a pedirlas sin sentirte incómodo:\n\n📲 El mejor momento para pedirla\n🔗 Cómo hacer que sea fácil (un link y listo)\n💬 Mensajes listos para copiar\n\n💡 Tip extra: responde TODAS las reseñas, incluso las malas. El próximo cliente no solo lee lo que dijeron de ti: lee cómo respondiste.\n\n¿Cuántas reseñas tiene tu local hoy? Cuéntame 👇\n\n🔖 Guárdalo y aplícalo esta semana\n📩 Mándaselo a alguien con local\n\n#googlemaps #negocioslocales #emprendedoreschile #molina #maule",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Para dueños de locales",
+      "title": "Más *reseñas*\nen Google\nsin rogar",
+      "size": 132,
+      "sub": "Con mensajes *listos para copiar*."
+    },
+    {
+      "type": "point",
+      "icon": "⭐",
+      "title": "Las estrellas\n*venden por ti*",
+      "body": "Antes de ir a un local nuevo, la gente **mira las reseñas en Google**.\n\nMás reseñas = más confianza = más visitas.",
+      "box": {
+        "k": "El problema",
+        "text": "Tus clientes felices casi nunca dejan una. No porque no quieran: nadie se los pidió."
+      }
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Pídela en el\n*mejor momento*",
+      "body": "Justo cuando el cliente **te dice que le gustó**: al pagar, al despedirse o al entregar su pedido.",
+      "box": {
+        "k": "Ejemplo",
+        "text": "\"¡Qué bueno que te gustó! ¿Me ayudas con una reseña en Google? Me sirve un montón.\""
+      }
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Hazlo *fácil*:\nun link y listo",
+      "body": "Google te da un **link directo para dejar reseñas** desde tu Perfil de Empresa.",
+      "box": {
+        "k": "Úsalo así",
+        "text": "Pégalo en WhatsApp, imprímelo como código QR en la caja o en la mesa."
+      }
+    },
+    {
+      "type": "prompt",
+      "icon": "💬",
+      "title": "03. Mensaje\npara *WhatsApp*",
+      "prompt": "¡Hola [nombre]! Gracias por venir a [local] 😊 Si te gustó, ¿nos dejas una reseña en Google? Nos ayuda muchísimo a crecer. Es aquí: [tu link]. ¡Te esperamos pronto!",
+      "box": {
+        "k": "Cuándo enviarlo",
+        "text": "El mismo día de la visita, cuando la experiencia está fresca."
+      }
+    },
+    {
+      "type": "point",
+      "num": "04",
+      "warn": true,
+      "title": "Responde *todas*,\nsobre todo las malas",
+      "body": "El próximo cliente lee **cómo respondiste**, no solo la queja.",
+      "box": {
+        "k": "Lo que nunca hacer",
+        "warn": true,
+        "text": "Discutir, dar excusas o pagar por reseñas falsas. Google puede castigar tu perfil."
+      }
+    },
+    {
+      "type": "checklist",
+      "title": "Tu plan de\n*esta semana*",
+      "items": [
+        "Saca el link de reseñas de tu perfil",
+        "Imprime un QR para la caja",
+        "Pide 1 reseña a cada cliente feliz",
+        "Responde todas las reseñas",
+        "Repite cada semana"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿Cuántas reseñas\ntiene *tu local*?",
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local."
+    }
+  ]
+}
