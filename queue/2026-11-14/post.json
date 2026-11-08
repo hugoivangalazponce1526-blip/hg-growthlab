@@ -1,0 +1,68 @@
+{
+  "fecha": "2026-11-14",
+  "hora": "20:30",
+  "tema": "No guardes este carrusel: 5 ideas para cuando no sabes qué subir",
+  "pilar": "Instagram que vende",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-08T15:10:00-03:00",
+  "caption": "En serio, no lo guardes. Bueno… a menos que alguna vez te hayas quedado mirando el celular sin saber qué subir. 😅\n\nA casi todos los dueños de local les pasa: el problema no es el tiempo, es que se acaban las ideas.\n\nEn este carrusel te dejo 5 ideas que funcionan en cualquier rubro:\n\n🎬 Detrás de escena\n🙋 Tu equipo\n❓ Lo que más te preguntan\n\n💡 Tip extra: anota en el celular cada pregunta que te hace un cliente. Cada pregunta es una publicación lista.\n\n¿Cuál vas a subir primero? Cuéntame 👇\n\n🔖 Ya sabemos que lo vas a guardar\n📩 Mándaselo a alguien que nunca sabe qué subir\n\n#negocioslocales #emprendedoreschile #molina #maule #ideasdecontenido",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "No guardes\neste carrusel.",
+      "size": 150,
+      "sub": "En serio. *No lo hagas.*",
+      "art": "<svg viewBox=\"0 0 1080 600\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M430,120 L650,120 Q670,120 670,140 L670,560 L540,470 L410,560 L410,140 Q410,120 430,120 Z\" fill=\"none\" stroke=\"#1A1A1A\" stroke-width=\"16\" stroke-linejoin=\"round\"/>\n<line x1=\"350\" y1=\"580\" x2=\"730\" y2=\"110\" stroke=\"#C9A84C\" stroke-width=\"22\" stroke-linecap=\"round\"/>\n<g transform=\"translate(720,360)\"><rect width=\"230\" height=\"76\" rx=\"38\" fill=\"#1A1A1A\"/><text x=\"115\" y=\"49\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"700\" font-size=\"28\" fill=\"#F5F1E8\">Guardar</text></g>\n<path transform=\"translate(880,410)\" d=\"M0,0 L0,70 L18,54 L32,86 L44,80 L30,49 L54,49 Z\" fill=\"#fff\" stroke=\"#1A1A1A\" stroke-width=\"5\" stroke-linejoin=\"round\"/>\n</svg>"
+    },
+    {
+      "type": "point",
+      "title": "…a menos que te hayas\nquedado mirando el celular\n==sin ideas==."
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Detrás de\n*escena*",
+      "body": "Cómo preparas, cómo abres el local, cómo llega el pedido. **Lo cotidiano para ti es interesante para otros.**"
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Tu *equipo*",
+      "body": "Quién atiende, quién cocina, quién corta el pelo. **La gente le compra a personas, no a logos.**"
+    },
+    {
+      "type": "point",
+      "num": "03",
+      "title": "Lo que más\nte *preguntan*",
+      "body": "\"¿Tienen estacionamiento?\" \"¿Hacen delivery?\" **Cada pregunta frecuente es un post listo.**"
+    },
+    {
+      "type": "point",
+      "num": "04",
+      "title": "Antes y\n*después*",
+      "body": "El corte, la mesa armada, el pedido empacado. **Mostrar la transformación engancha.**"
+    },
+    {
+      "type": "point",
+      "num": "05",
+      "title": "Un cliente\n*feliz*",
+      "body": "Con permiso: su foto, su comentario o su reseña. **La mejor publicidad la hacen otros.**"
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "Te dijimos\nque no lo guardaras.\n==Ya es tarde.=="
+    },
+    {
+      "type": "cta",
+      "title": "¿Cuál vas a\n*subir primero*?",
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo llenar tu local con marketing e IA.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Ya lo guardaste, lo sabemos",
+        "Mándaselo a alguien con local"
+      ]
+    }
+  ]
+}

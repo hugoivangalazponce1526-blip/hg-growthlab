@@ -8,3 +8,10 @@
 - 2026-11-06 · Carrusel · Promocionar NO es hacer publicidad
 - 2026-11-07 · Carrusel · 3 prompts de IA que te ahorran horas
 - 2026-11-08 · Carrusel · Más reseñas en Google sin rogar
+- 2026-11-09 · Carrusel · Tu local no existe si no estás en Google Maps
+- 2026-11-10 · Carrusel · Tu perfil de Instagram se juzga en 3 segundos (bio)
+- 2026-11-11 · Carrusel · Balde roto: clientes que no vuelven (fidelización)
+- 2026-11-12 · Carrusel · 4 errores de anuncios en Meta
+- 2026-11-13 · Carrusel · WhatsApp Business: responder a las 23:00 sin estar despierto
+- 2026-11-14 · Carrusel · No guardes este carrusel: 5 ideas de contenido
+- 2026-11-15 · Carrusel · Alianzas entre locales vecinos

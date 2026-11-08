@@ -1,0 +1,77 @@
+{
+  "fecha": "2026-11-09",
+  "hora": "13:00",
+  "tema": "Tu local no existe si no estás en Google Maps",
+  "pilar": "Atraer clientes",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-08T15:10:00-03:00",
+  "caption": "Hay un local en tu ciudad que vende lo mismo que tú… y le gana clientes todos los días solo porque aparece primero en el mapa. 📍\n\nCuando alguien busca \"café cerca de mí\" o \"barbería en Molina\", Google le muestra 3 locales. Si no eres uno de ellos, para esa persona no existes.\n\nEn este carrusel te dejo lo que tiene que tener tu perfil para aparecer:\n\n📍 Categoría y dirección correctas\n📸 Fotos reales y actualizadas\n⭐ Reseñas recientes (y respondidas)\n\n💡 Tip extra: sube una foto nueva a tu perfil cada semana. Un perfil que se mueve se ve vivo, para Google y para tus clientes.\n\n¿Ya buscaste tu local en Google hoy? Cuéntame en qué lugar apareces 👇\n\n🔖 Guárdalo para revisarlo con calma\n📩 Mándaselo a alguien con local\n\n#negocioslocales #emprendedoreschile #molina #maule #googlemaps",
+  "slides": [
+    {
+      "type": "cover",
+      "dark": true,
+      "title": "Tu local\nno *existe*.",
+      "size": 170,
+      "sub": "Al menos, no en Google Maps.\nY ahí es donde te están buscando.",
+      "art": "<svg viewBox=\"0 0 1080 600\" xmlns=\"http://www.w3.org/2000/svg\">\n<ellipse cx=\"540\" cy=\"560\" rx=\"330\" ry=\"46\" fill=\"none\" stroke=\"#C9A84C\" stroke-opacity=\".25\" stroke-width=\"3\"/>\n<ellipse cx=\"540\" cy=\"560\" rx=\"210\" ry=\"28\" fill=\"none\" stroke=\"#C9A84C\" stroke-opacity=\".45\" stroke-width=\"3\"/>\n<ellipse cx=\"540\" cy=\"560\" rx=\"70\" ry=\"10\" fill=\"#C9A84C\" fill-opacity=\".35\"/>\n<path d=\"M540,545 C540,545 395,375 395,270 A145,145 0 1 1 685,270 C685,375 540,545 540,545 Z\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"12\" stroke-dasharray=\"26 18\"/>\n<circle cx=\"540\" cy=\"270\" r=\"52\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"12\" stroke-dasharray=\"20 14\"/>\n<g transform=\"translate(690,150)\"><rect width=\"300\" height=\"74\" rx=\"37\" fill=\"#F5F1E8\"/><circle cx=\"40\" cy=\"37\" r=\"12\" fill=\"#C7443F\"/><text x=\"66\" y=\"47\" font-family=\"Sora\" font-weight=\"700\" font-size=\"27\" fill=\"#1A1A1A\">0 resultados</text></g>\n</svg>"
+    },
+    {
+      "type": "point",
+      "title": "Busca \"café\ncerca de mí\".\n==¿Apareces?==",
+      "body": "Google muestra **3 locales** arriba del mapa.\nSi no eres uno de ellos, tu cliente se va con otro."
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Categoría y\ndirección *exactas*",
+      "body": "Si eres \"cafetería\", no pongas solo \"restaurante\". La categoría decide **en qué búsquedas sales**.",
+      "box": {
+        "k": "Revisa también",
+        "text": "Horario al día, teléfono y link a tu WhatsApp o web."
+      }
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Fotos *reales*,\nno de catálogo",
+      "body": "Tu fachada, tu mesón, tu equipo y tus productos. La gente quiere ver **cómo es llegar**.",
+      "box": {
+        "k": "Ritmo",
+        "text": "Una foto nueva por semana mantiene tu perfil vivo."
+      }
+    },
+    {
+      "type": "point",
+      "num": "03",
+      "title": "Reseñas\n*recientes*",
+      "body": "Diez reseñas de este mes pesan más que cien de hace tres años. **Pide y responde todas.**"
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "Tu local ya existe.\nFalta que\n==te encuentren==."
+    },
+    {
+      "type": "checklist",
+      "title": "Tu perfil de Google,\n*en 10 minutos*",
+      "items": [
+        "Categoría correcta",
+        "Horario y teléfono al día",
+        "5 fotos reales nuevas",
+        "Link a WhatsApp o web",
+        "Responder las últimas reseñas"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿En qué lugar\n*apareces tú*?",
+      "body": "Búscate y cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Guárdalo para hacerlo hoy",
+        "Mándaselo a alguien con local"
+      ]
+    }
+  ]
+}

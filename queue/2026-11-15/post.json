@@ -1,0 +1,73 @@
+{
+  "fecha": "2026-11-15",
+  "hora": "13:00",
+  "tema": "Tu competencia no es el local de al lado: alianzas entre locales",
+  "pilar": "Atraer clientes",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-08T15:10:00-03:00",
+  "caption": "El local de al lado no es tu enemigo. Puede ser tu mejor fuente de clientes nuevos. 🤝\n\nUn café y una panadería, una barbería y una tienda de ropa, una carnicería y una botillería: comparten clientes, pero no compiten. Juntos llegan a el doble de gente sin gastar más.\n\nEn este carrusel te doy ideas concretas:\n\n🎟️ Descuentos cruzados\n📸 Contenido juntos en Instagram\n🎁 Combos entre locales\n\n💡 Tip extra: empieza con un solo local vecino y una sola acción por un mes. Si funciona, la repiten; si no, no se perdió nada.\n\n¿Con qué local de tu barrio harías una alianza? Cuéntame 👇\n\n🔖 Guárdalo y propónselo a tu vecino\n📩 Mándaselo a ese local con el que harías dupla\n\n#negocioslocales #emprendedoreschile #molina #maule #emprendimientolocal",
+  "slides": [
+    {
+      "type": "cover",
+      "dark": true,
+      "title": "Tu competencia\nno es el local\nde *al lado*.",
+      "size": 124,
+      "sub": "Puede ser tu mejor fuente de clientes.",
+      "art": "<svg viewBox=\"0 0 1080 600\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"548\" y=\"190\" width=\"270\" height=\"270\" rx=\"26\" fill=\"#C9A84C\"/>\n<circle cx=\"548\" cy=\"325\" r=\"52\" fill=\"#1A1A1A\"/>\n<rect x=\"262\" y=\"190\" width=\"270\" height=\"270\" rx=\"26\" fill=\"#F5F1E8\"/>\n<circle cx=\"548\" cy=\"325\" r=\"46\" fill=\"#F5F1E8\"/>\n<text x=\"397\" y=\"338\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"700\" font-size=\"34\" fill=\"#1A1A1A\">Café</text>\n<text x=\"702\" y=\"338\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"700\" font-size=\"30\" fill=\"#1A1A1A\">Panadería</text>\n<ellipse cx=\"540\" cy=\"520\" rx=\"300\" ry=\"20\" fill=\"#000\" fill-opacity=\".5\"/>\n</svg>"
+    },
+    {
+      "type": "point",
+      "title": "Comparten clientes.\n==No compiten.==",
+      "body": "Un café y una panadería. Una barbería y una tienda de ropa.\n**Juntos llegan al doble de gente.**"
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Descuentos\n*cruzados*",
+      "body": "\"Muestra tu boleta de la barbería y el café va con 10% menos.\" **Cada uno le manda clientes al otro.**"
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Contenido\n*juntos*",
+      "body": "Una publicación o un Reel en colaboración en Instagram: **aparece en los dos perfiles** y llegas a sus seguidores."
+    },
+    {
+      "type": "point",
+      "num": "03",
+      "title": "Combos entre\n*locales*",
+      "body": "Corte + café. Asado + vino. **Un paquete que ninguno de los dos podría ofrecer solo.**",
+      "box": {
+        "k": "Para partir",
+        "text": "Un solo vecino, una sola acción, un mes de prueba."
+      }
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "Solo llegas a\ntus clientes.\nJuntos, ==a los de los dos==."
+    },
+    {
+      "type": "checklist",
+      "title": "Tu primera\n*alianza*",
+      "items": [
+        "Elige un local que no compita",
+        "Propón una sola acción",
+        "Acuerden un mes de prueba",
+        "Publíquenlo los dos",
+        "Midan cuántos clientes llegaron"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿Con qué local\nharías *dupla*?",
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Guárdalo y propónselo",
+        "Mándaselo a tu local vecino"
+      ]
+    }
+  ]
+}

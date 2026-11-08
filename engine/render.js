@@ -114,6 +114,9 @@ body.claro .s.hasimg .bot{display:none}
 .in.center{justify-content:center}
 .in.center h2{font-size:96px}
 body.claro .photo{height:440px;background-position:center 80%}
+.art{position:absolute;left:0;right:0;bottom:0;height:600px;z-index:1;display:flex;align-items:flex-end;justify-content:center}
+.art svg{width:100%;height:100%}
+.s.hasart .bot{display:none}
 /* slide de contraste negra dentro del estilo claro */
 body.claro .s.dark{background:#1A1A1A;color:#F5F1E8;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px}
 body.claro .s.dark h1,body.claro .s.dark h2,body.claro .s.dark strong{color:#F5F1E8}
@@ -166,9 +169,10 @@ function slideHTML(s, i) {
       break;
     default: throw new Error('Tipo de slide desconocido: ' + s.type);
   }
+  const art = s.type === 'cover' && s.art ? `<div class="art">${s.art}</div>` : '';
   const bg = s.type === 'cover' && s.img ? `<div class="bgimg" style="background-image:url('${imgUrl(s.img)}')${s.imgTop !== undefined ? `;top:${s.imgTop}px` : ''}"></div>` : '';
   const center = s.center || (s.type === 'point' && !s.box && !s.img && !s.num && !s.icon) || (s.type === 'vs' && !s.box);
-  return `<section class="s${bg ? ' hasimg' : ''}${s.dark ? ' dark' : ''}" id="s${i + 1}">${bg}${top}<div class="in${center ? ' center' : ''}">${body}</div>${swipe}</section>`;
+  return `<section class="s${bg ? ' hasimg' : ''}${art ? ' hasart' : ''}${s.dark ? ' dark' : ''}" id="s${i + 1}">${bg}${art}${top}<div class="in${center ? ' center' : ''}">${body}</div>${swipe}</section>`;
 }
 
 (async () => {

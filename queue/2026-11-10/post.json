@@ -1,0 +1,78 @@
+{
+  "fecha": "2026-11-10",
+  "hora": "20:30",
+  "tema": "Tu perfil de Instagram se juzga en 3 segundos",
+  "pilar": "Instagram que vende",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-08T15:10:00-03:00",
+  "caption": "Nadie lee tu bio completa. Y no pasa nada: lo que importa es lo que alguien entiende en 3 segundos. ⏱️\n\nCuando un cliente nuevo entra a tu perfil decide rápido si te sigue, te escribe o se va. Y casi siempre se va porque no entendió qué vendes ni dónde estás.\n\nEn este carrusel te muestro qué mira en esos 3 segundos:\n\n👤 Tu foto y tu nombre\n📝 La primera línea de tu bio\n🔘 Tus destacadas y tu botón de contacto\n\n💡 Tip extra: en el campo \"Nombre\" agrega tu rubro y ciudad (ej.: \"Café Luna | Café en Molina\"). Ese campo también sirve para que te encuentren en el buscador de Instagram.\n\n¿Tu perfil pasa la prueba de los 3 segundos? Cuéntame 👇\n\n🔖 Guárdalo y revisa tu perfil hoy\n📩 Mándaselo a alguien con local\n\n#negocioslocales #emprendedoreschile #molina #maule #instagramparanegocios",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Nadie lee\ntu bio.",
+      "size": 176,
+      "sub": "Y está bien. Lo que importa es lo que ven *en 3 segundos*.",
+      "art": "<svg viewBox=\"0 0 1080 600\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"315\" y=\"110\" width=\"450\" height=\"560\" rx=\"52\" fill=\"#fff\" stroke=\"#1A1A1A\" stroke-width=\"6\"/>\n<circle cx=\"425\" cy=\"230\" r=\"56\" fill=\"#EBDDB5\"/>\n<rect x=\"505\" y=\"195\" width=\"200\" height=\"22\" rx=\"11\" fill=\"#d9d4c7\"/><rect x=\"505\" y=\"235\" width=\"140\" height=\"22\" rx=\"11\" fill=\"#e6e1d5\"/>\n<rect x=\"365\" y=\"320\" width=\"350\" height=\"18\" rx=\"9\" fill=\"#e6e1d5\"/><rect x=\"365\" y=\"352\" width=\"260\" height=\"18\" rx=\"9\" fill=\"#e6e1d5\"/>\n<g fill=\"#ece7db\"><rect x=\"365\" y=\"400\" width=\"108\" height=\"108\" rx=\"10\"/><rect x=\"486\" y=\"400\" width=\"108\" height=\"108\" rx=\"10\"/><rect x=\"607\" y=\"400\" width=\"108\" height=\"108\" rx=\"10\"/><rect x=\"365\" y=\"520\" width=\"108\" height=\"108\" rx=\"10\"/><rect x=\"486\" y=\"520\" width=\"108\" height=\"108\" rx=\"10\"/><rect x=\"607\" y=\"520\" width=\"108\" height=\"108\" rx=\"10\"/></g>\n<g transform=\"translate(770,150)\"><circle r=\"78\" fill=\"#1A1A1A\"/><circle r=\"78\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"8\" stroke-dasharray=\"370 120\" transform=\"rotate(-90)\"/><text y=\"20\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"800\" font-size=\"58\" fill=\"#C9A84C\">3s</text></g>\n</svg>"
+    },
+    {
+      "type": "point",
+      "title": "Un cliente nuevo\nentra a tu perfil y…\n==se va.==",
+      "body": "No porque tu producto sea malo.\nPorque **no entendió qué vendes**."
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Foto y nombre:\n*qué eres*",
+      "body": "Logo claro o foto de tu producto estrella. En el nombre: **rubro + ciudad**.",
+      "box": {
+        "k": "Ejemplo",
+        "text": "\"Carnes Don Pepe | Carnicería en Molina\""
+      }
+    },
+    {
+      "type": "vs",
+      "title": "La primera línea\n*de tu bio*",
+      "noLabel": "ASÍ NO",
+      "no": "\"✨ Pasión por la calidad desde siempre ✨\"",
+      "siLabel": "MEJOR ASÍ",
+      "si": "\"Cortes al vacío con delivery en Molina 🥩 Pide por WhatsApp ↓\""
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Destacadas que\n*responden dudas*",
+      "body": "Menú o precios · Cómo llegar · Clientes · Promos. **Lo que te preguntan siempre**, ya respondido.",
+      "box": {
+        "k": "Bonus",
+        "text": "Activa el botón de contacto con tu WhatsApp."
+      }
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "Tu perfil es\ntu vitrina.\n==3 segundos==\npara convencer."
+    },
+    {
+      "type": "checklist",
+      "title": "La prueba de\nlos *3 segundos*",
+      "items": [
+        "Se entiende qué vendo",
+        "Se ve dónde estoy",
+        "Hay una forma clara de pedir",
+        "Mis destacadas responden dudas",
+        "Mi foto se ve bien en chico"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿Tu perfil\n*pasa la prueba*?",
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo atraer clientes a tu local.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Guárdalo y revisa tu perfil",
+        "Mándaselo a alguien con local"
+      ]
+    }
+  ]
+}

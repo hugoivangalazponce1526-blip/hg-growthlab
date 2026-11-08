@@ -121,3 +121,5 @@ Para escenas con personas: "foto estilo documental, luz natural de día, persona
 - Portada: `"img": "img_portada.jpg"` con foto de objeto sobre fondo crema (el objeto en la mitad inferior; el texto va arriba). Si el objeto queda cortado o tapa el texto, ajusta `"imgTop"` (px desde arriba; por defecto 150; menor = sube la foto).
 - Slide con foto interna: `"img": "img_2.jpg"` en una point (texto corto).
 - Ejemplo de referencia: queue/2026-11-06 (metáfora del megáfono).
+- Portada ilustrada (alternativa a la foto): `"art": "<svg viewBox='0 0 1080 600'>…</svg>"` en la slide cover. Se dibuja en los 600 px inferiores. Úsala cuando no haya foto de ChatGPT disponible: ilustración plana y simple de la metáfora (negro, crema y dorado), sin degradados. Ejemplos: queue/2026-11-09 a 2026-11-15.
+- Portada negra (`"dark": true` en la cover) para hooks de choque; alternar con portadas crema durante la semana.

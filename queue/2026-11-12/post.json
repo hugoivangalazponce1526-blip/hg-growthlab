@@ -1,0 +1,70 @@
+{
+  "fecha": "2026-11-12",
+  "hora": "20:30",
+  "tema": "4 errores que hacen que tus anuncios no los vea nadie",
+  "pilar": "Publicidad Meta",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-08T15:10:00-03:00",
+  "caption": "Pagaste un anuncio, se gastó la plata y no te escribió nadie. No es mala suerte: casi siempre es uno de estos 4 errores. 💸\n\nLa publicidad en Instagram y Facebook sí funciona para locales chicos, pero castiga muy rápido las decisiones apuradas.\n\nEn este carrusel te dejo los errores más comunes:\n\n🎯 Pedirle a Meta el objetivo equivocado\n👥 Hablarle a todo el mundo\n🔄 Cambiar el anuncio todos los días\n\n💡 Tip extra: antes de poner plata, pregúntate \"¿qué quiero que haga la persona al ver esto?\". Si la respuesta es \"no sé\", el anuncio tampoco va a saber.\n\n¿Cuál de estos errores cometiste? Te leo 👇\n\n🔖 Guárdalo para tu próximo anuncio\n📩 Mándaselo a alguien que pone plata en anuncios\n\n#negocioslocales #emprendedoreschile #molina #maule #publicidadfacebook",
+  "slides": [
+    {
+      "type": "cover",
+      "dark": true,
+      "title": "Le pagaste a Meta\npara que *nadie*\nte viera.",
+      "size": 106,
+      "sub": "4 errores que se comen tu presupuesto.",
+      "art": "<svg viewBox=\"0 -90 1080 690\" xmlns=\"http://www.w3.org/2000/svg\">\n<ellipse cx=\"540\" cy=\"540\" rx=\"330\" ry=\"70\" fill=\"#000\"/>\n<ellipse cx=\"540\" cy=\"540\" rx=\"330\" ry=\"70\" fill=\"none\" stroke=\"#C9A84C\" stroke-opacity=\".6\" stroke-width=\"4\"/>\n<ellipse cx=\"540\" cy=\"548\" rx=\"220\" ry=\"40\" fill=\"#0b0b0b\"/>\n<g transform=\"translate(330,190) rotate(-18) scale(0.9)\"><rect x=\"-120\" y=\"-60\" width=\"240\" height=\"120\" rx=\"12\" fill=\"#C9A84C\"/><rect x=\"-104\" y=\"-44\" width=\"208\" height=\"88\" rx=\"8\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".35\" stroke-width=\"4\"/><circle r=\"30\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".45\" stroke-width=\"5\"/><text y=\"12\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"800\" font-size=\"34\" fill=\"#1A1A1A\" fill-opacity=\".55\">$</text></g><g transform=\"translate(720,140) rotate(14) scale(0.8)\"><rect x=\"-120\" y=\"-60\" width=\"240\" height=\"120\" rx=\"12\" fill=\"#C9A84C\"/><rect x=\"-104\" y=\"-44\" width=\"208\" height=\"88\" rx=\"8\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".35\" stroke-width=\"4\"/><circle r=\"30\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".45\" stroke-width=\"5\"/><text y=\"12\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"800\" font-size=\"34\" fill=\"#1A1A1A\" fill-opacity=\".55\">$</text></g><g transform=\"translate(470,360) rotate(8) scale(0.95)\"><rect x=\"-120\" y=\"-60\" width=\"240\" height=\"120\" rx=\"12\" fill=\"#C9A84C\"/><rect x=\"-104\" y=\"-44\" width=\"208\" height=\"88\" rx=\"8\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".35\" stroke-width=\"4\"/><circle r=\"30\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".45\" stroke-width=\"5\"/><text y=\"12\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"800\" font-size=\"34\" fill=\"#1A1A1A\" fill-opacity=\".55\">$</text></g><g transform=\"translate(640,450) rotate(-25) scale(0.75)\"><rect x=\"-120\" y=\"-60\" width=\"240\" height=\"120\" rx=\"12\" fill=\"#C9A84C\"/><rect x=\"-104\" y=\"-44\" width=\"208\" height=\"88\" rx=\"8\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".35\" stroke-width=\"4\"/><circle r=\"30\" fill=\"none\" stroke=\"#1A1A1A\" stroke-opacity=\".45\" stroke-width=\"5\"/><text y=\"12\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"800\" font-size=\"34\" fill=\"#1A1A1A\" fill-opacity=\".55\">$</text></g>\n</svg>"
+    },
+    {
+      "type": "point",
+      "title": "Se gastó la plata.\n==No escribió nadie.==",
+      "body": "No es mala suerte.\nCasi siempre es **uno de estos 4 errores**."
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Pedir el objetivo\n*equivocado*",
+      "body": "Si pides \"interacción\", Meta te trae likes. Si quieres pedidos, pide **mensajes o visitas a tu web**."
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Hablarle a\n*todo el mundo*",
+      "body": "Un local de barrio no necesita a todo Chile. Apunta a **unos kilómetros a la redonda** de tu local."
+    },
+    {
+      "type": "point",
+      "num": "03",
+      "title": "Cambiarlo\n*todos los días*",
+      "body": "El anuncio necesita unos días para aprender a quién mostrarse. **Si lo tocas a diario, vuelve a empezar.**"
+    },
+    {
+      "type": "point",
+      "num": "04",
+      "warn": true,
+      "title": "Un anuncio\n*bonito que no vende*",
+      "body": "Sin precio, sin oferta y sin decir qué hacer. **Lo lindo no reemplaza a lo claro.**",
+      "box": {
+        "k": "Siempre incluye",
+        "warn": true,
+        "text": "Qué es, por qué ahora y cómo pedirlo."
+      }
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "La plata no\nera el problema.\nEra ==la estrategia==."
+    },
+    {
+      "type": "cta",
+      "title": "¿Cuál de estos\n*cometiste*?",
+      "body": "Cuéntame en los comentarios. Cada día enseño gratis cómo hacer publicidad sin quemar plata.",
+      "buttons": [
+        "Sígueme para más ▸",
+        "Guárdalo para tu próximo anuncio",
+        "Mándaselo a alguien con local"
+      ]
+    }
+  ]
+}
