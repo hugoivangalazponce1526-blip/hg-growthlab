@@ -10,11 +10,10 @@
   "slides": [
     {
       "type": "cover",
-      "dark": true,
       "title": "Tu competencia\nno es el local\nde *al lado*.",
       "size": 124,
       "sub": "Puede ser tu mejor fuente de clientes.",
-      "art": "<svg viewBox=\"0 0 1080 600\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"548\" y=\"190\" width=\"270\" height=\"270\" rx=\"26\" fill=\"#C9A84C\"/>\n<circle cx=\"548\" cy=\"325\" r=\"52\" fill=\"#1A1A1A\"/>\n<rect x=\"262\" y=\"190\" width=\"270\" height=\"270\" rx=\"26\" fill=\"#F5F1E8\"/>\n<circle cx=\"548\" cy=\"325\" r=\"46\" fill=\"#F5F1E8\"/>\n<text x=\"397\" y=\"338\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"700\" font-size=\"34\" fill=\"#1A1A1A\">Café</text>\n<text x=\"702\" y=\"338\" text-anchor=\"middle\" font-family=\"Sora\" font-weight=\"700\" font-size=\"30\" fill=\"#1A1A1A\">Panadería</text>\n<ellipse cx=\"540\" cy=\"520\" rx=\"300\" ry=\"20\" fill=\"#000\" fill-opacity=\".5\"/>\n</svg>"
+      "img": "img_portada.jpg"
     },
     {
       "type": "point",

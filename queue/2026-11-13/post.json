@@ -13,7 +13,8 @@
       "title": "Te escribieron\na las 23:00.\nRespondiste a\nlas *10:00*.",
       "size": 104,
       "sub": "A esa hora, *ya había comprado en otro lado*.",
-      "art": "<svg viewBox=\"0 -170 1080 770\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"210\" y=\"40\" width=\"660\" height=\"600\" rx=\"40\" fill=\"#efeadf\" stroke=\"#1A1A1A\" stroke-opacity=\".12\" stroke-width=\"3\"/>\n<g transform=\"translate(260,90)\"><rect width=\"480\" height=\"120\" rx=\"28\" fill=\"#fff\"/><text x=\"32\" y=\"58\" font-family=\"Inter\" font-weight=\"500\" font-size=\"30\" fill=\"#1A1A1A\">¿Tienen hora para mañana?</text><text x=\"448\" y=\"100\" text-anchor=\"end\" font-family=\"Inter\" font-size=\"22\" fill=\"#8a8a8a\">23:04</text></g>\n<g transform=\"translate(540,260)\"><rect x=\"-80\" y=\"0\" width=\"160\" height=\"44\" rx=\"22\" fill=\"#e2dccd\"/><text y=\"30\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"600\" font-size=\"22\" fill=\"#6a6a6a\">11 horas después</text></g>\n<g transform=\"translate(400,350)\"><rect width=\"420\" height=\"120\" rx=\"28\" fill=\"#1A1A1A\"/><text x=\"32\" y=\"58\" font-family=\"Inter\" font-weight=\"500\" font-size=\"30\" fill=\"#F5F1E8\">¡Hola! Sí, a las 11 😊</text><text x=\"330\" y=\"100\" text-anchor=\"end\" font-family=\"Inter\" font-size=\"22\" fill=\"#9a9a9a\">10:12</text><text x=\"388\" y=\"100\" text-anchor=\"end\" font-family=\"Inter\" font-weight=\"700\" font-size=\"24\" fill=\"#C9A84C\">✓✓</text></g>\n<g transform=\"translate(260,500)\"><rect width=\"300\" height=\"90\" rx=\"26\" fill=\"#fff\"/><text x=\"30\" y=\"56\" font-family=\"Inter\" font-weight=\"500\" font-size=\"28\" fill=\"#1A1A1A\">Ya reservé, gracias</text></g>\n</svg>"
+      "img": "img_portada.jpg",
+      "imgTop": 250
     },
     {
       "type": "point",
