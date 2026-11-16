@@ -15,3 +15,9 @@
 - 2026-11-13 · Carrusel · WhatsApp Business: responder a las 23:00 sin estar despierto
 - 2026-11-14 · Carrusel · No guardes este carrusel: 5 ideas de contenido
 - 2026-11-15 · Carrusel · Alianzas entre locales vecinos
+- 2026-11-17 · Carrusel (historia de marca) · Por qué IKEA te hace caminar toda la tienda
+- 2026-11-18 · Carrusel (capturas de chat) · Te escriben «¿precio?» y desaparecen: 3 respuestas
+- 2026-11-19 · Carrusel (red flags con Labi) · 5 red flags del Instagram de un local
+- 2026-11-20 · Carrusel (elige tu plan) · Black Friday para locales chicos: plan A, B o C
+- 2026-11-21 · Carrusel (mito vs realidad) · 4 cosas de Instagram que ya no son verdad
+- 2026-11-22 · Carrusel (sigue la línea) · El viaje del cliente antes de pisar tu local (Maps, fotos, reseñas, Instagram, WhatsApp)

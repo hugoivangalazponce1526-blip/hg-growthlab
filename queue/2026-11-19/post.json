@@ -1,0 +1,92 @@
+{
+  "fecha": "2026-11-19",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-16T14:00:00-03:00",
+  "hora": "20:30",
+  "tema": "Labi revisa tu local: 5 red flags del Instagram de un local",
+  "pilar": "Instagram para locales",
+  "formato": "red flags con Labi",
+  "caption": "5 red flags que hacen que un cliente salga de tu Instagram sin escribirte. 🚩 ¿Cuántas tiene tu local?\n\nNinguna tiene que ver con seguidores ni con bailar en Reels. Son detalles que se arreglan en una tarde: que el perfil se vea activo, que diga dónde estás, fotos tuyas, algo más que ofertas y una forma fácil de escribirte.\n\nLabi 🧪 ya hizo la lista. Tú solo tienes que contar.\n\nDime tu número en comentarios, sin vergüenza. 👇\n\n#instagramparanegocios #negocioslocales #marketingdigitalchile #emprendedoreschile #maule",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Labi revisa tu local",
+      "title": "5 *red flags* del Instagram de un local",
+      "size": 120,
+      "sub": "Con 2 o más, estás\nperdiendo clientes.",
+      "labi": {
+        "pose": "preocupado",
+        "w": 480,
+        "right": 30,
+        "bottom": 60
+      },
+      "stickers": [
+        {
+          "e": "🚩",
+          "x": 100,
+          "y": 1010,
+          "size": 210,
+          "r": -12
+        },
+        {
+          "e": "🚩",
+          "x": 370,
+          "y": 1150,
+          "size": 110,
+          "r": 10
+        }
+      ]
+    },
+    {
+      "type": "flag",
+      "n": 1,
+      "title": "«Última publicación: hace 4 meses»",
+      "body": "El que entra a tu perfil no piensa «están ocupados». Piensa **«¿habrán cerrado?»**",
+      "fix": "Una foto a la semana de lo que hiciste hoy. Con eso tu perfil ya se ve vivo."
+    },
+    {
+      "type": "flag",
+      "n": 2,
+      "title": "No dice dónde estás ni a qué hora abres",
+      "body": "Si hay que escribirte para saber la dirección, mucha gente no escribe. Se va al local de al lado.",
+      "fix": "Dirección y horario en la bio, y el botón **«Cómo llegar»** activado."
+    },
+    {
+      "type": "flag",
+      "n": 3,
+      "title": "Fotos oscuras o sacadas de Google",
+      "body": "La foto es tu vitrina. Si se ve mal o no es tuya, el cliente duda de que el producto sea como se ve.",
+      "fix": "Tu producto real, cerca de una ventana, de día. El celular que tienes sirve."
+    },
+    {
+      "type": "flag",
+      "n": 4,
+      "title": "Solo publicas ofertas",
+      "body": "Un perfil lleno de «2x1» y «últimos cupos» se siente como un volante. Y los volantes se botan.",
+      "fix": "Alterna: una oferta, y después el detrás de escena, tu equipo o un cliente contento."
+    },
+    {
+      "type": "flag",
+      "n": 5,
+      "title": "Nadie sabe cómo escribirte",
+      "body": "Link caído, WhatsApp escondido o un «escríbenos» sin botón. Cada paso extra es un cliente que se cansa.",
+      "fix": "Un solo link en la bio que abra directo tu WhatsApp. Pruébalo desde otro celular."
+    },
+    {
+      "type": "cta",
+      "title": "¿Cuántas 🚩 tiene tu local?",
+      "body": "**0** → vas bien.\n**1 o 2** → se arregla este fin de semana.\n**3 o más** → parte por la que más te dolió.",
+      "buttons": [
+        "📩 Envíaselo a ese local que quieres"
+      ],
+      "labi": {
+        "pose": "saludo",
+        "expresion": "guino",
+        "w": 270,
+        "right": 70,
+        "y": 650
+      }
+    }
+  ]
+}

@@ -131,15 +131,16 @@ body.claro .s.dark .top{color:#8a8a8a}
 `;
 
 const imgUrl = f => 'file://' + path.join(dir, f);
+const X = require('./extra')({ esc, md, N });
 function slideHTML(s, i) {
   const n = `${i + 1}/${N}`;
   const logo = CLARO && !s.dark ? 'logo_claro.png' : 'logo.png';
   const top = `<div class="top"><img src="file://${ENGINE}/${logo}"><div>${CLARO ? '@hg_growthlab · ' : ''}${n}</div></div>`;
   const swipe = i < N - 1 && (s.type === 'cover' || i === 1) ? `<div class="bot">Desliza <span style="font-size:38px">→</span></div>` : '';
-  let body = '';
+  let body = '', full = '', xcls = '';
   switch (s.type) {
     case 'cover':
-      body = `${s.tag ? `<div class="tag">${esc(s.tag)}</div>` : ''}<h1 style="font-size:${s.size || 132}px">${md(s.title)}</h1>
+      body = `${s.tag ? `<div class="tag">${esc(s.tag)}</div>` : ''}<h1${s.serif ? ' class="serif"' : ''} style="font-size:${s.size || 132}px">${md(s.title)}</h1>
         <svg class="swoosh" viewBox="0 0 500 30"><path d="M6 22 C120 8 300 4 494 12" stroke="#E3BC52" stroke-width="9" fill="none" stroke-linecap="round"/></svg>
         ${s.sub ? `<div class="sub">${md(s.sub)}</div>` : ''}`;
       break;
@@ -167,16 +168,21 @@ function slideHTML(s, i) {
         <div class="btns">${(s.buttons || ['🔖 Guárdalo para aplicarlo', '📩 Mándaselo a alguien con local', '➕ Sígueme para más']).map(b => `<div class="btn">${esc(b)}</div>`).join('')}</div>
         <div class="sign">Hugo · <span class="gold">HG Growth Lab</span> · Automatiza tu futuro con IA</div>`;
       break;
-    default: throw new Error('Tipo de slide desconocido: ' + s.type);
+    default: {
+      const r = X.render(s, i);
+      if (!r) throw new Error('Tipo de slide desconocido: ' + s.type);
+      body = r.body || ''; full = r.full || ''; xcls = r.cls || '';
+    }
   }
   const art = s.type === 'cover' && s.art ? `<div class="art">${s.art}</div>` : '';
   const bg = s.type === 'cover' && s.img ? `<div class="bgimg" style="background-image:url('${imgUrl(s.img)}')${s.imgTop !== undefined ? `;top:${s.imgTop}px` : ''}"></div>` : '';
   const center = s.center || (s.type === 'point' && !s.box && !s.img && !s.num && !s.icon) || (s.type === 'vs' && !s.box);
-  return `<section class="s${bg ? ' hasimg' : ''}${art ? ' hasart' : ''}${s.dark ? ' dark' : ''}" id="s${i + 1}">${bg}${art}${top}<div class="in${center ? ' center' : ''}">${body}</div>${swipe}</section>`;
+  const dc = X.deco(s, i);
+  return `<section class="s${bg ? ' hasimg' : ''}${art ? ' hasart' : ''}${s.dark ? ' dark' : ''} ${xcls}${dc.cls}" id="s${i + 1}">${bg}${art}${full}${dc.html}${top}<div class="in${center ? ' center' : ''}">${body}</div>${swipe}</section>`;
 }
 
 (async () => {
-  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>${CSS}</style></head><body class="${CLARO ? 'claro' : ''}">${slides.map(slideHTML).join('')}</body></html>`;
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>${CSS}${X.css}</style></head><body class="${CLARO ? 'claro' : ''} f-${post.fondo || 'grid'}">${slides.map(slideHTML).join('')}</body></html>`;
   const tmp = path.join(dir, '_render.html');
   fs.writeFileSync(tmp, html);
   const b = await chromium.launch();

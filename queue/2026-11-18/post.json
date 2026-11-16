@@ -1,0 +1,153 @@
+{
+  "fecha": "2026-11-18",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-16T14:00:00-03:00",
+  "hora": "13:00",
+  "tema": "Te escriben «¿precio?» y desaparecen: 3 respuestas para copiar",
+  "pilar": "ventas por mensaje",
+  "formato": "capturas de chat",
+  "fondo": "liso",
+  "caption": "«¿Precio?» → respondes → visto. Si te pasa todas las semanas, no es que tu local esté caro: es cómo estás respondiendo. 👇\n\nUn número solo deja al cliente comparando. Un precio con lo que incluye y una pregunta al final mantiene la conversación abierta.\n\nEn el carrusel van 3 respuestas listas para copiar: cuando preguntan el precio, cuando el precio depende y cuando te dicen «lo voy a pensar».\n\n¿Cuál es el mensaje que más te llega y nunca sabes cómo responder? Cuéntame y lo armo. 💬\n\n#ventasporwhatsapp #atencionalcliente #negocioslocales #emprendedoreschile #marketingparanegocios",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Copia y pega",
+      "title": "Te escriben *«¿precio?»* y desaparecen.",
+      "size": 112,
+      "bubble": [
+        {
+          "text": "¿Precio?"
+        },
+        {
+          "me": true,
+          "text": "$9.000"
+        },
+        {
+          "seen": "Visto. Y nunca más volvió."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "ok": false,
+      "title": "Respondiste lo que te preguntaron. *Y ahí se acabó.*",
+      "name": "Camila R.",
+      "avatar": "C",
+      "via": "Instagram · Mensaje directo",
+      "msgs": [
+        {
+          "text": "Hola! precio del corte?"
+        },
+        {
+          "me": true,
+          "text": "$9.000"
+        },
+        {
+          "seen": "Visto 14:32"
+        }
+      ],
+      "note": "Un número solo no vende."
+    },
+    {
+      "type": "chat",
+      "ok": true,
+      "label": "✓ RESPUESTA 1",
+      "title": "Precio + lo que incluye + *una pregunta.*",
+      "name": "Camila R.",
+      "avatar": "C",
+      "via": "Instagram · Mensaje directo",
+      "msgs": [
+        {
+          "text": "Hola! precio del corte?"
+        },
+        {
+          "me": true,
+          "text": "¡Hola, Camila! El corte sale $9.000 e incluye lavado y peinado 🙌 ¿Lo quieres para hoy o para el fin de semana?"
+        },
+        {
+          "text": "Para el sábado en la mañana 🙏"
+        }
+      ],
+      "note": "La pregunta mantiene vivo el chat."
+    },
+    {
+      "type": "chat",
+      "ok": true,
+      "label": "✓ RESPUESTA 2",
+      "title": "Si el precio depende, *pregunta tú primero.*",
+      "name": "Jorge M.",
+      "avatar": "J",
+      "via": "WhatsApp",
+      "msgs": [
+        {
+          "text": "Buenas, cuánto sale una torta?"
+        },
+        {
+          "me": true,
+          "text": "¡Hola, Jorge! Depende del tamaño 🎂 ¿Para cuántas personas la necesitas? Así te doy el precio exacto."
+        },
+        {
+          "text": "Somos como 15"
+        }
+      ],
+      "note": "Nunca respondas solo «depende»."
+    },
+    {
+      "type": "chat",
+      "ok": true,
+      "label": "✓ RESPUESTA 3",
+      "title": "Cuando te dicen *«lo voy a pensar»*",
+      "name": "Camila R.",
+      "avatar": "C",
+      "via": "Instagram · Mensaje directo",
+      "msgs": [
+        {
+          "text": "Ya, lo voy a pensar"
+        },
+        {
+          "me": true,
+          "text": "¡Obvio! Te dejo guardada la hora del sábado hasta mañana al mediodía, por si te decides 😉"
+        },
+        {
+          "text": "Buena, mañana te confirmo"
+        }
+      ],
+      "note": "Un motivo y un plazo. Cero presión."
+    },
+    {
+      "type": "steps",
+      "tag": "La fórmula",
+      "title": "Antes de mandar un precio, revisa *estas 3 cosas:*",
+      "items": [
+        {
+          "t": "¿Dije qué incluye?",
+          "d": "El precio solo se compara. El precio con lo que trae, se entiende."
+        },
+        {
+          "t": "¿Terminé con una pregunta?",
+          "d": "Fácil de responder: ¿para cuándo?, ¿para cuántos?, ¿cuál prefieres?"
+        },
+        {
+          "t": "¿Usé su nombre?",
+          "d": "Un «Hola, Camila» ya te separa de la respuesta automática."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo.",
+      "body": "La próxima vez que te escriban «¿precio?», abre este carrusel y copia la respuesta.",
+      "buttons": [
+        "🔖 Guardar para la próxima"
+      ],
+      "sticker": {
+        "e": "🔖",
+        "size": 260,
+        "r": 10,
+        "right": 120,
+        "bottom": 460
+      }
+    }
+  ]
+}

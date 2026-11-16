@@ -1,0 +1,152 @@
+{
+  "fecha": "2026-11-22",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-16T14:00:00-03:00",
+  "hora": "13:00",
+  "tema": "Sigue la línea: el viaje de un cliente antes de pisar tu local",
+  "pilar": "presencia local",
+  "formato": "sigue la línea",
+  "fondo": "puntos",
+  "caption": "Antes de entrar a tu local, tu cliente ya pasó por 5 lugares. Si fallas en uno, se queda en el camino. Sigue la línea. 👇\n\nGoogle Maps → fotos → reseñas → Instagram → WhatsApp. Ese es el recorrido de alguien que todavía no te conoce y está decidiendo dónde ir hoy.\n\nLa buena noticia: las 5 paradas son gratis y se revisan desde el celular.\n\n¿En cuál parada crees que se te están quedando clientes? 👇\n\n#googlemaps #negocioslocales #marketinglocal #emprendedoreschile #pymeschile",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Sigue la línea →",
+      "title": "Así te encuentra un cliente *antes de pisar tu local*",
+      "size": 104,
+      "img": "img_portada.jpg",
+      "imgTop": 40,
+      "route": {
+        "px": 388,
+        "py": 1296,
+        "yout": 1100,
+        "pin": false
+      },
+      "notes": [
+        {
+          "text": "5 paradas.\nRevisa si estás\nen cada una.",
+          "x": 640,
+          "y": 800,
+          "size": 66,
+          "r": -4,
+          "color": "#1A1A1A"
+        }
+      ]
+    },
+    {
+      "type": "ruta",
+      "stop": "Parada 1 de 5",
+      "place": "Google Maps",
+      "title": "«Tengo hambre.»",
+      "body": "Saca el celular y busca **«pizza cerca de mí»**. Todavía no sabe que existes.",
+      "box": {
+        "k": "Revisa",
+        "text": "¿Apareces en el mapa cuando buscan lo que vendes? La ficha de Google es gratis."
+      },
+      "route": {
+        "yin": 1100,
+        "px": 540,
+        "py": 1190,
+        "yout": 1040,
+        "label": "1"
+      }
+    },
+    {
+      "type": "ruta",
+      "stop": "Parada 2 de 5",
+      "place": "Las fotos",
+      "title": "Mira las fotos antes que el nombre.",
+      "body": "Entre tres locales parecidos, toca el que se ve mejor.",
+      "box": {
+        "k": "Revisa",
+        "text": "¿Tus fotos son tuyas, con buena luz y de este año?"
+      },
+      "route": {
+        "yin": 1040,
+        "px": 400,
+        "py": 1220,
+        "yout": 1180,
+        "label": "2"
+      }
+    },
+    {
+      "type": "ruta",
+      "stop": "Parada 3 de 5",
+      "place": "Las reseñas",
+      "title": "Lee lo que otros dicen de ti.",
+      "body": "Mira la nota, las reseñas recientes y si alguien del local responde.",
+      "box": {
+        "k": "Revisa",
+        "text": "¿Tienes reseñas de este mes? ¿Las contestas, incluidas las malas?"
+      },
+      "route": {
+        "yin": 1180,
+        "px": 660,
+        "py": 1170,
+        "yout": 1080,
+        "label": "3"
+      }
+    },
+    {
+      "type": "ruta",
+      "stop": "Parada 4 de 5",
+      "place": "Instagram",
+      "title": "Entra a tu perfil a confirmar.",
+      "body": "Quiere ver que el local sigue vivo, el horario y qué hay hoy.",
+      "box": {
+        "k": "Revisa",
+        "text": "¿Tu última publicación es reciente? ¿Dirección y horario a la vista?"
+      },
+      "route": {
+        "yin": 1080,
+        "px": 440,
+        "py": 1230,
+        "yout": 1150,
+        "label": "4"
+      }
+    },
+    {
+      "type": "ruta",
+      "stop": "Parada 5 de 5",
+      "place": "WhatsApp",
+      "title": "Recién ahí te escribe.",
+      "body": "Una pregunta corta: «¿tienen mesa?», «¿hasta qué hora atienden?».",
+      "box": {
+        "k": "Revisa",
+        "text": "¿Respondes rápido y con ganas, o con un «sí» a secas?"
+      },
+      "route": {
+        "yin": 1150,
+        "px": 620,
+        "py": 1180,
+        "yout": 1210,
+        "label": "5"
+      }
+    },
+    {
+      "type": "ruta",
+      "end": true,
+      "stop": "Llegada",
+      "place": "Tu puerta",
+      "title": "Recién aquí te conoce *en persona.*",
+      "items": [
+        "Estoy en Google Maps",
+        "Fotos propias y actuales",
+        "Reseñas recientes y respondidas",
+        "Instagram activo, con horario",
+        "WhatsApp que responde rápido"
+      ],
+      "box": {
+        "k": "🔖 Guárdalo",
+        "text": "Y revisa tus 5 paradas hoy, desde otro celular."
+      },
+      "route": {
+        "yin": 1210,
+        "px": 900,
+        "py": 1270,
+        "label": "★"
+      }
+    }
+  ]
+}

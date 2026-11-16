@@ -113,6 +113,33 @@ Para escenas con personas: "foto estilo documental, luz natural de día, persona
 
 ---
 
+## 4. Dinámica semanal: un formato distinto cada día (desde el 17-nov-2026)
+
+**Por qué cambió.** Hugo pidió cambiar la dinámica: los carruseles salían "muy iguales y un poco aburridos" (siempre portada + 01/02/03 + checklist + cierre). Los números de la cuenta lo confirman: los carruseles de consejos genéricos llegaron a 10-40 cuentas, mientras que las historias de marca (Reel de McDonald's: 674 de alcance y 38 envíos), Labi (263 de alcance y 33 envíos) y lo práctico para copiar y pegar (3 prompts de IA: 317 de alcance) viajaron mucho más. En Instagram hoy pesan sobre todo los **envíos por mensaje** y los **guardados**; por eso cada carrusel se diseña para que alguien lo quiera mandar o guardar.
+
+**Reglas de la semana**
+1. **Nunca dos días seguidos con el mismo formato**, y ningún formato más de una vez por semana (salvo que Hugo lo pida).
+2. Al menos **1 historia de marca** por semana (es el género que mejor le funciona) y al menos **1 carrusel para copiar y pegar** (chats, prompts, plantillas).
+3. **Labi** aparece en 1 o 2 carruseles por semana, solo en portada o cierre (guía de la mascota).
+4. Portadas: 3 o 4 con foto de ChatGPT (objeto real sobre crema); el resto con chat gigante, Labi o tipografía. Que al ver las 7 portadas juntas ninguna parezca hermana de otra.
+5. **Un solo pedido en el cierre**, elegido según el formato: historia y mito → "mándaselo a…"; chats, planes y ruta → "guárdalo"; red flags → "mándaselo a ese local…". La pregunta para comentarios va en el caption.
+6. Caption más corto (80-150 palabras): gancho en los primeros 125 caracteres, 1 o 2 párrafos, una pregunta y 5 hashtags. Sin listas de bullets obligatorias.
+7. Si hay una fecha cercana (Black Friday, Navidad, Fiestas Patrias, Día de la Madre), un carrusel de la semana se ancla a ella.
+8. Los datos que se citen (estudios, frases de fundadores) deben estar verificados con búsqueda web; si no se pueden verificar, no van.
+
+**Catálogo de formatos (tipo de slide en el motor → ejemplo)**
+| Formato | Para qué sirve | Tipos de slide | Ejemplo |
+|---|---|---|---|
+| Historia de marca | Envíos y alcance. Caso real contado por capítulos + "lo que puedes copiar" | cover `serif` + `story` + `steps` dark + `cta` | queue/2026-11-17 (IKEA) |
+| Capturas de chat | Guardados. Respuestas para copiar, "así no / mejor así" | cover con `bubble` + `chat` + `steps` + `cta` | queue/2026-11-18 (¿precio?) |
+| Red flags con Labi | Envíos y comentarios ("¿cuántas tienes?") | cover con `labi` y `stickers` + `flag` + `cta` con `labi` | queue/2026-11-19 |
+| Elige tu plan (A/B/C) | Guardados y comentarios ("¿A, B o C?"). Ideal para fechas | cover foto + `choose` + `plan` + `prompt` + `point` dark + `cta` | queue/2026-11-20 (Black Friday) |
+| Mito vs. realidad | Envíos ("mándaselo al que todavía…") | cover foto + `mito` (pantalla partida) + `cta` dark con `labi` card | queue/2026-11-21 |
+| Sigue la línea | Retención: una línea punteada cruza todas las láminas | cover foto con `route` + `ruta` (paradas) + `ruta` end con checklist | queue/2026-11-22 |
+| Clásico HG (metáfora + ==resaltado==) | Sigue siendo válido, máximo 1 vez por semana | cover + point + vs + checklist + cta | queue/2026-11-06 |
+
+Otros formatos virales para ir probando (crear el tipo de slide si hace falta): "Cosas que me hubiera gustado saber antes de abrir mi local" (solo con experiencias reales que cuente Hugo), "Lo que no funcionó" (anti vitrina), transformación capa por capa de una bio o una publicación, test "¿qué tipo de local eres?", "Dato de laboratorio" de Labi.
+
 ## Cómo se aplica en el motor (engine/render.js)
 - En post.json: `"estilo": "claro"` (obligatorio en todo carrusel nuevo).
 - `==frase==` = frase clave resaltada con recuadro dorado suave y puntos (estilo selección de Figma). Úsalo 1 vez por slide como máximo y en frases cortas (que quepan en una línea).
@@ -123,3 +150,19 @@ Para escenas con personas: "foto estilo documental, luz natural de día, persona
 - Ejemplo de referencia: queue/2026-11-06 (metáfora del megáfono).
 - Portada ilustrada (alternativa a la foto): `"art": "<svg viewBox='0 0 1080 600'>…</svg>"` en la slide cover. Se dibuja en los 600 px inferiores. Úsala cuando no haya foto de ChatGPT disponible: ilustración plana y simple de la metáfora (negro, crema y dorado), sin degradados. Ejemplos: queue/2026-11-09 a 2026-11-15.
 - Portada negra (`"dark": true` en la cover) para hooks de choque; alternar con portadas crema durante la semana.
+
+### Formatos nuevos del motor (engine/extra.js, nov 2026)
+- En post.json: `"fondo": "liso"` (sin cuadrícula) o `"puntos"` (mapa); sin el campo = cuadrícula.
+- `cover` acepta además: `"serif": true` (titular editorial en Instrument Serif), `"bubble": [{text}, {me:true,text}, {seen}]` (chat gigante abajo), `"labi": {pose, expresion, w, right, bottom}`, `"stickers": [{e:"🚩", x, y, size, r}]`, `"notes": [{text, x, y, size, r}]` (nota manuscrita), `"route": {px, py, yout, pin:false}` (la línea parte desde la foto).
+- Capas que sirven en cualquier slide: `sticker` / `stickers` (emoji con borde blanco tipo calcomanía), `labi` (con `"card": true` va en círculo crema, para slides negras), `notes`.
+- `story {num, kicker, title, body, sticker}`: capítulo de historia con titular serif.
+- `steps {tag, title, items:[{t,d}], dark}`: lista numerada con círculos dorados (lecciones, fórmula). Se centra sola.
+- `chat {ok:true|false, label, title, name, avatar, via, msgs:[{text} | {me:true,text} | {seen}], note}`: captura de conversación; `note` es la frase manuscrita de abajo (una línea, máx. ~35 caracteres). El mensaje del local, máx. ~115 caracteres.
+- `flag {n, total, title, body, fix}`: nota de papel con cinta + "se arregla así".
+- `choose {title, options:[{k,t,d}]}`: tarjetas A/B/C para elegir camino.
+- `plan {letter, time, title, items:[..3], box}`: un plan con su letra y pestañas A B C.
+- `mito {n, mito, real, extra}`: pantalla partida; arriba el mito tachado, abajo negro con la realidad.
+- `ruta {stop, place, title, body, box, route:{yin, px, py, yout, label}}`: parada del recorrido. **El `yout` de una lámina debe ser igual al `yin` de la siguiente** para que la línea calce al deslizar. Última: `"end": true`, con `items` (checklist) y sin `yout`.
+- `cta`: un solo botón (`"buttons": ["📩 …"]`) + un `sticker` o `labi` para que no quede vacío.
+- Tipografías nuevas en engine/fonts: Instrument Serif (editorial) y Caveat (manuscrita).
+- Labi estático: engine/labi.js (copia del dibujo de claude/labi.js del proyecto).

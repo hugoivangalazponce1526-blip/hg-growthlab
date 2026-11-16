@@ -1,0 +1,111 @@
+{
+  "fecha": "2026-11-17",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-16T14:00:00-03:00",
+  "hora": "20:30",
+  "tema": "Historia de marca: por qué IKEA te hace caminar toda la tienda",
+  "pilar": "historia de marca",
+  "formato": "historia",
+  "fondo": "liso",
+  "caption": "IKEA no te deja ir directo a la caja. Y no es un error de diseño: es una estrategia de venta pensada al detalle. 👇\n\nUn solo camino, ambientes armados como casas reales, comida barata a mitad de recorrido y un mueble que terminas armando tú. Cada parte tiene una razón.\n\nLo bueno: ninguna de esas ideas necesita una tienda gigante. Sirven igual en una cafetería, una barbería o un almacén de barrio.\n\n¿Qué marca quieres que desarme en el próximo carrusel? Te leo en comentarios. 👀\n\n#marketingparanegocios #negocioslocales #emprendedoreschile #estrategiadeventas #maule",
+  "slides": [
+    {
+      "type": "cover",
+      "serif": true,
+      "tag": "Historia de marca",
+      "title": "IKEA te hace *caminar toda la tienda* para comprar una vela.",
+      "size": 122,
+      "sub": "No es mal diseño. Es estrategia.",
+      "img": "img_portada.jpg",
+      "imgTop": 110
+    },
+    {
+      "type": "story",
+      "num": "01",
+      "kicker": "La entrada",
+      "title": "Entras por *una sola cosa.*",
+      "body": "Una vela. Un marco. Algo chico.\nPero no existe el pasillo directo a la caja: el camino es **uno solo** y recorre la tienda completa.",
+      "sticker": {
+        "e": "🕯️",
+        "size": 250,
+        "r": 8,
+        "bottom": 120
+      }
+    },
+    {
+      "type": "story",
+      "num": "02",
+      "kicker": "El recorrido",
+      "title": "No ves productos. Ves *tu casa.*",
+      "body": "Living, cocina, dormitorio: cada ambiente armado como una casa de verdad.\nA esa ruta única la llaman **«el camino largo natural»**.",
+      "sticker": {
+        "e": "🛋️",
+        "size": 250,
+        "r": -6,
+        "bottom": 110
+      }
+    },
+    {
+      "type": "story",
+      "num": "03",
+      "kicker": "La pausa",
+      "title": "A mitad de camino, *comida barata.*",
+      "body": "Su fundador, Ingvar Kamprad, decía que es difícil hacer negocios con el estómago vacío.\nEl que come se queda más rato. Y sale convencido de que ahí **todo es barato**.",
+      "sticker": {
+        "e": "🌭",
+        "size": 250,
+        "r": -10,
+        "bottom": 110
+      }
+    },
+    {
+      "type": "story",
+      "num": "04",
+      "kicker": "El final",
+      "title": "Y el mueble *lo armas tú.*",
+      "body": "Tres investigadores lo estudiaron: valoramos más las cosas que armamos con nuestras propias manos.\nLe pusieron nombre: **«efecto IKEA»**.",
+      "sticker": {
+        "e": "🔧",
+        "size": 250,
+        "r": 12,
+        "bottom": 110
+      }
+    },
+    {
+      "type": "steps",
+      "dark": true,
+      "tag": "Lo que puedes copiar",
+      "title": "No necesitas una tienda gigante. Necesitas *esto:*",
+      "items": [
+        {
+          "t": "Diseña el recorrido",
+          "d": "Lo que más te conviene vender va donde todos pasan, no escondido al fondo."
+        },
+        {
+          "t": "Muestra el resultado",
+          "d": "El plato servido, el corte terminado, la pieza puesta. No el producto en una repisa."
+        },
+        {
+          "t": "Deja que participen",
+          "d": "Que el cliente elija, arme o personalice algo. Lo va a sentir más suyo."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿Conoces a alguien con un local?",
+      "body": "Mándale esta historia. Capaz que mañana cambia de lugar su vitrina.",
+      "buttons": [
+        "📩 Enviársela a alguien con local"
+      ],
+      "sticker": {
+        "e": "📩",
+        "size": 250,
+        "r": -10,
+        "right": 110,
+        "bottom": 460
+      }
+    }
+  ]
+}

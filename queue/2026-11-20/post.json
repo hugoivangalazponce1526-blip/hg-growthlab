@@ -1,0 +1,118 @@
+{
+  "fecha": "2026-11-20",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-16T14:00:00-03:00",
+  "hora": "13:00",
+  "tema": "Black Friday para locales chicos: Plan A, B o C según tu tiempo",
+  "pilar": "fechas clave",
+  "formato": "elige tu plan",
+  "caption": "Black Friday parte el viernes 27 y no es solo para las grandes tiendas. Tu local también puede aprovecharlo, sin gastar en anuncios. 👇\n\nArmé 3 planes según el tiempo que tengas esta semana: 15 minutos, 1 hora o una tarde. Elige uno, no los tres.\n\nY si no sabes qué oferta hacer, en la lámina 6 hay un prompt para copiar y pegar en ChatGPT.\n\n¿Con cuál te quedas: A, B o C? Coméntalo y te digo por dónde partir. 👇\n\n#blackfridaychile #negocioslocales #pymeschile #emprendedoreschile #marketingparanegocios",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Elige tu plan",
+      "title": "Black Friday es en *7 días.* ¿Y tu local?",
+      "size": 124,
+      "sub": "Plan A, B o C. Elige el tuyo.",
+      "img": "img_portada.jpg",
+      "imgTop": 230
+    },
+    {
+      "type": "choose",
+      "title": "¿Cuánto tiempo *tienes?*",
+      "options": [
+        {
+          "k": "A",
+          "t": "15 minutos",
+          "d": "Una sola oferta, bien contada"
+        },
+        {
+          "k": "B",
+          "t": "1 hora",
+          "d": "Avísale primero a tus clientes"
+        },
+        {
+          "k": "C",
+          "t": "Una tarde",
+          "d": "Que el viernes te deje clientes para diciembre"
+        }
+      ],
+      "center": true
+    },
+    {
+      "type": "plan",
+      "letter": "A",
+      "time": "Tienes 15 minutos",
+      "title": "Una sola oferta, *bien contada.*",
+      "items": [
+        "Elige **un** producto o servicio: el que más te piden.",
+        "Ponle una ventaja clara: 2x1, un regalo o un descuento.",
+        "Súbelo a historias con fecha y hora de término."
+      ],
+      "box": {
+        "k": "Ojo",
+        "text": "Una oferta clara se entiende en 2 segundos. Cinco ofertas juntas no las lee nadie."
+      }
+    },
+    {
+      "type": "plan",
+      "letter": "B",
+      "time": "Tienes 1 hora",
+      "title": "Primero, *los que ya te compran.*",
+      "items": [
+        "Junta a tus clientes frecuentes en una lista de difusión de WhatsApp.",
+        "Mándales la oferta el jueves: «tú la ves antes que nadie».",
+        "El viernes, recién, publícala para todos."
+      ],
+      "box": {
+        "k": "Por qué funciona",
+        "text": "El que ya te compró confía en ti. Es tu venta más fácil del viernes."
+      }
+    },
+    {
+      "type": "plan",
+      "letter": "C",
+      "time": "Tienes una tarde",
+      "title": "Que el viernes te deje *clientes para diciembre.*",
+      "items": [
+        "Con cada compra, entrega un vale para volver antes de Navidad.",
+        "Pon un cartel en el local con un QR directo a tu WhatsApp.",
+        "3 historias: jueves (anuncio), viernes (en vivo), sábado (último día)."
+      ],
+      "box": {
+        "k": "Por qué funciona",
+        "text": "No vendes solo el viernes: te aseguras una segunda visita en pleno diciembre."
+      }
+    },
+    {
+      "type": "prompt",
+      "icon": "🤖",
+      "title": "¿No sabes qué oferta hacer?",
+      "body": "Copia esto en ChatGPT y cambia lo que va entre corchetes:",
+      "prompt": "Tengo [tipo de local] en [ciudad]. Lo que más vendo es [A, B y C]. Dame 5 ideas de oferta para Black Friday que no me hagan perder plata, con un texto corto para historias y otro para WhatsApp."
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "El error: bajar precios *sin sacar la cuenta.*",
+      "body": "Antes de publicar, revisa cuánto te queda por cada venta.\n\nUn regalo o un 2x1 de algo que te cuesta poco suele cuidar más tu caja que un gran descuento parejo."
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo: lo vas a necesitar el jueves.",
+      "body": "Elige un plan. Uno solo, bien hecho, le gana a tres a medias.",
+      "buttons": [
+        "🔖 Guardar mi plan"
+      ],
+      "sticker": {
+        "e": "🏷️",
+        "size": 260,
+        "r": -12,
+        "right": 120,
+        "bottom": 460
+      }
+    }
+  ],
+  "fondo": "liso"
+}
