@@ -1,7 +1,7 @@
 {
   "fecha": "2026-11-18",
   "estilo": "claro",
-  "estado": "pendiente",
+  "estado": "publicado",
   "generado": "2026-11-16T14:00:00-03:00",
   "hora": "13:00",
   "tema": "Te escriben «¿precio?» y desaparecen: 3 respuestas para copiar",
@@ -149,5 +149,8 @@
         "bottom": 460
       }
     }
-  ]
+  ],
+  "publicado_en": "2026-11-18T12:53:22-03:00",
+  "permalink": "https://www.instagram.com/p/Df431L7IZ_T/",
+  "musica_sugerida": "Can't Stop the Feeling! – Justin Timberlake"
 }
