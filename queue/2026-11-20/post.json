@@ -1,7 +1,7 @@
 {
   "fecha": "2026-11-20",
   "estilo": "claro",
-  "estado": "pendiente",
+  "estado": "publicado",
   "generado": "2026-11-16T14:00:00-03:00",
   "hora": "13:00",
   "tema": "Black Friday para locales chicos: Plan A, B o C según tu tiempo",
@@ -114,5 +114,8 @@
       }
     }
   ],
-  "fondo": "liso"
+  "fondo": "liso",
+  "publicado_en": "2026-11-20T12:53:34-03:00",
+  "permalink": "https://www.instagram.com/p/Df-BcUFFF_1/",
+  "musica_sugerida": "Shut Up and Dance – Walk the Moon"
 }
