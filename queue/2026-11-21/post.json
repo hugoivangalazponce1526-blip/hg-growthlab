@@ -1,7 +1,7 @@
 {
   "fecha": "2026-11-21",
   "estilo": "claro",
-  "estado": "pendiente",
+  "estado": "publicado",
   "generado": "2026-11-16T14:00:00-03:00",
   "hora": "20:30",
   "tema": "Mito vs. realidad: 4 cosas de Instagram que ya no son verdad",
@@ -63,5 +63,8 @@
         "card": true
       }
     }
-  ]
+  ],
+  "publicado_en": "2026-11-21T20:23:21-03:00",
+  "permalink": "https://www.instagram.com/p/DgBZtbAHaRr/",
+  "musica_sugerida": "September – Earth, Wind & Fire"
 }
