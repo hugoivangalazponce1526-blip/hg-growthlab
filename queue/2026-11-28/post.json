@@ -1,0 +1,100 @@
+{
+  "fecha": "2026-11-28",
+  "hora": "20:30",
+  "tema": "«¿Lo de siempre?»: atender así o así en 3 momentos que hacen volver al cliente",
+  "pilar": "Que el cliente vuelva",
+  "formato": "así… o así (comparación con guion)",
+  "estilo": "claro",
+  "fondo": "liso",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "Hay locales donde te preguntan «¿qué va a querer?» aunque vayas hace 3 años. Y otros donde te dicen «¿lo de siempre?». ☕\n\nAdivina a cuál vuelves.\n\nQue el cliente vuelva no depende solo del producto o de las promociones. Depende de 3 momentos chicos: cuando llega, cuando espera y cuando se va. En cada uno puedes hacerlo sentir un número más… o hacerlo sentir en casa.\n\n¿En qué local te dicen «lo de siempre»? Etiquétalo en comentarios 👇\n\n#negocioslocales #emprendedoreschile #molina #atencionalcliente #fidelizaciondeclientes",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Así… o así",
+      "title": "La frase que hace volver a un cliente: *«¿lo de siempre?»*",
+      "size": 100,
+      "img": "img_portada.jpg",
+      "imgTop": 90
+    },
+    {
+      "type": "point",
+      "title": "Nadie vuelve por el café. Vuelve porque ==lo reconocen.==",
+      "body": "El producto te lo puede copiar cualquiera.\nQue sepas **su nombre**, no."
+    },
+    {
+      "type": "guion",
+      "scene": "Momento 1",
+      "place": "Cuando llega",
+      "title": "La bienvenida",
+      "no": [
+        "—Hola. ¿Qué va a querer?"
+      ],
+      "si": [
+        "—¡Don Luis! ¿Lo de siempre? ¿Cortado sin azúcar?"
+      ],
+      "note": "Anota qué pide tu cliente frecuente."
+    },
+    {
+      "type": "guion",
+      "scene": "Momento 2",
+      "place": "Mientras espera",
+      "title": "La espera",
+      "no": [
+        "(silencio, mirando el celular)"
+      ],
+      "si": [
+        "—¿Y cómo le fue a su hija en la prueba?"
+      ],
+      "note": "Acordarte de algo suyo no cuesta nada."
+    },
+    {
+      "type": "guion",
+      "scene": "Momento 3",
+      "place": "Cuando se va",
+      "title": "La despedida",
+      "no": [
+        "—Ya. Chao."
+      ],
+      "si": [
+        "—Gracias, don Luis. El viernes hay pan amasado, ¿le guardo uno?"
+      ],
+      "note": "Dale una razón concreta para volver."
+    },
+    {
+      "type": "steps",
+      "tag": "Sin ser genio",
+      "title": "Cómo acordarte *de todos:*",
+      "items": [
+        {
+          "t": "Una libreta o nota en el celular",
+          "d": "Nombre, qué pide y un detalle: «cortado sin azúcar, hija en la U»."
+        },
+        {
+          "t": "Etiquetas en WhatsApp Business",
+          "d": "Marca como «frecuente» a los que vienen seguido."
+        },
+        {
+          "t": "Cuéntaselo a tu equipo",
+          "d": "Que el cliente se sienta reconocido aunque no estés tú."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿Conoces a alguien que atiende *así de bien*?",
+      "body": "Mándale este carrusel. O mándaselo al que todavía te pregunta «¿qué va a querer?» después de 3 años.",
+      "buttons": [
+        "📩 Mándaselo a quien atiende un local"
+      ],
+      "labi": {
+        "pose": "saludo",
+        "expresion": "guino",
+        "w": 270,
+        "right": 80,
+        "y": 700
+      }
+    }
+  ]
+}

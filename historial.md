@@ -21,3 +21,10 @@
 - 2026-11-20 · Carrusel (elige tu plan) · Black Friday para locales chicos: plan A, B o C
 - 2026-11-21 · Carrusel (mito vs realidad) · 4 cosas de Instagram que ya no son verdad
 - 2026-11-22 · Carrusel (sigue la línea) · El viaje del cliente antes de pisar tu local (Maps, fotos, reseñas, Instagram, WhatsApp)
+- 2026-11-23 · Carrusel (historia de marca) · Krispy Kreme y la luz que avisa «recién hechas»: avisa el momento de lo fresco
+- 2026-11-24 · Carrusel (test sí/no) · ¿Estás listo para pagar anuncios en Meta? 5 preguntas antes de gastar
+- 2026-11-25 · Carrusel (laboratorio de prompts con Labi) · ChatGPT como cliente sincero: 3 prompts (perfil, reseñas, carta)
+- 2026-11-26 · Carrusel (capa por capa) · Arreglemos una publicación: de «nuevo producto 🔥» a una que vende
+- 2026-11-27 · Carrusel (cuenta regresiva) · Faltan 4 semanas para Navidad: qué hacer en tu local cada semana
+- 2026-11-28 · Carrusel (así… o así) · «¿Lo de siempre?»: 3 momentos de atención que hacen volver al cliente
+- 2026-11-29 · Carrusel (clásico con metáfora) · Tu mejor equipo de fotos es una ventana: 4 trucos con el celular

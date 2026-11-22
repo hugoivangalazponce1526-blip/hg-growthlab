@@ -1,0 +1,111 @@
+{
+  "fecha": "2026-11-24",
+  "hora": "20:30",
+  "tema": "Test: ¿estás listo para pagar anuncios en Meta? 5 preguntas antes de gastar",
+  "pilar": "Publicidad en Meta sin quemar plata",
+  "formato": "test sí/no",
+  "estilo": "claro",
+  "fondo": "puntos",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "Antes de pagar un anuncio en Instagram o Facebook, hay 5 cosas que tienen que estar listas. Si no, la plata se va igual. 💸\n\nUn anuncio no arregla un perfil confuso ni un WhatsApp que nadie contesta: solo le muestra ese problema a más gente. Por eso, antes de apretar «Promocionar», conviene hacerse estas 5 preguntas con honestidad.\n\nEl test está en el carrusel. Cuenta tus «sí» y mira qué te toca.\n\n¿Cuántos «sí» sacaste? Dímelo en comentarios, sin trampa 👇\n\n#negocioslocales #emprendedoreschile #molina #publicidadenmeta #anunciosenfacebook",
+  "slides": [
+    {
+      "type": "cover",
+      "dark": true,
+      "tag": "Test de 5 preguntas",
+      "title": "Antes de pagar tu primer anuncio, *haz este test.*",
+      "size": 118,
+      "sub": "Si fallas 2, guarda la tarjeta.",
+      "stickers": [
+        {
+          "e": "✅",
+          "x": 470,
+          "y": 1080,
+          "size": 140,
+          "r": -10
+        },
+        {
+          "e": "❌",
+          "x": 650,
+          "y": 1120,
+          "size": 110,
+          "r": 12
+        },
+        {
+          "e": "💳",
+          "x": 800,
+          "y": 1050,
+          "size": 170,
+          "r": 8
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "n": 1,
+      "q": "Si alguien entra a tu perfil, ¿entiende en 3 segundos *qué vendes y dónde estás?*",
+      "hint": "Si no, el anuncio te trae visitas… que se van."
+    },
+    {
+      "type": "test",
+      "n": 2,
+      "q": "¿Tienes algo *concreto* que mostrar?",
+      "hint": "«Visítanos» no es una oferta.\n«Almuerzo con bebida y postre», sí."
+    },
+    {
+      "type": "test",
+      "n": 3,
+      "q": "¿Respondes los mensajes *el mismo día?*",
+      "hint": "Un anuncio que trae mensajes que nadie contesta es plata botada."
+    },
+    {
+      "type": "test",
+      "n": 4,
+      "q": "¿Sabes qué quieres que haga la gente: *escribirte, llamarte o ir?*",
+      "hint": "Eso es lo que eliges como objetivo del anuncio. Uno solo."
+    },
+    {
+      "type": "test",
+      "n": 5,
+      "q": "¿Tienes un monto que puedes probar *sin que te duela?*",
+      "hint": "Los primeros anuncios son para aprender qué funciona. Parte chico."
+    },
+    {
+      "type": "score",
+      "title": "¿Cuántos *«sí»* tuviste?",
+      "rows": [
+        {
+          "k": "5",
+          "t": "Listo. Parte chico y mide.",
+          "d": "Prueba 2 versiones y quédate con la que traiga más mensajes."
+        },
+        {
+          "k": "3-4",
+          "t": "Casi. Arregla lo que falta.",
+          "d": "Cada «no» es un hoyo por donde se escapa la plata."
+        },
+        {
+          "k": "0-2",
+          "t": "Todavía no. Y está bien.",
+          "d": "Ordena tu perfil y tu atención. El anuncio puede esperar."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo para *antes* de tu próximo anuncio.",
+      "body": "Y hazlo de nuevo cada vez que te den ganas de apretar «Promocionar».",
+      "buttons": [
+        "🔖 Guardar el test"
+      ],
+      "sticker": {
+        "e": "🔖",
+        "size": 200,
+        "r": 10,
+        "right": 120,
+        "bottom": 420
+      }
+    }
+  ]
+}

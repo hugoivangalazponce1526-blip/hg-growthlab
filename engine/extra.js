@@ -1,4 +1,5 @@
 // Formatos nuevos del motor (semana del 17-nov-2026): historia, chat, red flag, planes, mito/realidad, ruta.
+// Semana del 23-nov-2026: test (sí/no) + score, capa (publicación capa por capa) + igpost, semana (cuenta regresiva), guion (así… o así).
 // Se usa desde render.js:  const X = require('./extra')({ esc, md, N });
 //   X.css            -> estilos extra
 //   X.render(s, i)   -> { body, full, cls } para los tipos nuevos (o null si no es un tipo nuevo)
@@ -104,11 +105,80 @@ body.claro .mt-r .gold{color:#E3BC52}
 .s.ruta .box{margin-top:36px;padding:30px 36px;font-size:36px}
 .s.ruta.end .rt-t{font-size:76px}.s.ruta.end .box{margin-top:30px;padding:24px 34px;font-size:33px}
 .s.ruta .list{margin-top:34px;gap:20px}.s.ruta .list li{font-size:34px}.s.ruta .list li i{width:52px;height:52px}
+/* ---- test (sí / no) ---- */
+.ts-k{display:flex;align-items:center;gap:18px;font:700 26px Sora;letter-spacing:3px;color:#8a8a8a;margin-bottom:40px}
+.ts-dots{display:flex;gap:10px}.ts-dots i{width:44px;height:12px;border-radius:10px;background:rgba(26,26,26,.15)}.ts-dots i.on{background:#C9A84C}
+.ts-q{font:800 78px/1.06 Sora;letter-spacing:-2px;color:#1A1A1A}
+.ts-yn{display:flex;gap:28px;margin-top:60px}
+.ts-yn div{flex:1;text-align:center;font:800 54px Sora;padding:34px 0;border-radius:100px;border:3px solid #1A1A1A;color:#1A1A1A}
+.ts-yn div:first-child{background:#1A1A1A;color:#E3BC52}
+.ts-h{font-family:Caveat;font-weight:700;font-size:58px;line-height:1.08;color:#8F6F22;margin-top:56px;transform:rotate(-1.5deg)}
+.s.test .in{justify-content:center}
+.sc{display:flex;flex-direction:column;gap:28px;margin-top:50px}
+.sc>div{display:flex;gap:30px;align-items:center;background:#fff;border-radius:28px;padding:30px 34px;border:1.5px solid rgba(26,26,26,.1);box-shadow:0 14px 30px rgba(0,0,0,.05)}
+.sc i{flex:none;min-width:150px;height:120px;padding:0 18px;border-radius:24px;background:#1A1A1A;color:#E3BC52;font:800 50px Sora;display:grid;place-items:center;font-style:normal}
+.sc b{display:block;font:700 38px/1.15 Sora;color:#1A1A1A}.sc span{display:block;font-size:30px;line-height:1.35;color:#555;margin-top:8px}
+.s.score .in{justify-content:center}
+/* ---- capa por capa (publicación de Instagram) ---- */
+.cp-k{display:flex;align-items:center;gap:16px;font:700 26px Sora;letter-spacing:3px;color:#8a8a8a;margin-bottom:22px;text-transform:uppercase}
+.cp-k b{background:#C9A84C;color:#1A1A1A;border-radius:100px;padding:10px 24px;letter-spacing:1px}
+.cp-t{font-size:60px;line-height:1.06}
+.ig{background:#fff;border-radius:30px;box-shadow:0 24px 50px rgba(0,0,0,.10);border:1.5px solid rgba(26,26,26,.08);overflow:hidden;flex:none;margin-top:34px}
+.ig-h{display:flex;align-items:center;gap:18px;padding:20px 28px}
+.ig-a{width:60px;height:60px;border-radius:50%;background:#1A1A1A;color:#E3BC52;display:grid;place-items:center;font:800 26px Sora;box-shadow:0 0 0 4px #fff,0 0 0 7px #C9A84C}
+.ig-h b{font:700 29px Sora;color:#1A1A1A}.ig-h span{display:block;font-size:22px;color:#8a8a8a}
+.ig-img{height:300px;background:#EBDDB5;display:grid;place-items:center;font-size:170px}
+.ig-ac{display:flex;gap:26px;padding:18px 28px 4px;font-size:36px;color:#1A1A1A}.ig-ac em{margin-left:auto;font-style:normal}
+.ig-c{padding:8px 28px 28px;font-size:31px;line-height:1.36;color:#1A1A1A}
+.ig-c b{font-weight:700}
+.ig-c mark{background:#EBDDB5;color:#1A1A1A;padding:0 4px;border-radius:4px;box-shadow:inset 0 -4px 0 #C9A84C}
+.cp-n{font-family:Caveat;font-weight:700;font-size:56px;line-height:1.05;color:#8F6F22;margin-top:26px;transform:rotate(-1.5deg);padding-left:12px}
+.cp-n.no{color:#C7443F}
+.s.capa .in{top:215px;bottom:90px;justify-content:center}
+.igx{position:absolute;z-index:1}
+/* ---- cuenta regresiva (semana) ---- */
+.wk{display:flex;gap:40px;align-items:center;margin-bottom:40px}
+.wk-cal{flex:none;width:230px;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 18px 36px rgba(0,0,0,.10);border:2px solid #1A1A1A;text-align:center}
+.wk-cal span{display:block;background:#1A1A1A;color:#E3BC52;font:700 24px Sora;letter-spacing:3px;padding:14px 0}
+.wk-cal b{display:block;font:800 140px/1.1 Sora;color:#1A1A1A;padding-top:6px}
+.wk-cal em{display:block;font-style:normal;font:600 22px Sora;color:#8a8a8a;padding-bottom:18px;letter-spacing:1px}
+.wk-r{font:700 28px Sora;letter-spacing:2px;color:#8a8a8a;text-transform:uppercase}
+.wk-r b{display:block;color:#1A1A1A;font-size:40px;letter-spacing:0;text-transform:none;margin-top:8px}
+.wk-t{font-size:74px;line-height:1.04}
+.s.semana .list{margin-top:50px;gap:34px}
+.s.semana .in{justify-content:center}
+.s.semana .list li{font-size:42px}
+.s.semana .wk-t{font-size:84px}
+/* ---- guion (así… o así) ---- */
+.gn-k{font:700 26px Sora;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:20px}
+.gn-k b{color:#1A1A1A}
+.gn-t{font-size:66px;line-height:1.05}
+.gn{margin-top:40px;display:flex;flex-direction:column;gap:30px}
+.gn>div{border-radius:30px;padding:30px 38px 36px;position:relative}
+.gn .no{background:#E6E1D5;color:#77716a}
+.gn .si{background:#fff;color:#1A1A1A;border:3px solid #C9A84C;box-shadow:0 18px 36px rgba(0,0,0,.08)}
+.gn label{display:block;font-family:Caveat;font-weight:700;font-size:62px;line-height:1;margin-bottom:10px}
+.gn .no label{color:#8a8378;text-decoration:line-through;text-decoration-color:#C7443F;text-decoration-thickness:4px}
+.gn .si label{color:#8F6F22}
+.gn p{font-size:40px;line-height:1.35;color:inherit}
+.gn .si p{font-weight:600;color:#1A1A1A}
+.gn-n{font:600 30px Inter;color:#3d3d3d;margin-top:34px;display:flex;gap:14px;align-items:flex-start}
+.gn-n i{font-style:normal;flex:none;background:#1A1A1A;color:#E3BC52;font:800 22px Sora;letter-spacing:2px;padding:8px 16px;border-radius:100px}
+.s.guion .in{justify-content:center}
+.s.guion .gn-t{font-size:88px}.s.guion .gn p{font-size:46px}.s.guion .gn label{font-size:72px}.s.guion .gn>div{padding:36px 42px 42px}.s.guion .gn-n{font-size:34px}.s.guion .gn-k{font-size:30px}
+body.claro .code{font-size:40px}
+
 `;
 
   const list = (items, cls = '') => `<ol class="sp ${cls}">${items.map((it, k) => typeof it === 'string'
     ? `<li><i>${k + 1}</i><div><b>${md(it)}</b></div></li>`
     : `<li><i>${k + 1}</i><div><b>${md(it.t)}</b>${it.d ? `<span>${md(it.d)}</span>` : ''}</div></li>`).join('')}</ol>`;
+
+
+  const mk = t => md(t).replace(/\[\[([\s\S]+?)\]\]/g, '<mark>$1</mark>');
+  const igpost = (p) => `<div class="ig"><div class="ig-h"><div class="ig-a">${esc(p.avatar || 'L')}</div><div><b>${esc(p.name || 'tulocal')}</b><span>${esc(p.place || '')}</span></div></div>
+    <div class="ig-img"${p.imgh ? ` style="height:${p.imgh}px;font-size:${Math.round(p.imgh * .56)}px"` : ''}>${p.emoji || '🥧'}</div><div class="ig-ac"><span>♡</span><span>💬</span><span>➤</span><em>🔖</em></div>
+    <div class="ig-c"${p.csize ? ` style="font-size:${p.csize}px"` : ''}><b>${esc(p.name || 'tulocal')}</b> ${mk(p.caption)}</div></div>`;
 
   // Línea punteada que cruza la lámina y pasa por el pin de la parada.
   function route(r) {
@@ -160,6 +230,27 @@ body.claro .mt-r .gold{color:#E3BC52}
           <h2 class="rt-t">${md(s.title)}</h2>${s.body ? `<p class="rt-p">${md(s.body)}</p>` : ''}
           ${s.items ? `<ul class="list">${s.items.map(t => `<li><i>✓</i>${md(t)}</li>`).join('')}</ul>` : ''}
           ${s.box ? `<div class="box"><span class="k">${esc(s.box.k)}</span>${md(s.box.text)}</div>` : ''}` };
+
+      case 'test':
+        return { cls: 'test', body: `<div class="ts-k"><span>PREGUNTA ${s.n} DE ${s.total || 5}</span><div class="ts-dots">${Array.from({ length: s.total || 5 }, (_, k) => `<i class="${k < s.n ? 'on' : ''}"></i>`).join('')}</div></div>
+          <h2 class="ts-q"${s.size ? ` style="font-size:${s.size}px"` : ''}>${md(s.q)}</h2><div class="ts-yn"><div>SÍ</div><div>NO</div></div>
+          ${s.hint ? `<div class="ts-h">${md(s.hint)}</div>` : ''}` };
+      case 'score':
+        return { cls: 'score', body: `${s.tag ? `<div class="tag">${esc(s.tag)}</div>` : ''}<h2>${md(s.title)}</h2>
+          <div class="sc">${s.rows.map(r => `<div><i>${esc(r.k)}</i><div><b>${md(r.t)}</b>${r.d ? `<span>${md(r.d)}</span>` : ''}</div></div>`).join('')}</div>` };
+      case 'capa':
+        return { cls: 'capa nobot', body: `<div class="cp-k">${s.num ? `<b>${esc(s.num)}</b>` : ''}<span>${esc(s.kicker || '')}</span></div>
+          <h2 class="cp-t">${md(s.title)}</h2>${igpost(s.post)}${s.note ? `<div class="cp-n ${s.bad ? 'no' : ''}">${md(s.note)}</div>` : ''}` };
+      case 'semana':
+        return { cls: 'semana', body: `<div class="wk"><div class="wk-cal"><span>FALTAN</span><b>${esc(s.left)}</b><em>${esc(s.unit || 'SEMANAS')}</em></div>
+          <div class="wk-r">${esc(s.kicker || '')}<b>${esc(s.range)}</b></div></div>
+          <h2 class="wk-t">${md(s.title)}</h2><ul class="list">${s.items.map(t => `<li><i>✓</i>${md(t)}</li>`).join('')}</ul>
+          ${s.box ? `<div class="box"><span class="k">${esc(s.box.k)}</span>${md(s.box.text)}</div>` : ''}` };
+      case 'guion':
+        return { cls: 'guion', body: `<div class="gn-k"><b>${esc(s.scene)}</b>${s.place ? ' · ' + esc(s.place) : ''}</div><h2 class="gn-t">${md(s.title)}</h2>
+          <div class="gn"><div class="no"><label>${esc(s.noLabel || 'Así…')}</label>${s.no.map(l => `<p>${md(l)}</p>`).join('')}</div>
+          <div class="si"><label>${esc(s.siLabel || '…o así')}</label>${s.si.map(l => `<p>${md(l)}</p>`).join('')}</div></div>
+          ${s.note ? `<div class="gn-n"><i>TIP</i><span>${md(s.note)}</span></div>` : ''}` };
     }
     return null;
   }
@@ -179,6 +270,11 @@ body.claro .mt-r .gold{color:#E3BC52}
       const o = s.labi, w = o.w || 520, h = Math.round(w * 480 / 460);
       const pos = (o.x !== undefined ? `left:${o.x}px;` : `right:${o.right ?? 50}px;`) + (o.y !== undefined ? `top:${o.y}px;` : `bottom:${o.bottom ?? 90}px;`);
       html += `<div class="lb${o.card ? ' card' : ''}" style="${pos}width:${w}px;height:${o.card ? w : h}px${o.card ? ';padding:' + Math.round(w * .08) + 'px' : ''}">${Labi.svg(o)}</div>`;
+      cls += ' nobot';
+    }
+    if (s.igpost) {
+      const o = s.igpost;
+      html += `<div class="igx" style="left:${o.x ?? 150}px;top:${o.y ?? 620}px;width:${o.w || 780}px;transform:rotate(${o.r ?? -2}deg)">${igpost(o)}</div>`;
       cls += ' nobot';
     }
     if (s.bubble) {

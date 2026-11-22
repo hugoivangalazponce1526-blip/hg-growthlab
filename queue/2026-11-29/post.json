@@ -1,0 +1,83 @@
+{
+  "fecha": "2026-11-29",
+  "hora": "13:00",
+  "tema": "Tu mejor equipo de fotos es una ventana: 4 trucos para fotografiar tu producto con el celular",
+  "pilar": "Instagram que vende",
+  "formato": "clásico (metáfora + resaltado)",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "Antes de cambiar el celular para sacar mejores fotos de tu producto, mira dónde está tu ventana. 📸\n\nMuchas fotos que se ven «feas» en el Instagram de un local no son culpa de la cámara: son culpa de la luz. Ampolleta amarilla de noche, sombras duras y el producto perdido entre cosas.\n\nCon una ventana, de día, y 4 ajustes simples, la misma foto cambia por completo. Sin comprar nada.\n\n¿Dónde sacas hoy las fotos de tus productos? Cuéntame y te digo qué cambiaría 👇\n\n#negocioslocales #emprendedoreschile #maule #fotografiadeproducto #instagramparanegocios",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Tu mejor equipo de fotos *ya lo tienes.*",
+      "size": 118,
+      "sub": "Es una ventana.",
+      "img": "img_portada.jpg",
+      "imgTop": 0,
+      "tag": "Fotos con el celular"
+    },
+    {
+      "type": "point",
+      "title": "Tu producto no es feo.\n==Le faltó luz.==",
+      "body": "La misma torta se ve rica o triste según **la luz**, no según el celular."
+    },
+    {
+      "type": "vs",
+      "title": "La misma foto, *dos luces*",
+      "noLabel": "AMPOLLETA, DE NOCHE",
+      "no": "Colores amarillos, sombras duras y todo se ve aceitoso.",
+      "siLabel": "VENTANA, DE DÍA",
+      "si": "Colores reales, sombras suaves y el producto **se ve como es.**"
+    },
+    {
+      "type": "point",
+      "num": "01",
+      "title": "Ponte *de lado* a la ventana",
+      "body": "Que la luz entre por un costado del producto. Con la ventana detrás, sale oscuro.",
+      "box": {
+        "k": "Si entra sol directo",
+        "text": "Cuelga una cortina blanca o pega papel mantequilla en el vidrio. La luz se suaviza."
+      }
+    },
+    {
+      "type": "point",
+      "num": "02",
+      "title": "Apaga las luces *de la pieza*",
+      "body": "Mezclar ventana con ampolleta tiñe todo de amarillo.\n**Una sola luz** se ve mejor."
+    },
+    {
+      "type": "point",
+      "num": "03",
+      "title": "Fondo simple, producto *protagonista*",
+      "body": "Una tabla, un mantel liso o una pared clara.\nSaca del cuadro las botellas, el cargador y la boleta."
+    },
+    {
+      "type": "point",
+      "num": "04",
+      "title": "Acércate *antes* de hacer zoom",
+      "body": "En muchos celulares el zoom le quita nitidez a la foto.\nAnte la duda, **da dos pasos adelante.**"
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "Nunca fue el celular.\nFue ==la luz.=="
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo para tu *próxima foto.*",
+      "body": "Mañana, de día, prueba con tu producto estrella al lado de la ventana.",
+      "buttons": [
+        "🔖 Guardar los 4 trucos"
+      ],
+      "sticker": {
+        "e": "📷",
+        "size": 250,
+        "r": -8,
+        "right": 120,
+        "bottom": 460
+      }
+    }
+  ]
+}

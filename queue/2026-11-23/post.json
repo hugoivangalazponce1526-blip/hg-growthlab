@@ -1,0 +1,125 @@
+{
+  "fecha": "2026-11-23",
+  "hora": "13:00",
+  "tema": "Historia de marca: Krispy Kreme y la luz que avisa «recién hechas»",
+  "pilar": "Atraer clientes al local",
+  "formato": "historia de marca",
+  "estilo": "claro",
+  "fondo": "liso",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "Una luz roja hace que la gente se desvíe de su camino para comprar donas. Sin descuento y sin regalo. 🍩\n\nEl Hot Light de Krispy Kreme no anuncia una oferta: anuncia un momento. «Están saliendo calientes, ahora». Y eso basta para que alguien que iba de pasada entre.\n\nTu local también tiene momentos así: el pan que sale del horno, la primera tanda de empanadas, el café recién preparado. La pregunta es si se lo estás avisando a alguien.\n\n¿Cuál sería la «luz» de tu local? Te leo en comentarios 👇\n\n#negocioslocales #emprendedoreschile #maule #historiademarca #marketinggastronomico",
+  "slides": [
+    {
+      "type": "cover",
+      "serif": true,
+      "tag": "Historia de marca",
+      "title": "Krispy Kreme vende donas con *una luz roja.*",
+      "size": 118,
+      "sub": "Y tu local la puede copiar hoy.",
+      "img": "img_portada.jpg",
+      "imgTop": 60
+    },
+    {
+      "type": "story",
+      "num": "01",
+      "kicker": "El letrero",
+      "title": "Una luz que dice *«ahora».*",
+      "body": "Afuera de sus tiendas hay un letrero rojo: el **Hot Light**.\nCuando se enciende, significa una sola cosa: hay donas **saliendo calientes de la línea**.",
+      "sticker": {
+        "e": "🔴",
+        "size": 230,
+        "r": 0,
+        "bottom": 130
+      }
+    },
+    {
+      "type": "story",
+      "num": "02",
+      "kicker": "La urgencia",
+      "title": "No dice «hay donas». Dice *«están calientes».*",
+      "size": 112,
+      "body": "Donas hay todo el día. Calientes, solo un rato.\nY ese rato es el que hace que la gente **se desvíe para entrar**.",
+      "sticker": {
+        "e": "🍩",
+        "size": 240,
+        "r": -8,
+        "bottom": 110
+      }
+    },
+    {
+      "type": "story",
+      "num": "03",
+      "kicker": "El show",
+      "title": "Además, *te dejan mirar.*",
+      "body": "En algunas tiendas puedes ver la línea de producción funcionando.\nVes cómo se hacen **antes de que lleguen a tu mano**.",
+      "sticker": {
+        "e": "👀",
+        "size": 240,
+        "r": 6,
+        "bottom": 120
+      }
+    },
+    {
+      "type": "story",
+      "num": "04",
+      "kicker": "El celular",
+      "title": "Y la luz *llega a tu bolsillo.*",
+      "body": "Su app te avisa cuando el Hot Light se enciende en una tienda cerca de ti.\nEl letrero salió de la calle y **se metió en el teléfono**.",
+      "sticker": {
+        "e": "📲",
+        "size": 240,
+        "r": -6,
+        "bottom": 120
+      }
+    },
+    {
+      "type": "story",
+      "num": "05",
+      "kicker": "El giro",
+      "title": "¿Y regalan una dona? *No.*",
+      "body": "Corre el rumor de que con la luz encendida te dan una gratis. La marca lo desmintió: la luz avisa que están frescas, no que son gratis.\n**No necesitaron regalar nada.**",
+      "sticker": {
+        "e": "🤫",
+        "size": 220,
+        "r": 8,
+        "bottom": 110
+      }
+    },
+    {
+      "type": "steps",
+      "dark": true,
+      "tag": "Lo que puedes copiar",
+      "title": "No necesitas un letrero rojo. Necesitas *avisar el momento:*",
+      "items": [
+        {
+          "t": "Ponle hora a lo fresco",
+          "d": "«El pan sale a las 7 y a las 18». Dilo en tu vitrina, tu bio y tus historias."
+        },
+        {
+          "t": "Crea tu propia «luz»",
+          "d": "Una historia de 10 segundos cada vez que algo sale del horno o de la cocina."
+        },
+        {
+          "t": "Deja mirar",
+          "d": "Si se puede, que se vea cómo lo preparas. Lo que se ve hacer, se antoja más."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "¿Conoces un local que *necesita su luz*?",
+      "body": "Mándale esta historia a esa panadería, sanguchería o café que te encanta.",
+      "buttons": [
+        "📩 Enviársela a ese local"
+      ],
+      "sticker": {
+        "e": "🍩",
+        "size": 250,
+        "r": -10,
+        "right": 110,
+        "bottom": 460
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "fecha": "2026-11-27",
+  "hora": "13:00",
+  "tema": "Cuenta regresiva: faltan 4 semanas para Navidad, qué hacer en tu local cada semana",
+  "pilar": "Atraer clientes al local",
+  "formato": "cuenta regresiva (Navidad)",
+  "estilo": "claro",
+  "fondo": "puntos",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "Hoy faltan exactamente 4 semanas para Navidad. Y diciembre, para un local, se empieza a ganar ahora, no el 23. 🎁\n\nMuchos parten a avisar sus productos navideños la última semana, cuando todos están gritando lo mismo. La idea es al revés: decidir ahora, contarlo temprano, tomar pedidos con calma y dejar sembrado enero.\n\nEn el carrusel tienes una cuenta regresiva semana a semana, con 3 tareas simples por semana.\n\n¿Qué vas a vender esta Navidad en tu local? Cuéntame y te tiro una idea 👇\n\n#negocioslocales #emprendedoreschile #maule #navidad #ventasdenavidad",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Cuenta regresiva",
+      "title": "Faltan *4 semanas* para Navidad. ¿Tu local ya partió?",
+      "size": 104,
+      "img": "img_portada.jpg",
+      "imgTop": 150
+    },
+    {
+      "type": "semana",
+      "left": "4",
+      "kicker": "Semana 1",
+      "range": "27 nov – 3 dic",
+      "title": "Decide qué vas a *vender.*",
+      "items": [
+        "Elige 1 o 2 productos estrella para diciembre",
+        "Arma un formato regalo: caja, vale o pack",
+        "Sácale fotos de día, con luz de ventana"
+      ]
+    },
+    {
+      "type": "semana",
+      "left": "3",
+      "kicker": "Semana 2",
+      "range": "4 – 10 dic",
+      "title": "Cuéntalo *antes que nadie.*",
+      "items": [
+        "Publícalo y fíjalo arriba en tu perfil",
+        "Avísales primero a tus clientes frecuentes por WhatsApp",
+        "Pon un cartel en el local con fecha límite de pedidos"
+      ]
+    },
+    {
+      "type": "semana",
+      "left": "2",
+      "kicker": "Semana 3",
+      "range": "11 – 17 dic",
+      "title": "Toma pedidos *y recuérdalo.*",
+      "items": [
+        "Muestra en historias lo que ya te están encargando",
+        "Responde todos los mensajes el mismo día",
+        "Avisa: «quedan X días para encargar»"
+      ]
+    },
+    {
+      "type": "semana",
+      "left": "1",
+      "unit": "SEMANA",
+      "kicker": "Semana 4",
+      "range": "18 – 24 dic",
+      "title": "Atiende y *siembra enero.*",
+      "items": [
+        "Pide una reseña en Google a los clientes contentos",
+        "Entrega un vale para volver en enero",
+        "Avisa tu horario del 24 y 25 en todas partes"
+      ]
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "Diciembre se vende *en noviembre.*",
+      "body": "El que deja todo para la última semana compite con todos al mismo tiempo.\nEl que parte hoy **llega primero a la cabeza del cliente.**"
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo y marca *la semana 1* hoy.",
+      "body": "Tres tareas por semana. Una tarde cada semana y llegas tranquilo al 24.",
+      "buttons": [
+        "🔖 Guardar mi cuenta regresiva"
+      ],
+      "sticker": {
+        "e": "🎁",
+        "size": 250,
+        "r": -10,
+        "right": 120,
+        "bottom": 460
+      }
+    }
+  ]
+}

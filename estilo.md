@@ -136,6 +136,11 @@ Para escenas con personas: "foto estilo documental, luz natural de día, persona
 | Elige tu plan (A/B/C) | Guardados y comentarios ("¿A, B o C?"). Ideal para fechas | cover foto + `choose` + `plan` + `prompt` + `point` dark + `cta` | queue/2026-11-20 (Black Friday) |
 | Mito vs. realidad | Envíos ("mándaselo al que todavía…") | cover foto + `mito` (pantalla partida) + `cta` dark con `labi` card | queue/2026-11-21 |
 | Sigue la línea | Retención: una línea punteada cruza todas las láminas | cover foto con `route` + `ruta` (paradas) + `ruta` end con checklist | queue/2026-11-22 |
+| Test sí/no | Guardados y comentarios ("¿cuántos sí?") | cover tipográfica + `test` ×5 + `score` + `cta` | queue/2026-11-24 |
+| Capa por capa | Guardados. Una publicación mala se arregla de a una capa | cover con `igpost` + `capa` + `steps` (fórmula) + `cta` | queue/2026-11-26 |
+| Cuenta regresiva | Guardados. Ideal para fechas (Navidad, Fiestas Patrias) | cover foto + `semana` ×4 + `point` dark + `cta` | queue/2026-11-27 |
+| Así… o así (guion) | Envíos ("mándaselo a…"). La misma situación atendida fría y cálida | cover foto + `point` + `guion` ×3 + `steps` + `cta` con `labi` | queue/2026-11-28 |
+| Laboratorio de prompts | Guardados. Prompts para copiar con Labi en la portada | cover con `labi` + `point` + `prompt` ×3 (con `"center": true`) + `point` dark + `cta` | queue/2026-11-25 |
 | Clásico HG (metáfora + ==resaltado==) | Sigue siendo válido, máximo 1 vez por semana | cover + point + vs + checklist + cta | queue/2026-11-06 |
 
 Otros formatos virales para ir probando (crear el tipo de slide si hace falta): "Cosas que me hubiera gustado saber antes de abrir mi local" (solo con experiencias reales que cuente Hugo), "Lo que no funcionó" (anti vitrina), transformación capa por capa de una bio o una publicación, test "¿qué tipo de local eres?", "Dato de laboratorio" de Labi.
@@ -166,3 +171,12 @@ Otros formatos virales para ir probando (crear el tipo de slide si hace falta): 
 - `cta`: un solo botón (`"buttons": ["📩 …"]`) + un `sticker` o `labi` para que no quede vacío.
 - Tipografías nuevas en engine/fonts: Instrument Serif (editorial) y Caveat (manuscrita).
 - Labi estático: engine/labi.js (copia del dibujo de claude/labi.js del proyecto).
+
+### Formatos nuevos del motor (semana del 23-nov-2026)
+- `test {n, total, q, hint, size}`: pregunta de test con barra de progreso, botones SÍ / NO y una pista manuscrita.
+- `score {title, rows:[{k, t, d}]}`: resultado del test (k = rango de «sí», ej. "3-4").
+- `capa {num, kicker, title, post, note, bad}`: maqueta de publicación de Instagram (`post: {name, place, avatar, emoji, caption, imgh, csize}`). En `caption`, `[[texto]]` marca en dorado la capa nueva. `bad: true` pone la nota en rojo.
+- `igpost` (capa decorativa, sirve en la cover): la misma maqueta posicionada con `x, y, w, r`.
+- `semana {left, unit, kicker, range, title, items, box}`: hoja de calendario «FALTAN N SEMANAS» + checklist de la semana.
+- `guion {scene, place, title, no:[líneas], si:[líneas], noLabel, siLabel, note}`: la misma escena «Así…» (tachado, gris) «…o así» (blanca con borde dorado) + TIP.
+- Captura de fotos de ChatGPT sin carpeta Descargas: si la descarga no se puede leer, se muestra la imagen a pantalla completa en la pestaña de ChatGPT (overlay con JS, alto 985 px) y se guarda con `zoom` + `save_to_disk` (980×1225), luego se escala a 1080×1350.

@@ -1,0 +1,87 @@
+{
+  "fecha": "2026-11-25",
+  "hora": "13:00",
+  "tema": "ChatGPT como tu cliente más sincero: 3 prompts para saber por qué no te compran",
+  "pilar": "IA para tu negocio",
+  "formato": "laboratorio de prompts con Labi (copiar y pegar)",
+  "estilo": "claro",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "Tu familia dice que tu local es «lo máximo». Tus clientes no dicen nada: simplemente no vuelven. 🤐\n\nChatGPT puede hacer de cliente sincero. Le pegas tu perfil, tus reseñas o tu carta, le pides que se ponga en los zapatos de alguien que nunca ha ido y te dice lo que nadie se atreve a decirte.\n\nAquí van 3 prompts listos para copiar. Cambia lo que va entre [corchetes] y listo. Eso sí: tómalo como una segunda opinión, no como verdad absoluta.\n\n¿Con cuál vas a partir? Cuéntame qué te respondió 👇\n\n#negocioslocales #emprendedoreschile #maule #inteligenciaartificial #chatgpt",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Laboratorio de Labi 🧪",
+      "title": "Pídele a ChatGPT que *critique tu local.*",
+      "size": 120,
+      "sub": "Sin filtro.",
+      "labi": {
+        "pose": "explicar",
+        "expresion": "hablando",
+        "w": 440,
+        "right": 50,
+        "bottom": 30
+      },
+      "notes": [
+        {
+          "text": "3 prompts para\ncopiar y pegar\n(y aguantar 😅)",
+          "x": 100,
+          "y": 1010,
+          "size": 66,
+          "r": -4,
+          "color": "#8F6F22"
+        }
+      ]
+    },
+    {
+      "type": "point",
+      "title": "Tu familia dice que todo está ==«bacán».==",
+      "body": "Tus clientes no dicen nada: simplemente **no vuelven**.\nChatGPT puede hacer de cliente sincero."
+    },
+    {
+      "type": "prompt",
+      "icon": "🔍",
+      "title": "1 · Tu perfil, visto por un desconocido",
+      "body": "Copia tu bio y la descripción de tus últimas 3 publicaciones. Después pega esto:",
+      "prompt": "Actúa como alguien de [tu comuna] que nunca ha ido a mi [tipo de local]. Te pego mi perfil de Instagram. Dime con honestidad: ¿qué entiendes que vendo?, ¿qué te falta para ir? y ¿qué te haría desconfiar?",
+      "center": true
+    },
+    {
+      "type": "prompt",
+      "icon": "⭐",
+      "title": "2 · Lo que se repite en tus reseñas",
+      "body": "Copia tus reseñas de Google, las buenas y las malas:",
+      "prompt": "Estas son las reseñas de mi local. Agrúpalas en: lo que más gusta, lo que más molesta y lo que nadie menciona. Después dame 3 cambios concretos que pueda hacer esta semana.",
+      "center": true
+    },
+    {
+      "type": "prompt",
+      "icon": "📋",
+      "title": "3 · Tu carta o lista de precios",
+      "body": "Pega tu carta, menú o lista de servicios:",
+      "prompt": "Actúa como un cliente apurado que ve esta carta en el celular. ¿Qué no se entiende? ¿Qué nombres no dicen qué es? ¿Qué pedirías y por qué? Propón una versión más clara.",
+      "center": true
+    },
+    {
+      "type": "point",
+      "dark": true,
+      "title": "La IA no conoce tu local. *Tú sí.*",
+      "body": "Tómalo como una segunda opinión, no como la verdad.\nSi algo te hace sentido, **pruébalo una semana** y mira qué pasa."
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo y prueba uno *esta noche.*",
+      "body": "Elige un solo prompt. En 10 minutos vas a tener una lista de cosas para mejorar.",
+      "buttons": [
+        "🔖 Guardar los 3 prompts"
+      ],
+      "sticker": {
+        "e": "🧪",
+        "size": 250,
+        "r": -8,
+        "right": 120,
+        "bottom": 460
+      }
+    }
+  ]
+}

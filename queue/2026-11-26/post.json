@@ -1,0 +1,159 @@
+{
+  "fecha": "2026-11-26",
+  "hora": "20:30",
+  "tema": "Arreglemos una publicación capa por capa: de «nuevo producto 🔥» a una que vende",
+  "pilar": "Instagram que vende",
+  "formato": "capa por capa (transformación)",
+  "estilo": "claro",
+  "fondo": "liso",
+  "estado": "pendiente",
+  "generado": "2026-11-22T10:55:00-03:00",
+  "caption": "«Nuevo producto disponible 🔥». Si así anuncias lo nuevo de tu local, este carrusel es para ti. ✍️\n\nUna publicación que vende no necesita una foto de revista. Necesita que el texto responda lo que el cliente se pregunta: ¿qué es?, ¿por qué me importa?, ¿cuándo y cómo lo consigo?\n\nLa armamos capa por capa con el ejemplo de un café (inventado, pero muy parecido a muchos que conocemos). Al final está la fórmula para que la copies en tu próxima publicación.\n\n¿Qué producto tuyo merece una publicación así? Escríbelo y te ayudo con la primera línea 👇\n\n#negocioslocales #emprendedoreschile #molina #instagramparanegocios #copywriting",
+  "slides": [
+    {
+      "type": "cover",
+      "tag": "Capa por capa",
+      "title": "Esta publicación *no vende.* Arreglémosla.",
+      "size": 100,
+      "igpost": {
+        "name": "cafe.laesquina",
+        "place": "Molina",
+        "avatar": "LE",
+        "emoji": "🥧",
+        "caption": "Nuevo producto disponible 🔥🔥 Pregunte por interno.",
+        "imgh": 260,
+        "csize": 34,
+        "x": 290,
+        "y": 730,
+        "w": 700,
+        "r": -3
+      },
+      "notes": [
+        {
+          "text": "¿qué es?\n¿cuánto?\n¿dónde??",
+          "x": 60,
+          "y": 830,
+          "size": 62,
+          "r": -6,
+          "color": "#C7443F"
+        }
+      ]
+    },
+    {
+      "type": "capa",
+      "num": "Antes",
+      "kicker": "El punto de partida",
+      "title": "Nadie sabe qué es *ni por qué le importa.*",
+      "post": {
+        "name": "cafe.laesquina",
+        "place": "Molina",
+        "avatar": "LE",
+        "emoji": "🥧",
+        "caption": "Nuevo producto disponible 🔥🔥 Pregunte por interno.",
+        "imgh": 300
+      },
+      "note": "«Pregunte por interno» = «no me pregunte».",
+      "bad": true
+    },
+    {
+      "type": "capa",
+      "num": "Capa 1",
+      "kicker": "El gancho",
+      "title": "Empieza por lo que *siente* el cliente.",
+      "post": {
+        "name": "cafe.laesquina",
+        "place": "Molina",
+        "avatar": "LE",
+        "emoji": "🥧",
+        "caption": "[[¿Te acuerdas del kuchen de tu abuela? Lo hicimos igual.]]",
+        "imgh": 300
+      },
+      "note": "La primera línea decide si siguen leyendo."
+    },
+    {
+      "type": "capa",
+      "num": "Capa 2",
+      "kicker": "El detalle",
+      "title": "Dile *por qué* es distinto.",
+      "post": {
+        "name": "cafe.laesquina",
+        "place": "Molina",
+        "avatar": "LE",
+        "emoji": "🥧",
+        "caption": "¿Te acuerdas del kuchen de tu abuela? Lo hicimos igual. [[Manzanas de la zona y masa hecha aquí cada mañana.]]",
+        "imgh": 260
+      },
+      "note": "Un detalle real vale más que tres 🔥."
+    },
+    {
+      "type": "capa",
+      "num": "Capa 3",
+      "kicker": "Cuándo y cómo",
+      "title": "Responde antes de que *pregunten.*",
+      "post": {
+        "name": "cafe.laesquina",
+        "place": "Molina",
+        "avatar": "LE",
+        "emoji": "🥧",
+        "caption": "¿Te acuerdas del kuchen de tu abuela? Lo hicimos igual. Manzanas de la zona y masa hecha aquí cada mañana. [[Sale del horno a las 11, por porción o entero.]]",
+        "imgh": 230,
+        "csize": 30
+      },
+      "note": "Cada duda que resuelves es un mensaje menos."
+    },
+    {
+      "type": "capa",
+      "num": "Capa 4",
+      "kicker": "Qué hacer y dónde",
+      "title": "Dile *exactamente* qué hacer.",
+      "post": {
+        "name": "cafe.laesquina",
+        "place": "Molina",
+        "avatar": "LE",
+        "emoji": "🥧",
+        "caption": "¿Te acuerdas del kuchen de tu abuela? Lo hicimos igual. Manzanas de la zona y masa hecha aquí cada mañana. Sale del horno a las 11, por porción o entero. [[Escríbenos «KUCHEN» y te guardamos uno. 📍 A media cuadra de la plaza.]]",
+        "imgh": 190,
+        "csize": 29
+      },
+      "note": "Una acción fácil. Y que sepan dónde estás."
+    },
+    {
+      "type": "steps",
+      "tag": "La fórmula",
+      "title": "Tu próxima publicación, *en 4 capas:*",
+      "items": [
+        {
+          "t": "Gancho",
+          "d": "Un recuerdo, una pregunta o un antojo. No «nuevo producto»."
+        },
+        {
+          "t": "Detalle",
+          "d": "Qué lo hace distinto: ingrediente, origen, cómo lo haces."
+        },
+        {
+          "t": "Cuándo y cómo",
+          "d": "Horario, formato, si se encarga o no."
+        },
+        {
+          "t": "Qué hacer y dónde",
+          "d": "Una palabra para escribirte y tu ubicación."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Guárdalo y úsalo en tu *próxima publicación.*",
+      "body": "Escribe las 4 capas antes de subir la foto. Te va a tomar 5 minutos.",
+      "buttons": [
+        "🔖 Guardar la fórmula"
+      ],
+      "sticker": {
+        "e": "✍️",
+        "size": 250,
+        "r": -8,
+        "right": 120,
+        "bottom": 460
+      }
+    }
+  ]
+}
